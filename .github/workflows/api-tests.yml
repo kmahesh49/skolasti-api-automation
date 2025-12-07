@@ -81,10 +81,7 @@ jobs:
         if: always()
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp.gmail.com
-          server_port: 587
-          username: ${{ secrets.MAIL_USERNAME }}
-          password: ${{ secrets.MAIL_PASSWORD }}
+          connection_url: smtp://${{ secrets.MAIL_USERNAME }}:${{ secrets.MAIL_PASSWORD }}@smtp.gmail.com:587
           subject: Skolasti API Test Report - Run ${{ github.run_number }}
           to: ${{ secrets.MAIL_TO }}
           from: ${{ secrets.MAIL_USERNAME }}
@@ -93,5 +90,8 @@ jobs:
             
             Run Number: ${{ github.run_number }}
             Branch: ${{ github.ref_name }}
+            Status: Tests ran successfully
             
-            View report: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            View full report: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            
+            Download test artifacts from the Actions page.
