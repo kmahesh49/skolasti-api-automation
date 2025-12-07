@@ -1,0 +1,25 @@
+Failed to parse JSON from getcoursedetails: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/tests/CourseCrudoperation.spec.js:264:20
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:310:9
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/testInfo.js:305:11
+    at TimeoutManager.withRunnable (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/timeoutManager.js:67:14)
+    at TestInfoImpl._runWithTimeout (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/testInfo.js:303:7)
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:308:7
+    at WorkerMain._runTest (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:283:5)
+    at WorkerMain.runTestGroup (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:198:11)
+    at process.<anonymous> (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/common/process.js:65:22)
+Raw response from getcoursedetails: 
+DELETE JSON parse failed: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at APIResponse.json (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright-core/lib/client/fetch.js:301:17)
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/tests/CourseCrudoperation.spec.js:307:18
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:310:9
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/testInfo.js:305:11
+    at TimeoutManager.withRunnable (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/timeoutManager.js:67:14)
+    at TestInfoImpl._runWithTimeout (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/testInfo.js:303:7)
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:308:7
+    at WorkerMain._runTest (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:283:5)
+    at WorkerMain.runTestGroup (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:198:11)
+    at process.<anonymous> (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/common/process.js:65:22)
+DELETE raw: 
