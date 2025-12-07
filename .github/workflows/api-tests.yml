@@ -38,6 +38,10 @@ jobs:
         run: npm install -g allure-commandline --save-dev
       
       - name: Run API tests
+        env:
+          API_TOKEN: ${{ secrets.API_TOKEN }}
+          API_BASE_URL: ${{ secrets.API_BASE_URL }}
+          COURSE_API_BASE_URL: ${{ secrets.COURSE_API_BASE_URL }}
         run: npm test
         continue-on-error: true
       
