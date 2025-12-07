@@ -1,0 +1,3 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","1402","Create a course, get course details, update course, get updated course details, delete course and verify deletion","","Sun Dec 07 19:03:25 UTC 2025","failed","Sun Dec 07 19:03:27 UTC 2025","","CourseCrudoperation.spec.js","",""
+"","1395","Course API - Complete Validation: CRUD + Levels + Types + GetAll","","Sun Dec 07 19:03:25 UTC 2025","failed","Sun Dec 07 19:03:27 UTC 2025","","Course/CourseCrud.spec.js","",""
