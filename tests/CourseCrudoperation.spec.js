@@ -2,7 +2,7 @@ const { test, expect, request } = require("@playwright/test");
 // Removed incorrect import statement for faker
 const { CoursebaseURL, headers } = require("../config/config.js");
 // const RequestBody = require('../payloads/Dynamic_Payload.json');
-import { faker, Faker } from "@faker-js/faker";
+const { faker } = require("@faker-js/faker");
 const { DateTime } = require("luxon");
 
 
