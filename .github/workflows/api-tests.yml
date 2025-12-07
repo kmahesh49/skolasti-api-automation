@@ -1,0 +1,102 @@
+name: Skolasti API Test Automation
+
+on:
+  # Schedule: Run every day at 6:00 AM IST (12:30 AM UTC)
+  schedule:
+    - cron: '30 0 * * *'  # Adjust timezone as needed
+  
+  # Manual trigger
+  workflow_dispatch:
+  
+  # Trigger on push to main/develop
+  push:
+    branches: [ main, develop ]
+  
+  # Trigger on pull request to main
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  api-tests:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run API tests
+        run: npm test
+        continue-on-error: true
+      
+      - name: Generate Allure Report
+        if: always()
+        run: npm run allure:generate
+      
+      - name: Upload Allure Report as Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report-${{ github.run_number }}
+          path: allure-report/
+          retention-days: 30
+      
+      - name: Upload Test Results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results-${{ github.run_number }}
+          path: |
+            test-results/
+            playwright-report/
+          retention-days: 30
+      
+      - name: Deploy Allure Report to GitHub Pages
+        if: always() && github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./allure-report
+          destination_dir: reports/${{ github.run_number }}
+      
+      - name: Send Email Notification
+        if: always()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "Skolasti API Test Report - ${{ job.status }} - Run #${{ github.run_number }}"
+          to: ${{ secrets.MAIL_TO }}
+          from: Skolasti API Automation
+          body: |
+            Test execution completed with status: ${{ job.status }}
+            
+            Run Number: ${{ github.run_number }}
+            Triggered by: ${{ github.event_name }}
+            Branch: ${{ github.ref_name }}
+            Commit: ${{ github.sha }}
+            
+            View detailed Allure report: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            
+            Download artifacts to view the complete test report.
+          attachments: allure-report/index.html
+          html_body: |
+            <h2>Skolasti API Test Automation Report</h2>
+            <p><strong>Status:</strong> ${{ job.status }}</p>
+            <p><strong>Run Number:</strong> ${{ github.run_number }}</p>
+            <p><strong>Triggered by:</strong> ${{ github.event_name }}</p>
+            <p><strong>Branch:</strong> ${{ github.ref_name }}</p>
+            <p><strong>Commit:</strong> ${{ github.sha }}</p>
+            <hr>
+            <p><a href="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}">View Full Report</a></p>
+            <p>Download the artifacts from GitHub Actions to view the complete Allure report.</p>

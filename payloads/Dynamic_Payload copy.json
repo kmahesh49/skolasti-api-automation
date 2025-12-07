@@ -1,0 +1,28 @@
+{
+    "Title": "{0}",
+    "NumberOfRetake": 1,
+    "PassScoreInPertcentage": "80",
+    "TotalQuestions": 6,
+    "TotalScore": 140,
+    "IsOptional": true,
+    "QuizLevels": [
+        {
+            "LevelId": 0,
+            "NumberOfQuestions": 1,
+            "PassScoreInPertcentage": 80,
+            "PointsPerQuestion": 10
+        },
+        {
+            "LevelId": 1,
+            "NumberOfQuestions": 2,
+            "PassScoreInPertcentage": 80,
+            "PointsPerQuestion": 20
+        },
+        {
+            "LevelId": 2,
+            "NumberOfQuestions": 3,
+            "PassScoreInPertcentage": 80,
+            "PointsPerQuestion": 30
+        }
+    ]
+}
