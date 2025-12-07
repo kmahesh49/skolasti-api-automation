@@ -1,0 +1,38 @@
+Raw response text: System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Lms.Course.WebApi.Startup.<>c.<ConfigureServices>b__5_9(MessageReceivedContext context) in C:\Projects\LMS\src\Lms\Lms.Course.WebApi\Startup.cs:line 111
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.MessageReceived(MessageReceivedContext context)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+
+HEADERS
+=======
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImd0eSI6WyJhdXRob3JpemF0aW9uX2NvZGUiXSwia2lkIjoiRC1CMGFzUXk2OFV2a3M0QkR0QWRjUWJ0MmtzIn0.eyJhdWQiOiJhNTBjZDdkZC1mNmFkLTQ0NzAtODkwMC1hMzhlMzQ1NjFkOTUiLCJleHAiOjE3NjUxMzY2MzksImlhdCI6MTc2NTEzMzAzOSwiaXNzIjoiaHR0cHM6Ly9hdXRoLnNrb2xhc3RpLmNvbS8iLCJzdWIiOiJmNzEwM2RhNi1mYzdhLTRjZmQtODgwYi04OTYxNmU2ZGVlZWEiLCJqdGkiOiI5MDdmNjJmZi1lZjBlLTQ2ZjAtYmQwOC0xYmI0NWFhZjk1MDYiLCJhdXRoZW50aWNhdGlvblR5cGUiOiJQQVNTV09SRCIsImVtYWlsIjoic2lyaXNoYS5iQGlub3Zhci10ZWNoLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJhcHBsaWNhdGlvbklkIjoiYTUwY2Q3ZGQtZjZhZC00NDcwLTg5MDAtYTM4ZTM0NTYxZDk1Iiwic2NvcGUiOiJvcGVuaWQgb2ZmbGluZV9hY2Nlc3MiLCJyb2xlcyI6WyJ1c2VyIl0sInNpZCI6IjNhZGY0M2RkLTk1MTctNGZmOC04NmI0LTRiNTkzYTljYTE0YyIsImF1dGhfdGltZSI6MTc2NTEzMzAzOSwidGlkIjoiZjI2ZmExMmQtNjUyZi00NTI4LTg3M2ItYWEyZGM0OWU2MTU3In0.eeDmkJ3HXkTCyzy9xW6Ri6A77bz5qc24pzAzW1gcFUjZ_JL1d3cgMnJbYyw68Tlhf1Z0uV31FK3R-RUG_5SjNybbAKJLOeTCp_XObUPOP5tiVTEtM2WOZ8EVSWtPqeamSxn_BZMaVR4l5CYN-f3Kv1LCPxcnFIujyW8zmupVyO0QHYMIRCTRfWPBSCWPAJwkdyHfpq4OFUn4K7rHB8UdOowNYBWXAvnqgPqAoGcGJVQ-NaqZiinp9zAFefN29O5aNTCdySpsKJOjTC2xUHiLxTdAAOstZ74gFAziPZc_q858Mm2BD1QaU5kItupihgyeSv2V-WYhuMA6mJzALNyShg
+Content-Length: 2462
+Content-Type: application/json
+Host: courseapi-dev-c8bbhca5b6dwfag9.centralindia-01.azurewebsites.net
+Max-Forwards: 10
+User-Agent: Playwright/1.56.1 (x64; ubuntu 24.04) node/18.20 CI/1
+X-ARR-LOG-ID: f2148404-f2c7-40d5-9cda-3f37bd409afe
+CLIENT-IP: 48.217.140.228:48129
+DISGUISED-HOST: courseapi-dev-c8bbhca5b6dwfag9.centralindia-01.azurewebsites.net
+X-SITE-DEPLOYMENT-ID: courseapi-dev
+WAS-DEFAULT-HOSTNAME: courseapi-dev-c8bbhca5b6dwfag9.centralindia-01.azurewebsites.net
+X-Forwarded-Proto: https
+X-AppService-Proto: https
+X-ARR-SSL: 2048|256|CN=Microsoft Azure RSA TLS Issuing CA 08, O=Microsoft Corporation, C=US|CN=*.azurewebsites.net, O=Microsoft Corporation, L=Redmond, S=WA, C=US
+X-Forwarded-TlsVersion: 1.3
+X-Forwarded-For: 48.217.140.228:48129
+X-Original-URL: /api/Course/createcourse
+X-WAWS-Unencoded-URL: /api/Course/createcourse
+
+Status code: 500
+Parsed response body: null
