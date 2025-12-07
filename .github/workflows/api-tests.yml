@@ -77,6 +77,15 @@ jobs:
           retention-days: 30
           if-no-files-found: warn
       
+      - name: Deploy Allure Report to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./allure-report
+          destination_dir: reports/run-${{ github.run_number }}
+          keep_files: true
+      
       - name: Send Email Notification
         if: always()
         uses: dawidd6/action-send-mail@v3
@@ -85,13 +94,25 @@ jobs:
           subject: Skolasti API Test Report - Run ${{ github.run_number }}
           to: ${{ secrets.MAIL_TO }}
           from: ${{ secrets.MAIL_USERNAME }}
-          body: |
-            Test execution completed!
+          html_body: |
+            <h2>✅ Skolasti API Test Automation Report</h2>
             
-            Run Number: ${{ github.run_number }}
-            Branch: ${{ github.ref_name }}
-            Status: Tests ran successfully
+            <p><strong>Run Number:</strong> ${{ github.run_number }}</p>
+            <p><strong>Branch:</strong> ${{ github.ref_name }}</p>
+            <p><strong>Triggered by:</strong> ${{ github.event_name }}</p>
+            <p><strong>Timestamp:</strong> ${{ github.event.head_commit.timestamp }}</p>
             
-            View full report: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            <hr>
             
-            Download test artifacts from the Actions page.
+            <h3>📊 View Test Reports:</h3>
+            <ul>
+              <li><a href="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/reports/run-${{ github.run_number }}/">📈 Allure Report (Detailed)</a></li>
+              <li><a href="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}">🔍 GitHub Actions Run</a></li>
+            </ul>
+            
+            <p><strong>Note:</strong> Allure report will be available in 2-3 minutes after deployment.</p>
+            
+            <hr>
+            <p style="font-size: 12px; color: #666;">
+              Download artifacts: <a href="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}">Click here</a>
+            </p>
