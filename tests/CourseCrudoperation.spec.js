@@ -4,10 +4,20 @@ const { CoursebaseURL, headers } = require("../config/config.js");
 // const RequestBody = require('../payloads/Dynamic_Payload.json');
 const { faker } = require("@faker-js/faker");
 const { DateTime } = require("luxon");
+const { allure } = require("allure-playwright");
 
+test.describe("Course CRUD Operations with Validation", () => {
+  test.beforeEach(async () => {
+    allure.epic("Skolasti API Automation");
+    allure.feature("Course Management");
+    allure.owner("QA Team");
+    allure.tag("api", "course", "end-to-end");
+  });
 
-
-test("Create a course, get course details, update course, get updated course details, delete course and verify deletion", async ({ request }) => {
+  test("Create a course, get course details, update course, get updated course details, delete course and verify deletion", async ({ request }) => {
+    allure.story("Complete Course Lifecycle");
+    allure.severity("critical");
+    allure.description("End-to-end validation of course creation, retrieval, update, and deletion with detailed verification");
 const Title1= faker.lorem.words(3);
 const aiText1= faker.lorem.sentence();
 const Createddate1= DateTime.now().toISO();
@@ -328,5 +338,6 @@ let putJson;
   const finalRaw = await finalGetResponse.text();
   console.log("Final GET Response after delete:", finalRaw);
   
+  });
 });
 

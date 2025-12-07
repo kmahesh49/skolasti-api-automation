@@ -2,9 +2,21 @@ const { test, expect } = require("@playwright/test");
 const { CoursebaseURL, headers } = require("../../config/config.js");
 const { ApiHelper } = require("../../utils/ApiHelper.js");
 const { PayloadGenerator } = require("../../utils/PayloadGenerator.js");
+const { allure } = require("allure-playwright");
 
-test("Course API - Complete Validation: CRUD + Levels + Types + GetAll", async ({ request }) => {
-  test.setTimeout(120000); // 2 minutes timeout
+test.describe("Course Management API", () => {
+  test.beforeEach(async () => {
+    allure.epic("Skolasti API Automation");
+    allure.feature("Course Management");
+    allure.owner("QA Team");
+    allure.tag("api", "course", "crud");
+  });
+
+  test("Course API - Complete Validation: CRUD + Levels + Types + GetAll", async ({ request }) => {
+    test.setTimeout(120000); // 2 minutes timeout
+    allure.story("Course CRUD Operations");
+    allure.severity("critical");
+    allure.description("Complete validation of Course API including levels, types, CRUD operations, and retrieval");
   const api = new ApiHelper(request, CoursebaseURL, headers);
 
   // ==================== VALIDATE COURSE LEVELS ====================
@@ -361,4 +373,5 @@ test("Course API - Complete Validation: CRUD + Levels + Types + GetAll", async (
   // ==================== VERIFY DELETION ====================
   await api.verifyDeleted(`/Course/getbyidcourse?id=${courseId}`);
   console.log("Course deletion verified");
+  });
 });
