@@ -28,12 +28,23 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          ref: develop
       
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
           cache: 'npm'
+      
+      - name: Verify checkout
+        run: |
+          echo "Current branch:"
+          git branch
+          echo "Latest commit:"
+          git log -1 --oneline
+          echo "Checking CourseCrudoperation.spec.js imports:"
+          head -10 tests/CourseCrudoperation.spec.js
       
       - name: Install dependencies
         run: npm ci
