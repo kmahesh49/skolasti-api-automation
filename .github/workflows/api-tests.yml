@@ -83,21 +83,15 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 587
-          secure: true
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
-          subject: "Skolasti API Test Report - ${{ job.status }} - Run #${{ github.run_number }}"
+          subject: Skolasti API Test Report - Run ${{ github.run_number }}
           to: ${{ secrets.MAIL_TO }}
           from: ${{ secrets.MAIL_USERNAME }}
           body: |
-            Test execution completed with status: ${{ job.status }}
+            Test execution completed!
             
             Run Number: ${{ github.run_number }}
-            Triggered by: ${{ github.event_name }}
             Branch: ${{ github.ref_name }}
-            Commit: ${{ github.sha }}
             
-            View detailed report: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-            
-            Download artifacts to view the complete test report.
-          convert_markdown: true
+            View report: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
