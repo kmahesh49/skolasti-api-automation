@@ -1,0 +1,336 @@
+Raw response text: {"Id":1018,"FileId":"a7f0dc201d34499599cd7d973eabf193","SasToken":"https://saskolastitestci001.blob.core.windows.net/0ew0c2d5?sv=2025-07-05&se=2025-12-08T03%3A18%3A23Z&sr=c&sp=rcw&sig=tx4KLYZZT7x2xKzRjjp5qdHv7ITgvqEomQMZhpvgE9Q%3D"}
+Status code: 200
+Parsed response body: {
+  Id: 1018,
+  FileId: 'a7f0dc201d34499599cd7d973eabf193',
+  SasToken: 'https://saskolastitestci001.blob.core.windows.net/0ew0c2d5?sv=2025-07-05&se=2025-12-08T03%3A18%3A23Z&sr=c&sp=rcw&sig=tx4KLYZZT7x2xKzRjjp5qdHv7ITgvqEomQMZhpvgE9Q%3D'
+}
+Response Body: {
+  Id: 1018,
+  FileId: 'a7f0dc201d34499599cd7d973eabf193',
+  SasToken: 'https://saskolastitestci001.blob.core.windows.net/0ew0c2d5?sv=2025-07-05&se=2025-12-08T03%3A18%3A23Z&sr=c&sp=rcw&sig=tx4KLYZZT7x2xKzRjjp5qdHv7ITgvqEomQMZhpvgE9Q%3D'
+}
+COurse Id: 1018
+Raw response from Course details: {"Id":1018,"Title":"molestiae admiratio ascit","CourseTypeId":1,"CategoryName":"Leadership","CourseLevel":2,"Description":"Vorago clibanus strenuus nam tamquam. Tum solus validus somnus verus tubineus capto suscipio tamen. Aliquam explicabo aegrotatio vulgaris expedita pecto.","ThumbnailUrl":"","TenantId":null,"ClientId":"","IsPublished":null,"CreatedBy":"","UpdatedBy":"","Createddate":"2025-12-07T19:18:20.798","UpdatedDate":"2025-12-07T19:18:20.811","ThubnailSasToken":"https://saskolastitestci001.blob.core.windows.net/0ew0c2d5?sv=2025-07-05&se=2025-12-08T03%3A18%3A25Z&sr=c&sp=rcw&sig=gBR4O3jISLMOdiBrhInhIuvJecwA88g%2FMUeDe7YPHTI%3D","ContentPrice":[],"CourseSection":[],"CourseSkills":[],"RelatedCourses":[{"Id":39,"Title":"course tighffer er ert","CourseTypeId":1,"CategoryName":"Leadership","CourseLevelId":0,"Description":"vwvebwnj r eh rehtrr ","ThumbnailUrl":"","CreatedDate":"2025-08-08T06:41:33.0933333","UpdatedDate":"2025-08-08T06:41:33.0933333","CreatedBy":"","Rating":0},{"Id":40,"Title":"Dsd","CourseTypeId":null,"CategoryName":"Leadership","CourseLevelId":0,"Description":"<p>as</p>","ThumbnailUrl":"","CreatedDate":"2025-08-08T07:15:24.99","UpdatedDate":"2025-08-08T07:15:24.99","CreatedBy":"Sreekanth Nakka","Rating":0},{"Id":41,"Title":"kj ,m","CourseTypeId":0,"CategoryName":"Leadership","CourseLevelId":0,"Description":"<p>kn,</p>","ThumbnailUrl":"","CreatedDate":"2025-08-08T07:20:18.5","UpdatedDate":"2025-08-08T07:20:18.5","CreatedBy":"Sreekanth Nakka","Rating":0},{"Id":42,"Title":"s","CourseTypeId":0,"CategoryName":"Leadership","CourseLevelId":0,"Description":"<p>sg</p>","ThumbnailUrl":"","CreatedDate":"2025-08-08T07:27:46.2433333","UpdatedDate":"2025-08-08T07:27:46.2433333","CreatedBy":"Sreekanth Nakka","Rating":0},{"Id":43,"Title":"Test course","CourseTypeId":0,"CategoryName":"Leadership","CourseLevelId":0,"Description":"<p>fbarsd</p>","ThumbnailUrl":"","CreatedDate":"2025-08-08T07:31:10.9066667","UpdatedDate":"2025-08-08T07:31:10.9066667","CreatedBy":"Sreekanth Nakka","Rating":0},{"Id":44,"Title":"mmmm","CourseTypeId":0,"CategoryName":"Leadership","CourseLevelId":0,"Description":"<p>mnnmmn</p>","ThumbnailUrl":"","CreatedDate":"2025-08-08T07:39:07.2633333","UpdatedDate":"2025-08-08T07:39:07.2633333","CreatedBy":"Sreekanth Nakka","Rating":0},{"Id":45,"Title":"n,nn  ,n","CourseTypeId":0,"CategoryName":"Leadership","CourseLevelId":0,"Description":"<p>,n</p>","ThumbnailUrl":"","CreatedDate":"2025-08-08T07:42:13.56","UpdatedDate":"2025-08-08T07:42:13.56","CreatedBy":"Sreekanth Nakka","Rating":0},{"Id":46,"Title":"kjnlm,","CourseTypeId":0,"CategoryName":"Leadership","CourseLevelId":0,"Description":"<p>kjjk</p>","ThumbnailUrl":"","CreatedDate":"2025-08-08T07:47:43.6","UpdatedDate":"2025-08-08T07:47:43.6","CreatedBy":"Sreekanth Nakka","Rating":0},{"Id":47,"Title":"testBjj","CourseTypeId":0,"CategoryName":"Leadership","CourseLevelId":0,"Description":"<p>testBjj</p>","ThumbnailUrl":"","CreatedDate":"2025-08-08T07:49:15.3033333","UpdatedDate":"2025-08-08T07:49:15.3033333","CreatedBy":"Sreekanth Nakka","Rating":0},{"Id":48,"Title":",m,m","CourseTypeId":0,"CategoryName":"Leadership","CourseLevelId":0,"Description":"<p>,m,m</p>","ThumbnailUrl":"","CreatedDate":"2025-08-08T07:50:58.4133333","UpdatedDate":"2025-08-08T07:50:58.4133333","CreatedBy":"Sreekanth Nakka","Rating":0}],"TotalSections":0,"TotalEnrollments":0,"TotalReviews":0,"TotalAverageRating":0,"IsEnrolled":false}
+Status: 200
+Course Details: {
+  Id: 1018,
+  Title: 'molestiae admiratio ascit',
+  CourseTypeId: 1,
+  CategoryName: 'Leadership',
+  CourseLevel: 2,
+  Description: 'Vorago clibanus strenuus nam tamquam. Tum solus validus somnus verus tubineus capto suscipio tamen. Aliquam explicabo aegrotatio vulgaris expedita pecto.',
+  ThumbnailUrl: '',
+  TenantId: null,
+  ClientId: '',
+  IsPublished: null,
+  CreatedBy: '',
+  UpdatedBy: '',
+  Createddate: '2025-12-07T19:18:20.798',
+  UpdatedDate: '2025-12-07T19:18:20.811',
+  ThubnailSasToken: 'https://saskolastitestci001.blob.core.windows.net/0ew0c2d5?sv=2025-07-05&se=2025-12-08T03%3A18%3A25Z&sr=c&sp=rcw&sig=gBR4O3jISLMOdiBrhInhIuvJecwA88g%2FMUeDe7YPHTI%3D',
+  ContentPrice: [],
+  CourseSection: [],
+  CourseSkills: [],
+  RelatedCourses: [
+    {
+      Id: 39,
+      Title: 'course tighffer er ert',
+      CourseTypeId: 1,
+      CategoryName: 'Leadership',
+      CourseLevelId: 0,
+      Description: 'vwvebwnj r eh rehtrr ',
+      ThumbnailUrl: '',
+      CreatedDate: '2025-08-08T06:41:33.0933333',
+      UpdatedDate: '2025-08-08T06:41:33.0933333',
+      CreatedBy: '',
+      Rating: 0
+    },
+    {
+      Id: 40,
+      Title: 'Dsd',
+      CourseTypeId: null,
+      CategoryName: 'Leadership',
+      CourseLevelId: 0,
+      Description: '<p>as</p>',
+      ThumbnailUrl: '',
+      CreatedDate: '2025-08-08T07:15:24.99',
+      UpdatedDate: '2025-08-08T07:15:24.99',
+      CreatedBy: 'Sreekanth Nakka',
+      Rating: 0
+    },
+    {
+      Id: 41,
+      Title: 'kj ,m',
+      CourseTypeId: 0,
+      CategoryName: 'Leadership',
+      CourseLevelId: 0,
+      Description: '<p>kn,</p>',
+      ThumbnailUrl: '',
+      CreatedDate: '2025-08-08T07:20:18.5',
+      UpdatedDate: '2025-08-08T07:20:18.5',
+      CreatedBy: 'Sreekanth Nakka',
+      Rating: 0
+    },
+    {
+      Id: 42,
+      Title: 's',
+      CourseTypeId: 0,
+      CategoryName: 'Leadership',
+      CourseLevelId: 0,
+      Description: '<p>sg</p>',
+      ThumbnailUrl: '',
+      CreatedDate: '2025-08-08T07:27:46.2433333',
+      UpdatedDate: '2025-08-08T07:27:46.2433333',
+      CreatedBy: 'Sreekanth Nakka',
+      Rating: 0
+    },
+    {
+      Id: 43,
+      Title: 'Test course',
+      CourseTypeId: 0,
+      CategoryName: 'Leadership',
+      CourseLevelId: 0,
+      Description: '<p>fbarsd</p>',
+      ThumbnailUrl: '',
+      CreatedDate: '2025-08-08T07:31:10.9066667',
+      UpdatedDate: '2025-08-08T07:31:10.9066667',
+      CreatedBy: 'Sreekanth Nakka',
+      Rating: 0
+    },
+    {
+      Id: 44,
+      Title: 'mmmm',
+      CourseTypeId: 0,
+      CategoryName: 'Leadership',
+      CourseLevelId: 0,
+      Description: '<p>mnnmmn</p>',
+      ThumbnailUrl: '',
+      CreatedDate: '2025-08-08T07:39:07.2633333',
+      UpdatedDate: '2025-08-08T07:39:07.2633333',
+      CreatedBy: 'Sreekanth Nakka',
+      Rating: 0
+    },
+    {
+      Id: 45,
+      Title: 'n,nn  ,n',
+      CourseTypeId: 0,
+      CategoryName: 'Leadership',
+      CourseLevelId: 0,
+      Description: '<p>,n</p>',
+      ThumbnailUrl: '',
+      CreatedDate: '2025-08-08T07:42:13.56',
+      UpdatedDate: '2025-08-08T07:42:13.56',
+      CreatedBy: 'Sreekanth Nakka',
+      Rating: 0
+    },
+    {
+      Id: 46,
+      Title: 'kjnlm,',
+      CourseTypeId: 0,
+      CategoryName: 'Leadership',
+      CourseLevelId: 0,
+      Description: '<p>kjjk</p>',
+      ThumbnailUrl: '',
+      CreatedDate: '2025-08-08T07:47:43.6',
+      UpdatedDate: '2025-08-08T07:47:43.6',
+      CreatedBy: 'Sreekanth Nakka',
+      Rating: 0
+    },
+    {
+      Id: 47,
+      Title: 'testBjj',
+      CourseTypeId: 0,
+      CategoryName: 'Leadership',
+      CourseLevelId: 0,
+      Description: '<p>testBjj</p>',
+      ThumbnailUrl: '',
+      CreatedDate: '2025-08-08T07:49:15.3033333',
+      UpdatedDate: '2025-08-08T07:49:15.3033333',
+      CreatedBy: 'Sreekanth Nakka',
+      Rating: 0
+    },
+    {
+      Id: 48,
+      Title: ',m,m',
+      CourseTypeId: 0,
+      CategoryName: 'Leadership',
+      CourseLevelId: 0,
+      Description: '<p>,m,m</p>',
+      ThumbnailUrl: '',
+      CreatedDate: '2025-08-08T07:50:58.4133333',
+      UpdatedDate: '2025-08-08T07:50:58.4133333',
+      CreatedBy: 'Sreekanth Nakka',
+      Rating: 0
+    }
+  ],
+  TotalSections: 0,
+  TotalEnrollments: 0,
+  TotalReviews: 0,
+  TotalAverageRating: 0,
+  IsEnrolled: false
+}
+Status: 201
+Course Details: {
+  Id: 1018,
+  Title: 'tertius est comminor',
+  CourseTypeId: 1,
+  CategoryName: 'Technology',
+  CourseLevel: 1,
+  Description: 'Tui stella bellicus creator depromo cumque. Voco copiose aedificium acer audio. Cauda demonstro asporto vehemens suus somnus terreo.',
+  ThumbnailUrl: '',
+  TenantId: null,
+  ClientId: '',
+  IsPublished: null,
+  CreatedBy: '',
+  UpdatedBy: '',
+  Createddate: '2025-12-07T19:18:20.798',
+  UpdatedDate: '2025-12-07T19:18:26.4775085',
+  ThubnailSasToken: 'https://saskolastitestci001.blob.core.windows.net/0ew0c2d5?sv=2025-07-05&se=2025-12-08T03%3A18%3A28Z&sr=c&sp=rcw&sig=Zz1ckhI3F2CZtpSa0OmhfTxDtl9jxrikHtOj9qU3FXY%3D',
+  ContentPrice: [],
+  CourseSection: [],
+  CourseSkills: [],
+  RelatedCourses: [
+    {
+      Id: 0,
+      Title: 'Sample Course',
+      CourseTypeId: 1,
+      CategoryName: 'Technology',
+      CourseLevelId: 1,
+      Description: 'This is a sample course description.',
+      ThumbnailUrl: 'https://saskolastitestci001.blob.core.windows.net/0ew0c2d5/cdn/thumbnail/da57b043eb954c1987dbf2f067bacd33.png',
+      CreatedDate: '2025-08-06T10:51:02.7733333',
+      UpdatedDate: '2025-11-06T12:34:51.7793248',
+      CreatedBy: '',
+      Rating: 0
+    },
+    {
+      Id: 79,
+      Title: 'dg',
+      CourseTypeId: 1,
+      CategoryName: 'Technology',
+      CourseLevelId: 1,
+      Description: '<p>sdf</p>',
+      ThumbnailUrl: '',
+      CreatedDate: '2025-08-08T11:43:31.9766667',
+      UpdatedDate: '2025-08-08T11:43:31.9766667',
+      CreatedBy: 'Sreekanth Nakka',
+      Rating: 0
+    },
+    {
+      Id: 123,
+      Title: 'nbdfvn',
+      CourseTypeId: 1,
+      CategoryName: 'Technology',
+      CourseLevelId: 1,
+      Description: '<p>erjhv\thj</p>',
+      ThumbnailUrl: '',
+      CreatedDate: '2025-08-19T10:35:23.8566667',
+      UpdatedDate: '2025-08-19T10:35:23.8566667',
+      CreatedBy: 'sirisha Bommuluri',
+      Rating: 0
+    },
+    {
+      Id: 124,
+      Title: 'smbh',
+      CourseTypeId: 1,
+      CategoryName: 'Technology',
+      CourseLevelId: 1,
+      Description: '<p>dsnb</p>',
+      ThumbnailUrl: '',
+      CreatedDate: '2025-08-19T10:38:57.64',
+      UpdatedDate: '2025-08-19T10:38:57.64',
+      CreatedBy: 'sirisha Bommuluri',
+      Rating: 0
+    },
+    {
+      Id: 543,
+      Title: 'The Rise of Artificial Intelligence: Transforming the World Around Us',
+      CourseTypeId: 1,
+      CategoryName: 'Technology',
+      CourseLevelId: 1,
+      Description: '<p>Explore how artificial intelligence is reshaping industries, enhancing human capabilities, and redefining our future. From smart assistants to powerful AI-driven analytics, discover the technology that’s changing the way we live and work.</p>',
+      ThumbnailUrl: 'https://saskolastitestci001.blob.core.windows.net/0ew0c2d5/cdn/thumbnail/7a844366-29d4-4c8f-846e-a6315ebe670e.jpg',
+      CreatedDate: '2025-09-12T07:33:58.55',
+      UpdatedDate: '2025-09-12T07:55:30.3799058',
+      CreatedBy: '',
+      Rating: 0
+    },
+    {
+      Id: 600,
+      Title: 'JAVASCRIPT',
+      CourseTypeId: 1,
+      CategoryName: 'Technology',
+      CourseLevelId: 1,
+      Description: '<p> structured JavaScript course syllabus to guide your learning from beginner to advanced levels.</p>',
+      ThumbnailUrl: '',
+      CreatedDate: '2025-09-19T09:45:01.146',
+      UpdatedDate: '2025-09-19T09:54:30.0113693',
+      CreatedBy: 'sirisha Bommuluri',
+      Rating: 0
+    },
+    {
+      Id: 633,
+      Title: 'React',
+      CourseTypeId: 1,
+      CategoryName: 'Technology',
+      CourseLevelId: 0,
+      Description: '<p>\tReact.js</p>',
+      ThumbnailUrl: '',
+      CreatedDate: '2025-09-22T06:36:17.375',
+      UpdatedDate: '2025-09-22T06:36:17.375',
+      CreatedBy: 'sirisha Bommuluri',
+      Rating: 0
+    },
+    {
+      Id: 636,
+      Title: 'ddede',
+      CourseTypeId: 1,
+      CategoryName: 'Technology',
+      CourseLevelId: 0,
+      Description: '<p>dwwcs</p>',
+      ThumbnailUrl: '',
+      CreatedDate: '2025-09-22T13:23:15.549',
+      UpdatedDate: '2025-09-22T13:23:15.549',
+      CreatedBy: 'Hemanth Sakinetipalli',
+      Rating: 0
+    },
+    {
+      Id: 732,
+      Title: 'react',
+      CourseTypeId: 1,
+      CategoryName: 'Technology',
+      CourseLevelId: 0,
+      Description: '<p>React</p>',
+      ThumbnailUrl: '',
+      CreatedDate: '2025-09-29T10:30:31.113',
+      UpdatedDate: '2025-09-29T10:30:31.113',
+      CreatedBy: 'sirisha Bommuluri',
+      Rating: 0
+    },
+    {
+      Id: 761,
+      Title: 'Learn AI Prompting (A Ready Handbook)',
+      CourseTypeId: 3,
+      CategoryName: 'Technology',
+      CourseLevelId: 0,
+      Description: '<p>Sample Description will come and edit it later.</p>',
+      ThumbnailUrl: '',
+      CreatedDate: '2025-10-04T02:35:38.06',
+      UpdatedDate: '2025-10-04T02:35:51.3263666',
+      CreatedBy: 'Akshay Tyagi',
+      Rating: 0
+    }
+  ],
+  TotalSections: 0,
+  TotalEnrollments: 0,
+  TotalReviews: 0,
+  TotalAverageRating: 0,
+  IsEnrolled: false
+}
+Status: 200
+Deleting course with id: 1018
+DELETE Status: 204
+Verifying course is deleted: 1018
+Final GET Status: 204
+Final GET Response after delete: 
