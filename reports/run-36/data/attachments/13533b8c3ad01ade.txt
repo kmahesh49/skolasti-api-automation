@@ -1,0 +1,19 @@
+Creating resource at: /Video/create
+Payload: {
+  "Videos": [
+    {
+      "FileId": "qrtWP2A4JdThiYzeSSHyQuKbvawD37sv",
+      "FileName": "questioningly",
+      "CategoryId": 1,
+      "IsVrEnabled": false,
+      "IsPublic": true,
+      "VideoType": 2,
+      "CdnUrl": "/videos/Z0tMzEkgoRKRr59X0jTtNC80opPRpD56.m3u8",
+      "IsSharingAllowed": true,
+      "Points": 0
+    }
+  ]
+}
+Raw response: Missing Authorization token
+Status code: 401
+Create Response: null

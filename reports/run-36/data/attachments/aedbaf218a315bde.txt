@@ -1,0 +1,25 @@
+Creating resource at: /ContentDocument/createcontentdocument
+Payload: [
+  {
+    "TenantId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "Id": 0,
+    "Title": "aurum consequuntur",
+    "Url": "https://www.gurukultti.org/admin/notice/javascript.pdf",
+    "CdnUrl": "https://www.gurukultti.org/admin/notice/javascript.pdf",
+    "ContentRefId": 4383,
+    "ContentRefTypeId": 1,
+    "FileName": "javascript.pdf",
+    "FileId": "2nJ7bDQpENV9yt0hgnnv112aKnRG3CEw",
+    "Extension": "pdf",
+    "CreatedDate": "2025-12-10T04:09:01.060+00:00",
+    "UpdatedDate": "2025-12-10T04:09:01.073+00:00",
+    "DocumentSize": 738,
+    "ClientId": "",
+    "IsActive": true,
+    "IsDeleted": true,
+    "IsPublished": true
+  }
+]
+Raw response: Missing Authorization token
+Status code: 401
+Create Response: null

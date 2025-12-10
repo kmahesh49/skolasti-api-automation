@@ -1,0 +1,245 @@
+Fetching course levels...
+Getting resource from: /Course/courseslevels
+Attempt 1: Status: 401
+Attempt 1: Raw response: Missing Authorization token
+✓ Level 1: Beginner validated
+✓ Level 2: Intermediate validated
+✓ Level 3: Advanced validated
+All Levels validation attempted
+Fetching course types...
+Getting resource from: /Course/coursestypes
+Attempt 1: Status: 401
+Attempt 1: Raw response: Missing Authorization token
+✓ Type 1: Offline validated
+✓ Type 2: Online validated
+✓ Type 3: DigitalDownload validated
+All Types validation attempted
+Creating resource at: /Course/createcourse
+Payload: {
+  "aiText": "Valde conor annus tero tamisium.",
+  "title": "tabesco temporibus atavus",
+  "titlePlaceholder": "spes saepe asperiores accusantium una",
+  "courseType": "offline",
+  "courseTypeLabel": "Course Type",
+  "courseCategoryLabel": "Category",
+  "courseCategory": "0",
+  "courseLevelLabel": "Course Level",
+  "courseLevel": "advanced",
+  "courseLevelId": 2,
+  "description": "Cunae repudiandae accusamus adinventitias amet atrox. Teneo cervus currus succedo curriculum. Colligo complectus desidero admiratio.",
+  "descriptionPlaceholder": "Course Description Goes here",
+  "skillsSectionLabel": "What skills students will gain from this course?",
+  "skills": [
+    "",
+    "",
+    "",
+    ""
+  ],
+  "skillsPlaceholders": [
+    "e.g., JavaScript fundamentals, DOM manipulation",
+    "e.g., ES6+ features, async programming",
+    "e.g., React.js basics, component lifecycle",
+    "e.g., State management, hooks usage"
+  ],
+  "courseTypeId": 1,
+  "categories": [
+    {
+      "Id": 0,
+      "PlaylistCategoryName": "Leadership",
+      "PlaylistCategoryDescription": "Entertainment",
+      "CreatedDate": "2025-02-14T05:41:21.1666667",
+      "UpdatedDate": "2025-02-14T05:41:21.17",
+      "Playlists": []
+    },
+    {
+      "Id": 1,
+      "PlaylistCategoryName": "Technology",
+      "PlaylistCategoryDescription": "Technology",
+      "CreatedDate": "2025-02-18T14:03:19.4966667",
+      "UpdatedDate": "2025-02-18T14:03:19.4966667",
+      "Playlists": []
+    },
+    {
+      "Id": 2,
+      "PlaylistCategoryName": "Soft Skills",
+      "PlaylistCategoryDescription": "Soft Skills",
+      "CreatedDate": "2025-02-18T14:03:19.5066667",
+      "UpdatedDate": "2025-02-18T14:03:19.5066667",
+      "Playlists": []
+    },
+    {
+      "Id": 3,
+      "PlaylistCategoryName": "Production",
+      "PlaylistCategoryDescription": "Production",
+      "CreatedDate": "2025-02-18T14:03:19.51",
+      "UpdatedDate": "2025-02-18T14:03:19.51",
+      "Playlists": []
+    },
+    {
+      "Id": 4,
+      "PlaylistCategoryName": "Learning",
+      "PlaylistCategoryDescription": "Learning",
+      "CreatedDate": "2025-02-18T14:03:19.5166667",
+      "UpdatedDate": "2025-02-18T14:03:19.5166667",
+      "Playlists": []
+    },
+    {
+      "Id": 5,
+      "PlaylistCategoryName": "Life style",
+      "PlaylistCategoryDescription": "Life style",
+      "CreatedDate": "2025-02-25T13:40:00.28",
+      "UpdatedDate": "2025-02-25T13:40:00.28",
+      "Playlists": []
+    },
+    {
+      "Id": 6,
+      "PlaylistCategoryName": "LIfestyle",
+      "PlaylistCategoryDescription": "LIfestyle",
+      "CreatedDate": "2025-03-28T13:15:35.69",
+      "UpdatedDate": "2025-03-28T13:15:35.69",
+      "Playlists": []
+    }
+  ],
+  "CategoryId": 0,
+  "existingSkills": [],
+  "CreatedBy": "f7103da6-fc7a-4cfd-880b-89616e6deeea",
+  "UpdatedBy": "f7103da6-fc7a-4cfd-880b-89616e6deeea",
+  "Createddate": "2025-12-10T04:08:49.050+00:00",
+  "UpdatedDate": "2025-12-10T04:08:49.069+00:00",
+  "state": "saved"
+}
+Raw response: Missing Authorization token
+Status code: 401
+Create Response: null
+Created Course ID: undefined
+Fetching all courses with date range: 2025-12-06T04:08:49.442+00:00 to 2025-12-10T04:08:49.442+00:00
+POST request to: /Course/getallcourse?courseType=1
+Payload: {
+  "PageNumber": 1,
+  "PageSize": 20,
+  "IncludeAllPage": true,
+  "SortField": "",
+  "SortType": "",
+  "FilterField": "",
+  "FilterText": "",
+  "StartDate": "2025-12-06T04:08:49.442+00:00",
+  "EndDate": "2025-12-10T04:08:49.442+00:00"
+}
+Raw response: Missing Authorization token
+Status code: 401
+POST Response: null
+Total courses retrieved: 0
+Getting resource from: /Course/getbyidcourse?id=undefined
+Attempt 1: Status: 401
+Attempt 1: Raw response: Missing Authorization token
+Course details retrieved successfully
+Updating resource at: /Course/updatecourse
+Payload: {
+  "aiText": "Tutis creo sumptus amaritudo conscendo caelum.",
+  "title": "adiuvo ver delinquo",
+  "titlePlaceholder": "truculenter defaeco subnecto casus vindico",
+  "courseType": "online",
+  "courseTypeLabel": "Course Type",
+  "courseCategoryLabel": "Category",
+  "courseCategory": "0",
+  "courseLevelLabel": "Course Level",
+  "courseLevel": "intermediate",
+  "courseLevelId": 1,
+  "description": "Stipes tui nihil adopto sapiente carpo exercitationem abundans benevolentia. Canonicus vitium urbs attero. Tabesco cupio cubitum adiuvo velit corporis alo bestia trans spoliatio.",
+  "descriptionPlaceholder": "Course Description Goes here",
+  "skillsSectionLabel": "What skills students will gain from this course?",
+  "skills": [
+    "",
+    "",
+    "",
+    ""
+  ],
+  "skillsPlaceholders": [
+    "e.g., JavaScript fundamentals, DOM manipulation",
+    "e.g., ES6+ features, async programming",
+    "e.g., React.js basics, component lifecycle",
+    "e.g., State management, hooks usage"
+  ],
+  "courseTypeId": 1,
+  "categories": [
+    {
+      "Id": 0,
+      "PlaylistCategoryName": "Leadership",
+      "PlaylistCategoryDescription": "Entertainment",
+      "CreatedDate": "2025-02-14T05:41:21.1666667",
+      "UpdatedDate": "2025-02-14T05:41:21.17",
+      "Playlists": []
+    },
+    {
+      "Id": 1,
+      "PlaylistCategoryName": "Technology",
+      "PlaylistCategoryDescription": "Technology",
+      "CreatedDate": "2025-02-18T14:03:19.4966667",
+      "UpdatedDate": "2025-02-18T14:03:19.4966667",
+      "Playlists": []
+    },
+    {
+      "Id": 2,
+      "PlaylistCategoryName": "Soft Skills",
+      "PlaylistCategoryDescription": "Soft Skills",
+      "CreatedDate": "2025-02-18T14:03:19.5066667",
+      "UpdatedDate": "2025-02-18T14:03:19.5066667",
+      "Playlists": []
+    },
+    {
+      "Id": 3,
+      "PlaylistCategoryName": "Production",
+      "PlaylistCategoryDescription": "Production",
+      "CreatedDate": "2025-02-18T14:03:19.51",
+      "UpdatedDate": "2025-02-18T14:03:19.51",
+      "Playlists": []
+    },
+    {
+      "Id": 4,
+      "PlaylistCategoryName": "Learning",
+      "PlaylistCategoryDescription": "Learning",
+      "CreatedDate": "2025-02-18T14:03:19.5166667",
+      "UpdatedDate": "2025-02-18T14:03:19.5166667",
+      "Playlists": []
+    },
+    {
+      "Id": 5,
+      "PlaylistCategoryName": "Life style",
+      "PlaylistCategoryDescription": "Life style",
+      "CreatedDate": "2025-02-25T13:40:00.28",
+      "UpdatedDate": "2025-02-25T13:40:00.28",
+      "Playlists": []
+    },
+    {
+      "Id": 6,
+      "PlaylistCategoryName": "LIfestyle",
+      "PlaylistCategoryDescription": "LIfestyle",
+      "CreatedDate": "2025-03-28T13:15:35.69",
+      "UpdatedDate": "2025-03-28T13:15:35.69",
+      "Playlists": []
+    }
+  ],
+  "CategoryId": 0,
+  "existingSkills": [],
+  "CreatedBy": "f7103da6-fc7a-4cfd-880b-89616e6deeea",
+  "UpdatedBy": "f7103da6-fc7a-4cfd-880b-89616e6deeea",
+  "Createddate": "2025-12-10T04:08:50.181+00:00",
+  "UpdatedDate": "2025-12-10T04:08:50.181+00:00",
+  "state": "saved"
+}
+Raw response: Missing Authorization token
+Status code: 401
+Update Response: null
+Course updated successfully
+Getting resource from: /Course/getbyidcourse?id=undefined
+Attempt 1: Status: 401
+Attempt 1: Raw response: Missing Authorization token
+Updated course details retrieved successfully
+Deleting resource at: /course/deletebyidcourse/undefined
+Delete Status: 401
+Course deleted successfully
+Verifying resource is deleted: /Course/getbyidcourse?id=undefined
+Verify Deleted Status: 401
+Verify Deleted Response: Missing Authorization token
+✓ PASS: Deleted resource /Course/getbyidcourse?id=undefined should not return 200, got 401
+Course deletion verified
