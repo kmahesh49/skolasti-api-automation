@@ -1,13 +1,53 @@
-const { expect } = require("@playwright/test");
+const { expect, test } = require("@playwright/test");
 
 /**
- * API Helper class for reusable CRUD operations
+ * API Helper class for reusable CRUD operations with soft assertions
  */
 class ApiHelper {
   constructor(request, baseURL, headers) {
     this.request = request;
     this.baseURL = baseURL;
     this.headers = headers;
+    this.softAssertions = [];
+  }
+
+  /**
+   * Soft assertion wrapper - records failures but continues execution
+   * @param {Function} assertion - Assertion function to execute
+   * @param {string} description - Description of what's being asserted
+   */
+  softAssert(assertion, description) {
+    try {
+      assertion();
+      console.log(`✓ PASS: ${description}`);
+    } catch (error) {
+      console.error(`✗ FAIL: ${description}`);
+      console.error(`  Error: ${error.message}`);
+      this.softAssertions.push({
+        description,
+        error: error.message,
+        stack: error.stack
+      });
+    }
+  }
+
+  /**
+   * Check all soft assertions and fail test if any failed
+   * Call this at the end of your test to report all failures
+   */
+  assertAll() {
+    if (this.softAssertions.length > 0) {
+      const failureReport = this.softAssertions.map((failure, index) => 
+        `\n${index + 1}. ${failure.description}\n   Error: ${failure.error}`
+      ).join('\n');
+      
+      console.error(`\n❌ TEST FAILED WITH ${this.softAssertions.length} ASSERTION(S):`);
+      console.error(failureReport);
+      
+      throw new Error(`Test completed with ${this.softAssertions.length} failed assertion(s):${failureReport}`);
+    } else {
+      console.log('\n✅ ALL ASSERTIONS PASSED');
+    }
   }
 
   /**
@@ -50,7 +90,9 @@ class ApiHelper {
     const responseBody = await this.parseResponse(response);
     console.log("POST Response:", responseBody);
 
-    expect(response.status()).toBe(expectedStatus);
+    this.softAssert(() => expect(response.status()).toBe(expectedStatus), 
+      `POST ${endpoint} should return status ${expectedStatus}, got ${response.status()}`);
+    
     return responseBody;
   }
 
@@ -61,16 +103,23 @@ class ApiHelper {
    * @param {string} itemType - Type of items being validated (for logging)
    */
   validateArrayData(actualArray, expectedArray, itemType = "item") {
-    expect(Array.isArray(actualArray)).toBeTruthy();
-    expect(actualArray.length).toBe(expectedArray.length);
+    this.softAssert(() => expect(Array.isArray(actualArray)).toBeTruthy(), 
+      `${itemType} response should be an array`);
+    
+    this.softAssert(() => expect(actualArray.length).toBe(expectedArray.length), 
+      `${itemType} array should have ${expectedArray.length} items, got ${actualArray?.length || 0}`);
     
     expectedArray.forEach((expectedItem, index) => {
-      expect(actualArray[index]).toHaveProperty("Id", expectedItem.Id);
-      expect(actualArray[index]).toHaveProperty("Name", expectedItem.Name);
+      this.softAssert(() => expect(actualArray[index]).toHaveProperty("Id", expectedItem.Id), 
+        `${itemType}[${index}] should have Id: ${expectedItem.Id}`);
+      
+      this.softAssert(() => expect(actualArray[index]).toHaveProperty("Name", expectedItem.Name), 
+        `${itemType}[${index}] should have Name: ${expectedItem.Name}`);
+      
       console.log(`✓ ${itemType} ${expectedItem.Id}: ${expectedItem.Name} validated`);
     });
     
-    console.log(`All ${itemType}s validated successfully`);
+    console.log(`All ${itemType}s validation attempted`);
   }
 
   /**
@@ -92,8 +141,11 @@ class ApiHelper {
     const responseBody = await this.parseResponse(response);
     console.log("Create Response:", responseBody);
 
-    expect(response.ok()).toBeTruthy();
-    expect(response.status()).toBe(expectedStatus);
+    this.softAssert(() => expect(response.ok()).toBeTruthy(), 
+      `CREATE ${endpoint} should be successful (2xx status)`);
+    
+    this.softAssert(() => expect(response.status()).toBe(expectedStatus), 
+      `CREATE ${endpoint} should return status ${expectedStatus}, got ${response.status()}`);
 
     return responseBody;
   }
@@ -127,11 +179,13 @@ class ApiHelper {
             responseBody = JSON.parse(rawText);
           }
           console.log("Get Response:", responseBody);
-          expect(response.status()).toBe(expectedStatus);
+          this.softAssert(() => expect(response.status()).toBe(expectedStatus), 
+            `GET ${endpoint} should return status ${expectedStatus}, got ${response.status()}`);
           break;
         } catch (err) {
           console.error("Failed to parse JSON:", err);
-          expect(response.status()).toBe(expectedStatus);
+          this.softAssert(() => expect(response.status()).toBe(expectedStatus), 
+            `GET ${endpoint} should return status ${expectedStatus}, got ${response.status()}`);
           break;
         }
       } else if (response.status() === 204 && expectedStatus === 200) {
@@ -140,15 +194,19 @@ class ApiHelper {
         if (attempts < maxRetries) {
           await new Promise(res => setTimeout(res, delayMs));
         } else {
-          expect(response.status()).toBe(expectedStatus);
+          this.softAssert(() => expect(response.status()).toBe(expectedStatus), 
+            `GET ${endpoint} should return status ${expectedStatus}, got ${response.status()} after ${maxRetries} retries`);
         }
       } else {
-        expect(response.status()).toBe(expectedStatus);
+        this.softAssert(() => expect(response.status()).toBe(expectedStatus), 
+          `GET ${endpoint} should return status ${expectedStatus}, got ${response.status()}`);
         break;
       }
     }
 
-    expect(response.ok()).toBeTruthy();
+    this.softAssert(() => expect(response.ok()).toBeTruthy(), 
+      `GET ${endpoint} should be successful (2xx status)`);
+    
     return responseBody;
   }
 
@@ -171,8 +229,11 @@ class ApiHelper {
     const responseBody = await this.parseResponse(response);
     console.log("Update Response:", responseBody);
 
-    expect(response.ok()).toBeTruthy();
-    expect(response.status()).toBe(expectedStatus);
+    this.softAssert(() => expect(response.ok()).toBeTruthy(), 
+      `UPDATE ${endpoint} should be successful (2xx status)`);
+    
+    this.softAssert(() => expect(response.status()).toBe(expectedStatus), 
+      `UPDATE ${endpoint} should return status ${expectedStatus}, got ${response.status()}`);
 
     return responseBody;
   }
@@ -204,8 +265,11 @@ class ApiHelper {
       }
     }
 
-    expect(response.ok()).toBeTruthy();
-    expect(response.status()).toBe(expectedStatus);
+    this.softAssert(() => expect(response.ok()).toBeTruthy(), 
+      `DELETE ${endpoint} should be successful (2xx status)`);
+    
+    this.softAssert(() => expect(response.status()).toBe(expectedStatus), 
+      `DELETE ${endpoint} should return status ${expectedStatus}, got ${response.status()}`);
 
     return responseBody;
   }
@@ -228,7 +292,8 @@ class ApiHelper {
     console.log("Verify Deleted Response:", rawText);
 
     // Deleted items should NOT return 200
-    expect(response.status()).not.toBe(200);
+    this.softAssert(() => expect(response.status()).not.toBe(200), 
+      `Deleted resource ${endpoint} should not return 200, got ${response.status()}`);
   }
 }
 
