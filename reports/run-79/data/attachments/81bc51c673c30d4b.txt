@@ -1,0 +1,302 @@
+✗ FAIL: GET /Course/courseslevels should return status 200, got 401
+  Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [200]
+✗ FAIL: GET /Course/courseslevels should be successful (2xx status)
+  Error: expect(received).toBeTruthy()
+
+Received: false
+✗ FAIL: Level response should be an array
+  Error: expect(received).toBeTruthy()
+
+Received: false
+✗ FAIL: Level array should have 3 items, got 0
+  Error: Cannot read properties of undefined (reading 'length')
+✗ FAIL: Level[0] should have Id: 1
+  Error: Cannot read properties of undefined (reading '0')
+✗ FAIL: Level[0] should have Name: Beginner
+  Error: Cannot read properties of undefined (reading '0')
+✗ FAIL: Level[1] should have Id: 2
+  Error: Cannot read properties of undefined (reading '1')
+✗ FAIL: Level[1] should have Name: Intermediate
+  Error: Cannot read properties of undefined (reading '1')
+✗ FAIL: Level[2] should have Id: 3
+  Error: Cannot read properties of undefined (reading '2')
+✗ FAIL: Level[2] should have Name: Advanced
+  Error: Cannot read properties of undefined (reading '2')
+✗ FAIL: GET /Course/coursestypes should return status 200, got 401
+  Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [200]
+✗ FAIL: GET /Course/coursestypes should be successful (2xx status)
+  Error: expect(received).toBeTruthy()
+
+Received: false
+✗ FAIL: Type response should be an array
+  Error: expect(received).toBeTruthy()
+
+Received: false
+✗ FAIL: Type array should have 3 items, got 0
+  Error: Cannot read properties of undefined (reading 'length')
+✗ FAIL: Type[0] should have Id: 1
+  Error: Cannot read properties of undefined (reading '0')
+✗ FAIL: Type[0] should have Name: Offline
+  Error: Cannot read properties of undefined (reading '0')
+✗ FAIL: Type[1] should have Id: 2
+  Error: Cannot read properties of undefined (reading '1')
+✗ FAIL: Type[1] should have Name: Online
+  Error: Cannot read properties of undefined (reading '1')
+✗ FAIL: Type[2] should have Id: 3
+  Error: Cannot read properties of undefined (reading '2')
+✗ FAIL: Type[2] should have Name: DigitalDownload
+  Error: Cannot read properties of undefined (reading '2')
+Failed to parse JSON: SyntaxError: Unexpected token M in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at ApiHelper.parseResponse (/home/runner/work/skolasti-api-automation/skolasti-api-automation/utils/ApiHelper.js:66:29)
+    at ApiHelper.create (/home/runner/work/skolasti-api-automation/skolasti-api-automation/utils/ApiHelper.js:144:26)
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/tests/Course/Course.spec.js:37:28
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:310:9
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/testInfo.js:305:11
+    at TimeoutManager.withRunnable (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/timeoutManager.js:67:14)
+    at TestInfoImpl._runWithTimeout (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/testInfo.js:303:7)
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:308:7
+    at WorkerMain._runTest (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:283:5)
+    at WorkerMain.runTestGroup (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:198:11)
+    at process.<anonymous> (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/common/process.js:65:22)
+✗ FAIL: CREATE /Course/createcourse should be successful (2xx status)
+  Error: expect(received).toBeTruthy()
+
+Received: false
+✗ FAIL: CREATE /Course/createcourse should return status 200, got 401
+  Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 200
+Received: 401
+Failed to parse JSON: SyntaxError: Unexpected token M in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at ApiHelper.parseResponse (/home/runner/work/skolasti-api-automation/skolasti-api-automation/utils/ApiHelper.js:66:29)
+    at ApiHelper.post (/home/runner/work/skolasti-api-automation/skolasti-api-automation/utils/ApiHelper.js:90:26)
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/tests/Course/Course.spec.js:53:24
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:310:9
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/testInfo.js:305:11
+    at TimeoutManager.withRunnable (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/timeoutManager.js:67:14)
+    at TestInfoImpl._runWithTimeout (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/testInfo.js:303:7)
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:308:7
+    at WorkerMain._runTest (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:283:5)
+    at WorkerMain.runTestGroup (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:198:11)
+    at process.<anonymous> (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/common/process.js:65:22)
+✗ FAIL: POST /Course/getallcourse?courseType=1 should return status 200, got 401
+  Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [200]
+✗ FAIL: Get all courses should return an array
+  Error: expect(received).toBeTruthy()
+
+Received: false
+✗ FAIL: GET /Course/getbyidcourse?id=undefined should return status 200, got 401
+  Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [200]
+✗ FAIL: GET /Course/getbyidcourse?id=undefined should be successful (2xx status)
+  Error: expect(received).toBeTruthy()
+
+Received: false
+Failed to parse JSON: SyntaxError: Unexpected token M in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at ApiHelper.parseResponse (/home/runner/work/skolasti-api-automation/skolasti-api-automation/utils/ApiHelper.js:66:29)
+    at ApiHelper.update (/home/runner/work/skolasti-api-automation/skolasti-api-automation/utils/ApiHelper.js:235:26)
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/tests/Course/Course.spec.js:82:28
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:310:9
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/testInfo.js:305:11
+    at TimeoutManager.withRunnable (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/timeoutManager.js:67:14)
+    at TestInfoImpl._runWithTimeout (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/testInfo.js:303:7)
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:308:7
+    at WorkerMain._runTest (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:283:5)
+    at WorkerMain.runTestGroup (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:198:11)
+    at process.<anonymous> (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/common/process.js:65:22)
+✗ FAIL: UPDATE /Course/updatecourse should be successful (2xx status)
+  Error: expect(received).toBeTruthy()
+
+Received: false
+✗ FAIL: UPDATE /Course/updatecourse should return status 201, got 401
+  Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 201
+Received: 401
+✗ FAIL: GET /Course/getbyidcourse?id=undefined should return status 200, got 401
+  Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [200]
+✗ FAIL: GET /Course/getbyidcourse?id=undefined should be successful (2xx status)
+  Error: expect(received).toBeTruthy()
+
+Received: false
+DELETE JSON parse failed: SyntaxError: Unexpected token M in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at ApiHelper.delete (/home/runner/work/skolasti-api-automation/skolasti-api-automation/utils/ApiHelper.js:266:29)
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/tests/Course/Course.spec.js:93:5
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:310:9
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/testInfo.js:305:11
+    at TimeoutManager.withRunnable (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/timeoutManager.js:67:14)
+    at TestInfoImpl._runWithTimeout (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/testInfo.js:303:7)
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:308:7
+    at WorkerMain._runTest (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:283:5)
+    at WorkerMain.runTestGroup (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:198:11)
+    at process.<anonymous> (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/common/process.js:65:22)
+DELETE raw: Missing Authorization token
+✗ FAIL: DELETE /course/deletebyidcourse/undefined should be successful (2xx status)
+  Error: expect(received).toBeTruthy()
+
+Received: false
+✗ FAIL: DELETE /course/deletebyidcourse/undefined should return status 204, got 401
+  Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 204
+Received: 401
+
+❌ TEST FAILED WITH 32 ASSERTION(S):
+
+1. GET /Course/courseslevels should return status 200, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [200]
+
+2. GET /Course/courseslevels should be successful (2xx status)
+   Error: expect(received).toBeTruthy()
+
+Received: false
+
+3. Level response should be an array
+   Error: expect(received).toBeTruthy()
+
+Received: false
+
+4. Level array should have 3 items, got 0
+   Error: Cannot read properties of undefined (reading 'length')
+
+5. Level[0] should have Id: 1
+   Error: Cannot read properties of undefined (reading '0')
+
+6. Level[0] should have Name: Beginner
+   Error: Cannot read properties of undefined (reading '0')
+
+7. Level[1] should have Id: 2
+   Error: Cannot read properties of undefined (reading '1')
+
+8. Level[1] should have Name: Intermediate
+   Error: Cannot read properties of undefined (reading '1')
+
+9. Level[2] should have Id: 3
+   Error: Cannot read properties of undefined (reading '2')
+
+10. Level[2] should have Name: Advanced
+   Error: Cannot read properties of undefined (reading '2')
+
+11. GET /Course/coursestypes should return status 200, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [200]
+
+12. GET /Course/coursestypes should be successful (2xx status)
+   Error: expect(received).toBeTruthy()
+
+Received: false
+
+13. Type response should be an array
+   Error: expect(received).toBeTruthy()
+
+Received: false
+
+14. Type array should have 3 items, got 0
+   Error: Cannot read properties of undefined (reading 'length')
+
+15. Type[0] should have Id: 1
+   Error: Cannot read properties of undefined (reading '0')
+
+16. Type[0] should have Name: Offline
+   Error: Cannot read properties of undefined (reading '0')
+
+17. Type[1] should have Id: 2
+   Error: Cannot read properties of undefined (reading '1')
+
+18. Type[1] should have Name: Online
+   Error: Cannot read properties of undefined (reading '1')
+
+19. Type[2] should have Id: 3
+   Error: Cannot read properties of undefined (reading '2')
+
+20. Type[2] should have Name: DigitalDownload
+   Error: Cannot read properties of undefined (reading '2')
+
+21. CREATE /Course/createcourse should be successful (2xx status)
+   Error: expect(received).toBeTruthy()
+
+Received: false
+
+22. CREATE /Course/createcourse should return status 200, got 401
+   Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 200
+Received: 401
+
+23. POST /Course/getallcourse?courseType=1 should return status 200, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [200]
+
+24. Get all courses should return an array
+   Error: expect(received).toBeTruthy()
+
+Received: false
+
+25. GET /Course/getbyidcourse?id=undefined should return status 200, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [200]
+
+26. GET /Course/getbyidcourse?id=undefined should be successful (2xx status)
+   Error: expect(received).toBeTruthy()
+
+Received: false
+
+27. UPDATE /Course/updatecourse should be successful (2xx status)
+   Error: expect(received).toBeTruthy()
+
+Received: false
+
+28. UPDATE /Course/updatecourse should return status 201, got 401
+   Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 201
+Received: 401
+
+29. GET /Course/getbyidcourse?id=undefined should return status 200, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [200]
+
+30. GET /Course/getbyidcourse?id=undefined should be successful (2xx status)
+   Error: expect(received).toBeTruthy()
+
+Received: false
+
+31. DELETE /course/deletebyidcourse/undefined should be successful (2xx status)
+   Error: expect(received).toBeTruthy()
+
+Received: false
+
+32. DELETE /course/deletebyidcourse/undefined should return status 204, got 401
+   Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 204
+Received: 401

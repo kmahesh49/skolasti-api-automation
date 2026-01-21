@@ -1,0 +1,34 @@
+
+========== SETUP: Create Quiz for Negative Tests ==========
+Creating resource at: /UserQuizAndAssesment/createquiz
+Payload: {
+  "Title": "Negative Test Quiz 1768995378025",
+  "NumberOfRetake": 3,
+  "PassScoreInPertcentage": "70",
+  "TotalQuestions": 6,
+  "TotalScore": 110,
+  "IsOptional": true,
+  "QuizLevels": [
+    {
+      "LevelId": 0,
+      "NumberOfQuestions": 1,
+      "PassScoreInPertcentage": 70,
+      "PointsPerQuestion": 10
+    },
+    {
+      "LevelId": 1,
+      "NumberOfQuestions": 2,
+      "PassScoreInPertcentage": 70,
+      "PointsPerQuestion": 20
+    },
+    {
+      "LevelId": 2,
+      "NumberOfQuestions": 3,
+      "PassScoreInPertcentage": 70,
+      "PointsPerQuestion": 20
+    }
+  ]
+}
+Raw response: Missing Authorization token
+Status code: 401
+Create Response: null

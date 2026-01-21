@@ -1,0 +1,8 @@
+
+========== GET: BOTH CATEGORY TYPES FOR COMPARISON ==========
+Getting resource from: /Category/getallcategories
+Attempt 1: Status: 401
+Attempt 1: Raw response: Missing Authorization token
+Getting resource from: /Category/getallplaylistcategories
+Attempt 1: Status: 401
+Attempt 1: Raw response: Missing Authorization token

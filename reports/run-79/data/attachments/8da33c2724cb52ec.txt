@@ -1,0 +1,5 @@
+
+========== STEP 1: GET QUIZ LEVELS ==========
+Getting resource from: /UserQuizAndAssesment/getquizlevels
+Attempt 1: Status: 401
+Attempt 1: Raw response: Missing Authorization token

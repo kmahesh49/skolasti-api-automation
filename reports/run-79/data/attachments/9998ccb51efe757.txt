@@ -1,0 +1,18 @@
+✗ FAIL: GET /Category/getallcategories should return status 200, got 401
+  Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [200]
+✗ FAIL: GET /Category/getallcategories should be successful (2xx status)
+  Error: expect(received).toBeTruthy()
+
+Received: false
+✗ FAIL: GET /Category/getallplaylistcategories should return status 200, got 401
+  Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [200]
+✗ FAIL: GET /Category/getallplaylistcategories should be successful (2xx status)
+  Error: expect(received).toBeTruthy()
+
+Received: false

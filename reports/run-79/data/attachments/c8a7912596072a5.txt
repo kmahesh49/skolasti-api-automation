@@ -1,0 +1,23 @@
+Failed to parse JSON: SyntaxError: Unexpected token M in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at ApiHelper.parseResponse (/home/runner/work/skolasti-api-automation/skolasti-api-automation/utils/ApiHelper.js:66:29)
+    at ApiHelper.create (/home/runner/work/skolasti-api-automation/skolasti-api-automation/utils/ApiHelper.js:144:26)
+    at createTestQuiz (/home/runner/work/skolasti-api-automation/skolasti-api-automation/tests/Client/QuizCrud.spec.js:71:22)
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/tests/Client/QuizCrud.spec.js:842:24
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:310:9
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/testInfo.js:305:11
+    at TimeoutManager.withRunnable (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/timeoutManager.js:67:14)
+    at TestInfoImpl._runWithTimeout (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/testInfo.js:303:7)
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:308:7
+    at WorkerMain._runTest (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:283:5)
+    at WorkerMain.runTestGroup (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:198:11)
+    at process.<anonymous> (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/common/process.js:65:22)
+✗ FAIL: CREATE /UserQuizAndAssesment/createquiz should be successful (2xx status)
+  Error: expect(received).toBeTruthy()
+
+Received: false
+✗ FAIL: CREATE /UserQuizAndAssesment/createquiz should return status 200, got 401
+  Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 200
+Received: 401

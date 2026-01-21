@@ -1,0 +1,23 @@
+Creating resource at: /Audio/createaudio
+Payload: [
+  {
+    "Id": 0,
+    "Title": "Nobody Does it Better.mp3",
+    "Description": "",
+    "Transcript": "",
+    "audioType": 1,
+    "AudioUrl": "",
+    "AudioLength": 0,
+    "FileName": "(Everything I Do) I Do it For You.mp3",
+    "Extension": "mp3",
+    "CreatedDate": "2026-01-21T11:36:28.751+00:00",
+    "UpdatedDate": "2026-01-21T11:36:28.765+00:00",
+    "AudioSize": 1614270,
+    "IsActive": true,
+    "IsDeleted": false,
+    "IsPublished": false
+  }
+]
+Raw response: Missing Authorization token
+Status code: 401
+Create Response: null

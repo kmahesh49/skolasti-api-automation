@@ -1,0 +1,26 @@
+Creating resource at: /ContentDocument/createcontentdocument
+Payload: [
+  {
+    "Id": 0,
+    "Title": "bene.pdf",
+    "Url": "",
+    "CdnUrl": "",
+    "ContentRefId": 9697,
+    "ContentRefTypeId": 1,
+    "FileName": "bene.pdf",
+    "FileId": "",
+    "documentType": 1,
+    "Extension": "pdf",
+    "CreatedDate": "2026-01-21T11:36:43.982+00:00",
+    "UpdatedDate": "2026-01-21T11:36:44.000+00:00",
+    "DocumentSize": 802548,
+    "IsActive": true,
+    "IsDeleted": false,
+    "IsPublished": false,
+    "BlobPath": "cdn/documents/bene.pdf",
+    "ContainerName": "8RY3NPyX"
+  }
+]
+Raw response: Missing Authorization token
+Status code: 401
+Create Response: null

@@ -1,0 +1,22 @@
+
+========== SETUP: Create Quiz with Questions for Execution Flow ==========
+Creating resource at: /UserQuizAndAssesment/createquiz
+Payload: {
+  "Title": "Execution Flow Quiz 1768995382627",
+  "NumberOfRetake": 3,
+  "PassScoreInPertcentage": "70",
+  "TotalQuestions": 3,
+  "TotalScore": 110,
+  "IsOptional": true,
+  "QuizLevels": [
+    {
+      "LevelId": 0,
+      "NumberOfQuestions": 3,
+      "PassScoreInPertcentage": 60,
+      "PointsPerQuestion": 10
+    }
+  ]
+}
+Raw response: Missing Authorization token
+Status code: 401
+Create Response: null

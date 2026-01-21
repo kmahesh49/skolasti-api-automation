@@ -1,0 +1,26 @@
+Creating resource at: /Video/create
+Payload: {
+  "Videos": [
+    {
+      "FileName": "because_yum_voter",
+      "state": "Uploading",
+      "FileId": "XXv6IL3bfLNFr9SadPWrhUASb8G0WjT1",
+      "IsSharingAllowed": true,
+      "IsPublic": true,
+      "VideoType": 2,
+      "CdnUrl": "",
+      "credentials": {
+        "policy": "HdXa1ZYDaJ6hfTZZ0VkJaTmri349aLvajBXCNexMqE8XOBxPM5H1lSzqSsrsMpLh8j0wbwshZKHJdW1jSoB01TmzYWdQaNaMBHhihYpwaTRq5hxufRMqnrXVSlg5chgjOg9pXPBXNre7C3Hcagq8nukS4OABLbSWo5YlsyqDrmI4DfDscLEsD84nVTYiDrLEtF2D1i6p",
+        "key": "orig/omRxbmBEz0nMh",
+        "x-amz-signature": "qnhSZcsaL8s7I8iz1Lya1LCHICdEnFsYcdGHHfYZWPrvTBt2JwAt7XUZ5Yitr9kv",
+        "x-amz-algorithm": "AWS4-HMAC-SHA256",
+        "x-amz-date": "20260121T000000Z",
+        "x-amz-credential": "AKIAJ2S2LBWKGN3W33GQ/20260121/ap-southeast-1/s3/aws4_request",
+        "uploadLink": "https://vdo-ap-southeast.s3-accelerate.amazonaws.com"
+      }
+    }
+  ]
+}
+Raw response: Missing Authorization token
+Status code: 401
+Create Response: null
