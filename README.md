@@ -109,58 +109,176 @@ skolasti-api-automation/
 
 ## ⚙️ Configuration
 
-### API Configuration
+### Environment Setup
 
-Update `config/config.js` with your API details:
+The framework supports **two environments**: **DEV** (default) and **TEST**
 
-```javascript
-module.exports = {
-  baseURL: "https://api.skolasti.com",
-  headers: {
-    "Content-Type": "application/json",
-    "x-api-key": "your-api-key-here"
-  }
-};
+#### Environment Base URLs
+
+| Service | DEV Environment | TEST Environment |
+|---------|----------------|------------------|
+| **Admin** | https://adminapi.skolasti.com | https://adminapi.skillrok.com |
+| **Course** | https://courseapi.skolasti.com | https://courseapi.skillrok.com |
+| **Client** | https://clientapi.skolasti.com | https://clientapi.skillrok.com |
+| **Tenant** | https://tenantapi.skolasti.com | https://tenantapi.skillrok.com |
+| **Marketing** | https://marketingapi.skolasti.com | https://marketingapi.skillrok.com |
+
+### Switching Between Environments
+
+#### Method 1: Using ENV Variable (Recommended)
+
+**On Windows (PowerShell):**
+```powershell
+# Run tests on DEV environment (default)
+$env:ENV="dev"; npm test
+
+# Run tests on TEST environment
+$env:ENV="test"; npm test
 ```
 
-### Environment Variables
+**On Windows (Command Prompt):**
+```cmd
+# Run tests on DEV environment (default)
+set ENV=dev && npm test
 
-For sensitive data, create a `.env` file:
+# Run tests on TEST environment
+set ENV=test && npm test
+```
+
+**On Mac/Linux:**
+```bash
+# Run tests on DEV environment (default)
+ENV=dev npm test
+
+# Run tests on TEST environment
+ENV=test npm test
+```
+
+#### Method 2: Permanent Environment Setting
+
+**On Windows (PowerShell):**
+```powershell
+# Set environment permanently for current session
+$env:ENV="test"
+
+# Run tests (will use TEST environment)
+npm test
+
+# Switch back to DEV
+$env:ENV="dev"
+npm test
+```
+
+**On Mac/Linux:**
+```bash
+# Set environment permanently for current session
+export ENV=test
+
+# Run tests (will use TEST environment)
+npm test
+
+# Switch back to DEV
+export ENV=dev
+npm test
+```
+
+### API Configuration
+
+The framework automatically switches base URLs based on the `ENV` variable.
+
+**Configuration file**: `config/config.js`
+
+```javascript
+// Current environment (dev or test)
+const currentEnv = process.env.ENV || 'dev';
+
+// Automatically uses correct URLs based on environment
+const { AdminAPIURL, CourseAPIURL, ClientAPIURL, TenantAPIURL, MarketingAPIURL } = require('./config/config.js');
+```
+
+### Environment Variables (Optional)
+
+For advanced configuration or CI/CD, create a `.env` file:
 
 ```env
-API_BASE_URL=https://api.skolasti.com
-API_KEY=your-api-key-here
+# Environment selection (dev or test)
+ENV=dev
+
+# Override specific API URLs (optional)
+ADMIN_API_URL=https://adminapi.skolasti.com
+COURSE_API_URL=https://courseapi.skolasti.com
+CLIENT_API_URL=https://clientapi.skolasti.com
+TENANT_API_URL=https://tenantapi.skolasti.com
+MARKETING_API_URL=https://marketingapi.skolasti.com
+
+# Custom token (optional)
+API_TOKEN=your-custom-token-here
 ```
 
 ## 🚀 Running Tests
 
+### Quick Start
+
+```bash
+# Run all tests on DEV environment (default)
+npm test
+
+# Run all tests on TEST environment
+$env:ENV="test"; npm test    # PowerShell
+set ENV=test && npm test     # Command Prompt
+```
+
 ### Run All Tests
 ```bash
+# DEV environment
 npm test
+
+# TEST environment (PowerShell)
+$env:ENV="test"; npm test
+
+# TEST environment (Command Prompt)
+set ENV=test && npm test
 ```
 
 ### Run Specific Test Suite
+
 ```bash
-# Course tests
+# Course tests on DEV
 npx playwright test tests/Course/CourseCrud.spec.js
 
-# Quiz tests
-npx playwright test tests/Quiz/QuizCrud.spec.js
+# Course tests on TEST (PowerShell)
+$env:ENV="test"; npx playwright test tests/Course/CourseCrud.spec.js
 
-# Student tests
-npx playwright test tests/Student/StudentCrud.spec.js
+# Quiz tests on TEST (Command Prompt)
+set ENV=test && npx playwright test tests/Quiz/QuizCrud.spec.js
 
-# Assignment tests
-npx playwright test tests/Assignment/AssignmentCrud.spec.js
+# Client Subscription tests on DEV
+npx playwright test tests/Client/Subscription.spec.js
+
+# Client Subscription tests on TEST (PowerShell)
+$env:ENV="test"; npx playwright test tests/Client/Subscription.spec.js
+```
+
+### Run Tests by Module
+
+```bash
+# All Client API tests on DEV
+npx playwright test tests/Client/
+
+# All Course API tests on TEST
+$env:ENV="test"; npx playwright test tests/Course/
+
+# All tests in specific folder
+$env:ENV="test"; npx playwright test tests/Quiz/
 ```
 
 ### Run with Different Reporters
 ```bash
-# HTML report
+# HTML report on DEV
 npm test -- --reporter=html
 
-# List reporter
-npm test -- --reporter=list
+# List reporter on TEST
+$env:ENV="test"; npm test -- --reporter=list
 
 # Dot reporter
 npm test -- --reporter=dot
@@ -168,8 +286,21 @@ npm test -- --reporter=dot
 
 ### Debug Mode
 ```bash
+# Debug on DEV
 npx playwright test --debug
+
+# Debug on TEST
+$env:ENV="test"; npx playwright test --debug
 ```
+
+### Environment-Specific Examples
+
+| Task | Windows PowerShell Command | Windows CMD Command |
+|------|---------------------------|---------------------|
+| Run all tests on DEV | `npm test` | `npm test` |
+| Run all tests on TEST | `$env:ENV="test"; npm test` | `set ENV=test && npm test` |
+| Run specific test on DEV | `npx playwright test tests/Client/Subscription.spec.js` | `npx playwright test tests/Client/Subscription.spec.js` |
+| Run specific test on TEST | `$env:ENV="test"; npx playwright test tests/Client/Subscription.spec.js` | `set ENV=test && npx playwright test tests/Client/Subscription.spec.js` |
 
 ## 📊 Reporting
 

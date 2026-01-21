@@ -6,7 +6,7 @@ const { DateTime } = require("luxon");
  */
 class PayloadGenerator {
   /**
-   * Generate Quiz payload with dynamic data
+   * Generate Quiz payload with dynamic data (legacy method)
    * @param {Object} overrides - Optional overrides for specific fields
    * @returns {Object} - Quiz payload
    */
@@ -41,6 +41,98 @@ class PayloadGenerator {
     };
 
     return { ...defaults, ...overrides };
+  }
+
+  /**
+   * Generate Quiz Create payload for ClientAPI
+   * @param {Object} overrides - Optional overrides for specific fields
+   * @returns {Object} - Quiz create payload
+   */
+  static generateQuizCreatePayload(overrides = {}) {
+    const defaults = {
+      Title: `Automated Quiz ${faker.lorem.words(3)} ${Date.now()}`,
+      NumberOfRetake: 3,
+      PassScoreInPertcentage: "70",
+      TotalQuestions: 6,
+      TotalScore: 110,
+      IsOptional: true,
+      QuizLevels: [
+        {
+          LevelId: 0, // Easy
+          NumberOfQuestions: 1,
+          PassScoreInPertcentage: 70,
+          PointsPerQuestion: 10
+        },
+        {
+          LevelId: 1, // Medium
+          NumberOfQuestions: 2,
+          PassScoreInPertcentage: 70,
+          PointsPerQuestion: 20
+        },
+        {
+          LevelId: 2, // Hard
+          NumberOfQuestions: 3,
+          PassScoreInPertcentage: 70,
+          PointsPerQuestion: 20
+        }
+      ]
+    };
+
+    return { ...defaults, ...overrides };
+  }
+
+  /**
+   * Generate Quiz Update payload for ClientAPI
+   * @param {number} quizId - The quiz ID to update
+   * @param {string} originalTitle - The original title for reference
+   * @param {Object} overrides - Optional overrides for specific fields
+   * @returns {Object} - Quiz update payload
+   */
+  static generateQuizUpdatePayload(quizId, originalTitle, overrides = {}) {
+    const defaults = {
+      Id: quizId,
+      Title: `${originalTitle} - Updated`,
+      NumberOfRetake: 3,
+      PassScoreInPertcentage: "80",
+      TotalQuestions: 7,
+      TotalScore: 120,
+      IsOptional: true,
+      QuizLevels: [
+        {
+          LevelId: 0, // Easy
+          NumberOfQuestions: 2,
+          PassScoreInPertcentage: 80,
+          PointsPerQuestion: 10
+        },
+        {
+          LevelId: 1, // Medium
+          NumberOfQuestions: 2,
+          PassScoreInPertcentage: 80,
+          PointsPerQuestion: 20
+        },
+        {
+          LevelId: 2, // Hard
+          NumberOfQuestions: 3,
+          PassScoreInPertcentage: 80,
+          PointsPerQuestion: 20
+        }
+      ]
+    };
+
+    return { ...defaults, ...overrides };
+  }
+
+  /**
+   * Generate GetAllQuizzes payload for ClientAPI
+   * @param {number} pageNumber - Page number (default: 1)
+   * @param {number} pageSize - Page size (default: 20)
+   * @returns {Object} - GetAllQuizzes payload
+   */
+  static generateGetAllQuizzesPayload(pageNumber = 1, pageSize = 20) {
+    return {
+      PageNumber: pageNumber,
+      PageSize: pageSize
+    };
   }
 
   /**
@@ -134,11 +226,10 @@ class PayloadGenerator {
       ],
       CategoryId: 0,
       existingSkills: [],
-      CreatedBy: "f7103da6-fc7a-4cfd-880b-89616e6deeea",
-      UpdatedBy: "f7103da6-fc7a-4cfd-880b-89616e6deeea",
       Createddate: DateTime.now().toISO(),
       UpdatedDate: DateTime.now().toISO(),
-      state: "saved"
+      state: "saved",
+      IsActive: true
     };
 
     return { ...defaults, ...overrides };
@@ -206,8 +297,6 @@ class PayloadGenerator {
       CourseId: courseId,
       IsActive: true,
       IsVisible: true,
-      CreatedBy: "f7103da6-fc7a-4cfd-880b-89616e6deeea",
-      UpdatedBy: "f7103da6-fc7a-4cfd-880b-89616e6deeea",
       Createddate: DateTime.now().toISO(),
       UpdatedDate: DateTime.now().toISO()
     };
@@ -223,19 +312,17 @@ class PayloadGenerator {
   static generateAudioPayload(overrides = {}) {
     const defaults = {
       Id: 0,
-      Title: faker.music.songName(),
+      Title: faker.music.songName() + ".mp3",
       Description: "",
       Transcript: "",
-      audioType: 2,
-      AudioUrl: "http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3",
+      audioType: 1,
+      AudioUrl: "",
       AudioLength: 0,
-      FileName: "Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3",
+      FileName: faker.music.songName() + ".mp3",
       Extension: "mp3",
       CreatedDate: DateTime.now().toISO(),
       UpdatedDate: DateTime.now().toISO(),
-      AudioSize: 0,
-      TenantId: "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-      ClientId: "",
+      AudioSize: faker.number.int({ min: 100000, max: 2000000 }),
       IsActive: true,
       IsDeleted: false,
       IsPublished: false
@@ -245,11 +332,11 @@ class PayloadGenerator {
   }
 
   /**
-   * Generate Audio update payload
+   * Generate Audio update payload (returns array as API expects)
    * @param {number} audioId - Audio ID to update
    * @param {string} title - Audio title
    * @param {Object} overrides - Optional overrides for specific fields
-   * @returns {Object} - Audio update payload
+   * @returns {Array} - Audio update payload array
    */
   static generateAudioUpdatePayload(audioId, title, overrides = {}) {
     const defaults = {
@@ -257,20 +344,20 @@ class PayloadGenerator {
       Title: title,
       Description: `<p>${faker.lorem.sentence()}</p>`,
       Transcript: "",
+      audioType: 1,
+      AudioUrl: "",
       AudioLength: 0,
-      TenantId: "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-      ClientId: null,
-      IsActive: null,
-      IsDeleted: false,
-      IsPublished: false,
+      FileName: title,
+      Extension: "mp3",
       CreatedDate: DateTime.now().toISO(),
-      UpadatedDate: DateTime.now().toISO(),
-      Documents: [],
-      Points: 0,
-      ContentRefTypeId: 2
+      UpdatedDate: DateTime.now().toISO(),
+      AudioSize: faker.number.int({ min: 100000, max: 2000000 }),
+      IsActive: true,
+      IsDeleted: false,
+      IsPublished: false
     };
 
-    return { ...defaults, ...overrides };
+    return [{ ...defaults, ...overrides }];
   }
 
   /**
@@ -288,8 +375,7 @@ class PayloadGenerator {
       CourseSectionId: courseSectionId,
       LearningItemTypeId: learningItemTypeId,
       LearningItemId: learningItemId,
-      CreatedBy: "f7103da6-fc7a-4cfd-880b-89616e6deeea",
-      UpdatedBy: "f7103da6-fc7a-4cfd-880b-89616e6deeea"
+      IsActive: true
     };
 
     return [{ ...defaults, ...overrides }];
@@ -323,16 +409,24 @@ class PayloadGenerator {
    * @returns {Object} - Video payload with Videos array
    */
   static generateVideoPayload(overrides = {}) {
+    const fileId = faker.string.alphanumeric(32);
     const videoDefaults = {
-      FileId: faker.string.alphanumeric(32),
       FileName: faker.system.fileName().replace(/\.[^/.]+$/, ""),
-      CategoryId: 1,
-      IsVrEnabled: false,
+      state: "Uploading",
+      FileId: fileId,
+      IsSharingAllowed: true,
       IsPublic: true,
       VideoType: 2,
-      CdnUrl: `/videos/${faker.string.alphanumeric(32)}.m3u8`,
-      IsSharingAllowed: true,
-      Points: 0
+      CdnUrl: "",
+      credentials: {
+        policy: faker.string.alphanumeric(200),
+        key: `orig/${faker.string.alphanumeric(13)}`,
+        "x-amz-signature": faker.string.alphanumeric(64),
+        "x-amz-algorithm": "AWS4-HMAC-SHA256",
+        "x-amz-date": DateTime.now().toFormat("yyyyMMdd") + "T000000Z",
+        "x-amz-credential": `AKIAJ2S2LBWKGN3W33GQ/${DateTime.now().toFormat("yyyyMMdd")}/ap-southeast-1/s3/aws4_request`,
+        uploadLink: "https://vdo-ap-southeast.s3-accelerate.amazonaws.com"
+      }
     };
 
     return {
@@ -346,24 +440,26 @@ class PayloadGenerator {
    * @returns {Array} - Document payload array
    */
   static generateDocumentPayload(overrides = {}) {
+    const fileName = `${faker.lorem.word()}.pdf`;
     const defaults = {
-      TenantId: "3fa85f64-5717-4562-b3fc-2c963f66afa6",
       Id: 0,
-      Title: faker.lorem.words(2),
-      Url: "https://www.gurukultti.org/admin/notice/javascript.pdf",
-      CdnUrl: "https://www.gurukultti.org/admin/notice/javascript.pdf",
+      Title: fileName,
+      Url: "",
+      CdnUrl: "",
       ContentRefId: faker.number.int({ min: 1000, max: 9999 }),
       ContentRefTypeId: 1,
-      FileName: "javascript.pdf",
-      FileId: faker.string.alphanumeric(32),
+      FileName: fileName,
+      FileId: "",
+      documentType: 1,
       Extension: "pdf",
       CreatedDate: DateTime.now().toISO(),
       UpdatedDate: DateTime.now().toISO(),
-      DocumentSize: faker.number.int({ min: 100, max: 1000 }),
-      ClientId: "",
+      DocumentSize: faker.number.int({ min: 100000, max: 1000000 }),
       IsActive: true,
-      IsDeleted: true,
-      IsPublished: true
+      IsDeleted: false,
+      IsPublished: false,
+      BlobPath: `cdn/documents/${fileName}`,
+      ContainerName: faker.string.alphanumeric(8)
     };
 
     return [{ ...defaults, ...overrides }];
@@ -377,24 +473,23 @@ class PayloadGenerator {
    * @returns {Array} - Document update payload array
    */
   static generateDocumentUpdatePayload(documentId, title, overrides = {}) {
+    const fileId = faker.string.alphanumeric(32);
     const defaults = {
-      TenantId: "3fa85f64-5717-4562-b3fc-2c963f66afa6",
       Id: documentId,
       Title: title,
-      Url: "https://www.gurukultti.org/admin/notice/javascript.pdf",
-      CdnUrl: "https://www.gurukultti.org/admin/notice/javascript.pdf",
+      Url: "",
+      CdnUrl: `${fileId}.pdf`,
       ContentRefId: faker.number.int({ min: 1000, max: 9999 }),
       ContentRefTypeId: 1,
-      FileName: "javascript.pdf",
-      FileId: faker.string.alphanumeric(32),
+      FileName: title,
+      FileId: fileId,
       Extension: "pdf",
       CreatedDate: DateTime.now().toISO(),
       UpdatedDate: DateTime.now().toISO(),
-      DocumentSize: faker.number.int({ min: 100, max: 1000 }),
-      ClientId: "",
+      DocumentSize: faker.number.int({ min: 100000, max: 1000000 }),
       IsActive: true,
-      IsDeleted: true,
-      IsPublished: true
+      IsDeleted: false,
+      IsPublished: false
     };
 
     return [{ ...defaults, ...overrides }];
@@ -413,6 +508,7 @@ class PayloadGenerator {
       skills.push({
         Title: faker.lorem.words(2),
         CourseId: courseId,
+        IsActive: true,
         ...overrides
       });
     }
@@ -432,11 +528,138 @@ class PayloadGenerator {
       skills.push({
         Title: faker.lorem.words(2),
         CourseId: courseId,
-        TenantId: "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        IsActive: true,
         ...overrides
       });
     }
     return skills;
+  }
+
+  // ==================== QUIZ QUESTION PAYLOADS ====================
+
+  /**
+   * Generate Question Create payload for Quiz
+   * @param {string|number} quizId - The quiz ID to add question to
+   * @param {Object} overrides - Optional overrides for specific fields
+   * @returns {Object} - Question create payload
+   */
+  static generateQuestionCreatePayload(quizId, overrides = {}) {
+    const questionTypes = ["Single Choice", "Multiple Choice"];
+    const difficulties = ["Easy", "Medium", "Hard"];
+    const difficultyLevelMap = { "Easy": 0, "Medium": 1, "Hard": 2 };
+    
+    const difficulty = overrides.Difficulty || faker.helpers.arrayElement(difficulties);
+    
+    const defaults = {
+      QuizId: String(quizId),
+      Question: `Test Question ${faker.lorem.words(5)} ${Date.now()}`,
+      QuestionType: faker.helpers.arrayElement(questionTypes),
+      Difficulty: difficulty,
+      Points: faker.number.int({ min: 1, max: 10 }),
+      QuestionLevelId: difficultyLevelMap[difficulty],
+      Choices: [
+        {
+          Choice: faker.lorem.word(),
+          isCorrectChoice: true
+        },
+        {
+          Choice: faker.lorem.word(),
+          isCorrectChoice: false
+        }
+      ]
+    };
+
+    return { ...defaults, ...overrides };
+  }
+
+  /**
+   * Generate Question Update payload
+   * @param {number} questionId - The question ID to update
+   * @param {string|number} quizId - The quiz ID
+   * @param {Array} existingChoices - Existing choice IDs to update
+   * @param {Object} overrides - Optional overrides for specific fields
+   * @returns {Object} - Question update payload
+   */
+  static generateQuestionUpdatePayload(questionId, quizId, existingChoices = [], overrides = {}) {
+    const defaults = {
+      QuestionId: questionId,
+      QuizId: String(quizId),
+      Question: `Updated Question ${faker.lorem.words(3)} ${Date.now()}`,
+      QuestionType: "Single Choice",
+      Difficulty: "Easy",
+      Points: faker.number.int({ min: 5, max: 20 }),
+      QuestionLevelId: 0,
+      Choices: existingChoices.length >= 2 ? [
+        {
+          ChoiceId: existingChoices[0].ChoiceId,
+          Choice: `Updated ${faker.lorem.word()}`,
+          isCorrectChoice: true
+        },
+        {
+          ChoiceId: existingChoices[1].ChoiceId,
+          Choice: `Updated ${faker.lorem.word()}`,
+          isCorrectChoice: false
+        }
+      ] : [
+        {
+          Choice: `Updated ${faker.lorem.word()}`,
+          isCorrectChoice: true
+        },
+        {
+          Choice: `Updated ${faker.lorem.word()}`,
+          isCorrectChoice: false
+        }
+      ]
+    };
+
+    return { ...defaults, ...overrides };
+  }
+
+  /**
+   * Generate Invalid Question payload for negative testing
+   * @param {string|number} quizId - The quiz ID
+   * @param {string} invalidType - Type of invalid payload ('missingQuestion', 'invalidQuizId', 'noChoices', 'noCorrectChoice')
+   * @returns {Object} - Invalid question payload
+   */
+  static generateInvalidQuestionPayload(quizId, invalidType = 'missingQuestion') {
+    const basePayload = {
+      QuizId: String(quizId),
+      Question: `Test Question ${Date.now()}`,
+      QuestionType: "Single Choice",
+      Difficulty: "Easy",
+      Points: 5,
+      QuestionLevelId: 0,
+      Choices: [
+        { Choice: "Option A", isCorrectChoice: true },
+        { Choice: "Option B", isCorrectChoice: false }
+      ]
+    };
+
+    switch (invalidType) {
+      case 'missingQuestion':
+        delete basePayload.Question;
+        break;
+      case 'invalidQuizId':
+        basePayload.QuizId = "999999";
+        break;
+      case 'noChoices':
+        basePayload.Choices = [];
+        break;
+      case 'noCorrectChoice':
+        basePayload.Choices = [
+          { Choice: "Option A", isCorrectChoice: false },
+          { Choice: "Option B", isCorrectChoice: false }
+        ];
+        break;
+      case 'emptyQuestion':
+        basePayload.Question = "";
+        break;
+      case 'negativePoints':
+        basePayload.Points = -5;
+        break;
+    }
+
+    return basePayload;
   }
 }
 

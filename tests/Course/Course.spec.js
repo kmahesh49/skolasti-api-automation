@@ -37,7 +37,14 @@ test.describe("Course API", () => {
     const createResponse = await api.create("/Course/createcourse", createPayload, 200);
     
     const courseId = createResponse?.Id;
-    console.log("Created Course ID:", courseId);
+    console.log("=".repeat(50));
+    console.log("CREATE RESPONSE DETAILS:");
+    console.log("Full Response:", JSON.stringify(createResponse, null, 2));
+    console.log("Extracted Course ID:", courseId);
+    console.log("=".repeat(50));
+    
+    // Add small delay to allow API to fully persist/index the course
+    await new Promise(resolve => setTimeout(resolve, 2000));
 
     // ==================== GET ALL COURSES (Verify Created Course Exists) ====================
     const getAllCoursesPayload = PayloadGenerator.generateGetAllCoursesPayload(4);
@@ -49,10 +56,19 @@ test.describe("Course API", () => {
     api.softAssert(() => expect(Array.isArray(allCourses)).toBeTruthy(), 
       "Get all courses should return an array");
     
-    // Verify the created course exists in the list
+    // Verify the created course exists in the list and check if ID matches
     if (courseId && allCourses) {
-      const createdCourseExists = allCourses.some(course => course.Id === courseId);
+      const createdCourse = allCourses.find(course => course.Id === courseId);
+      const createdCourseExists = createdCourse !== undefined;
       console.log(`Created course ID ${courseId} exists in all courses list:`, createdCourseExists);
+      
+      if (!createdCourseExists && allCourses.length > 0) {
+        // Check if there's a course with a different ID that was just created
+        const mostRecentCourse = allCourses[0]; // Assuming sorted by creation date
+        console.warn(`WARNING: Course ID mismatch! Expected ID ${courseId}, but most recent course has ID ${mostRecentCourse.Id}`);
+        console.log("Most recent course details:", JSON.stringify(mostRecentCourse, null, 2));
+      }
+      
       api.softAssert(() => expect(createdCourseExists).toBeTruthy(), 
         `Created course ${courseId} should exist in all courses list`);
     }
@@ -65,6 +81,9 @@ test.describe("Course API", () => {
     const updatePayload = PayloadGenerator.generateCoursePayload({ Id: courseId });
     const updateResponse = await api.update("/Course/updatecourse", updatePayload, 201);
     console.log("Course updated successfully");
+    
+    // Add small delay to allow API to fully persist/index the updates
+    await new Promise(resolve => setTimeout(resolve, 2000));
 
     // ==================== GET AFTER UPDATE ====================
     const getAfterUpdateResponse = await api.get(`/Course/getbyidcourse?id=${courseId}`, 200);

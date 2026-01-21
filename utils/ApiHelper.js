@@ -75,7 +75,7 @@ class ApiHelper {
    * POST request with custom payload (for search/filter operations)
    * @param {string} endpoint - API endpoint
    * @param {Object} data - Request payload
-   * @param {number} expectedStatus - Expected status code (default: 200)
+   * @param {number|Array<number>} expectedStatus - Expected status code(s) (default: 200)
    * @returns {Object} - Response body
    */
   async post(endpoint, data, expectedStatus = 200) {
@@ -90,8 +90,11 @@ class ApiHelper {
     const responseBody = await this.parseResponse(response);
     console.log("POST Response:", responseBody);
 
-    this.softAssert(() => expect(response.status()).toBe(expectedStatus), 
-      `POST ${endpoint} should return status ${expectedStatus}, got ${response.status()}`);
+    const expectedStatusArray = Array.isArray(expectedStatus) ? expectedStatus : [expectedStatus];
+    const actualStatus = response.status();
+    
+    this.softAssert(() => expect(expectedStatusArray).toContain(actualStatus), 
+      `POST ${endpoint} should return status ${expectedStatusArray.join(' or ')}, got ${actualStatus}`);
     
     return responseBody;
   }
@@ -153,7 +156,7 @@ class ApiHelper {
   /**
    * Get a resource with retry logic for eventual consistency
    * @param {string} endpoint - API endpoint
-   * @param {number} expectedStatus - Expected status code (default: 200)
+   * @param {number|Array<number>} expectedStatus - Expected status code(s) (default: 200)
    * @param {number} maxRetries - Maximum retry attempts (default: 5)
    * @param {number} delayMs - Delay between retries in ms (default: 1000)
    * @returns {Object} - Response body
@@ -161,6 +164,7 @@ class ApiHelper {
   async get(endpoint, expectedStatus = 200, maxRetries = 5, delayMs = 1000) {
     console.log(`Getting resource from: ${endpoint}`);
 
+    const expectedStatusArray = Array.isArray(expectedStatus) ? expectedStatus : [expectedStatus];
     let response, responseBody;
     let attempts = 0;
 
@@ -173,33 +177,35 @@ class ApiHelper {
       console.log(`Attempt ${attempts + 1}: Status:`, response.status());
       console.log(`Attempt ${attempts + 1}: Raw response:`, rawText);
 
-      if (response.status() === expectedStatus) {
+      const actualStatus = response.status();
+      
+      if (expectedStatusArray.includes(actualStatus)) {
         try {
           if (rawText) {
             responseBody = JSON.parse(rawText);
           }
           console.log("Get Response:", responseBody);
-          this.softAssert(() => expect(response.status()).toBe(expectedStatus), 
-            `GET ${endpoint} should return status ${expectedStatus}, got ${response.status()}`);
+          this.softAssert(() => expect(expectedStatusArray).toContain(actualStatus), 
+            `GET ${endpoint} should return status ${expectedStatusArray.join(' or ')}, got ${actualStatus}`);
           break;
         } catch (err) {
           console.error("Failed to parse JSON:", err);
-          this.softAssert(() => expect(response.status()).toBe(expectedStatus), 
-            `GET ${endpoint} should return status ${expectedStatus}, got ${response.status()}`);
+          this.softAssert(() => expect(expectedStatusArray).toContain(actualStatus), 
+            `GET ${endpoint} should return status ${expectedStatusArray.join(' or ')}, got ${actualStatus}`);
           break;
         }
-      } else if (response.status() === 204 && expectedStatus === 200) {
+      } else if (actualStatus === 204 && expectedStatusArray.includes(200) && !expectedStatusArray.includes(204)) {
         console.log("No content (204). Retrying...");
         attempts++;
         if (attempts < maxRetries) {
           await new Promise(res => setTimeout(res, delayMs));
         } else {
-          this.softAssert(() => expect(response.status()).toBe(expectedStatus), 
-            `GET ${endpoint} should return status ${expectedStatus}, got ${response.status()} after ${maxRetries} retries`);
+          this.softAssert(() => expect(expectedStatusArray).toContain(actualStatus), 
+            `GET ${endpoint} should return status ${expectedStatusArray.join(' or ')}, got ${actualStatus} after ${maxRetries} retries`);
         }
       } else {
-        this.softAssert(() => expect(response.status()).toBe(expectedStatus), 
-          `GET ${endpoint} should return status ${expectedStatus}, got ${response.status()}`);
+        this.softAssert(() => expect(expectedStatusArray).toContain(actualStatus), 
+          `GET ${endpoint} should return status ${expectedStatusArray.join(' or ')}, got ${actualStatus}`);
         break;
       }
     }

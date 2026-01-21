@@ -115,11 +115,10 @@ const LevelId1= faker.number.int({ min: 1, max: 3 });
   ],
   "CategoryId": 0,
   "existingSkills": [],
-  "CreatedBy": "f7103da6-fc7a-4cfd-880b-89616e6deeea",
-  "UpdatedBy": "f7103da6-fc7a-4cfd-880b-89616e6deeea",
   "Createddate": Createddate1,
   "UpdatedDate": UpdatedDate1,
-  "state": "saved"
+  "state": "saved",
+  "IsActive": true
 }
     }
   );
@@ -146,25 +145,24 @@ const LevelId1= faker.number.int({ min: 1, max: 3 });
   console.log("Response Body:", responseBody);
   console.log("COurse Id:", CID);
 
+  // Add small delay to allow API to fully persist/index the course
+  await new Promise(resolve => setTimeout(resolve, 2000));
+
   // Defensive check for getcoursedetails response
   const getresponse = await request.get(`${CoursebaseURL}/Course/getbyidcourse?id=${CID}`, { headers });
   const getText = await getresponse.text();
   console.log("Raw response from Course details:", getText);
   console.log("Status:", getresponse.status());
 
-  if (getresponse.status() === 204) {
-    console.log("No content returned for Course details (204).");
-    expect(getresponse.status()).toBe(204);
-  } else {
+  if (getText) {
     try {
       const getJson = JSON.parse(getText);
       console.log("Course Details:", getJson);
-      expect(getresponse.status()).toBe(200);
     } catch (err) {
       console.error("Failed to parse JSON from coursedetails:", err);
-      expect(getresponse.status()).toBe(200); // This will fail, but logs error
     }
   }
+  
   expect(getresponse.ok()).toBeTruthy();
   expect(getresponse.status()).toBe(200);
   // Update the course with new dynamic data  
