@@ -1,0 +1,12 @@
+[
+  {
+    "RegistrationUrl": "https://test.skillrok.com/register",
+    "UserEmailId": "newuser1@test.com",
+    "RoleId": 1
+  },
+  {
+    "RegistrationUrl": "https://test.skillrok.com/register",
+    "UserEmailId": "newuser2@test.com",
+    "RoleId": 2
+  }
+]

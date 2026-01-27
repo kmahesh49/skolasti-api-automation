@@ -1,0 +1,18 @@
+
+🔄 PUT request to: /Marketingpages/marketingpages
+📦 Payload: {
+  "Id": 1,
+  "PageName": "Same Name",
+  "IsPageVisible": true,
+  "IsPublished": true
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:17:00.507Z
+📍 PUT https://marketingapi.skolasti.com/api/Marketingpages/marketingpages
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 PUT Response: null

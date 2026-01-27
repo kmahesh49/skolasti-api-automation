@@ -1,0 +1,5 @@
+
+========== ❌ TEST: STRING VALIDATION ==========
+
+🧪 Testing: CategoryName with Numbers
+📊 Response Status: 401

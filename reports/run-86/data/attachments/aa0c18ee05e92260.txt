@@ -1,0 +1,42 @@
+
+========== SETUP: Create Quiz ==========
+
+✨ Creating resource at: /UserQuizAndAssesment/createquiz
+📦 Payload: {
+  "Title": "Choice Validation Quiz 1769519738182",
+  "NumberOfRetake": 3,
+  "PassScoreInPertcentage": "70",
+  "TotalQuestions": 6,
+  "TotalScore": 110,
+  "IsOptional": true,
+  "QuizLevels": [
+    {
+      "LevelId": 0,
+      "NumberOfQuestions": 1,
+      "PassScoreInPertcentage": 70,
+      "PointsPerQuestion": 10
+    },
+    {
+      "LevelId": 1,
+      "NumberOfQuestions": 2,
+      "PassScoreInPertcentage": 70,
+      "PointsPerQuestion": 20
+    },
+    {
+      "LevelId": 2,
+      "NumberOfQuestions": 3,
+      "PassScoreInPertcentage": 70,
+      "PointsPerQuestion": 20
+    }
+  ]
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:15:38.571Z
+📍 POST (CREATE) https://clientapi.skolasti.com/api/UserQuizAndAssesment/createquiz
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: Missing Authorization token
+Status code: 401
+📥 Create Response: null

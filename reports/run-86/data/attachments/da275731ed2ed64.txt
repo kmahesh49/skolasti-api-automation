@@ -1,0 +1,9 @@
+❌ FAIL: DELETE /VisibilityTenantSettings/deleteconfiguration should be successful (2xx status)
+   Error: expect(received).toBeTruthy()
+
+Received: false
+❌ FAIL: DELETE /VisibilityTenantSettings/deleteconfiguration should return status 204, got 401
+   Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 204
+Received: 401

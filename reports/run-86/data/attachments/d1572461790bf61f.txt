@@ -1,0 +1,17 @@
+
+📤 POST request to: /Notification/createnotification
+📦 Payload: {
+  "CategoryId": 1,
+  "TemplateId": 1,
+  "TypeID": 1
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:15:12.682Z
+📍 POST https://adminapi.skolasti.com/api/Notification/createnotification
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null

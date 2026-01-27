@@ -1,0 +1,5 @@
+
+========== ❌ TEST: DELETE NON-EXISTENT DOCUMENT ==========
+
+🧪 Testing: Delete document ID 999999999
+📊 Response Status: 401

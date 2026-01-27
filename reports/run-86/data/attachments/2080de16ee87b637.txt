@@ -1,0 +1,17 @@
+
+📤 POST request to: /Marketingpages/marketingpages
+📦 Payload: {
+  "PageName": "Delete Test 1769519823914",
+  "IsPageVisible": true,
+  "IsPublished": true
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:17:04.275Z
+📍 POST https://marketingapi.skolasti.com/api/Marketingpages/marketingpages
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null

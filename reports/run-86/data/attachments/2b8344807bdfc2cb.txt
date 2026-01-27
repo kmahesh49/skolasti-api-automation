@@ -1,0 +1,19 @@
+
+🔄 PUT request to: /Notification/updatenotification
+📦 Payload: {
+  "NotificationId": 0,
+  "Title": "Updated Notification",
+  "CategoryId": 1,
+  "TemplateId": 1,
+  "TypeId": 1
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:15:13.027Z
+📍 PUT https://adminapi.skolasti.com/api/Notification/updatenotification
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 PUT Response: null

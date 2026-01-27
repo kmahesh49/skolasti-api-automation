@@ -1,0 +1,15 @@
+
+📤 POST request to: /CourseData/inviteuser
+📦 Payload: {
+  "EmailId": "testuser@example.com"
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:16:54.877Z
+📍 POST https://marketingapi.skolasti.com/api/CourseData/inviteuser
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null

@@ -1,0 +1,19 @@
+
+📤 POST request to: /UserManagement/getusers
+📦 Payload: {
+  "PageNumber": -1,
+  "PageSize": 10,
+  "IncludeAllPage": false,
+  "SortField": "name",
+  "SortType": "asc"
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:15:21.481Z
+📍 POST https://adminapi.skolasti.com/api/UserManagement/getusers
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null

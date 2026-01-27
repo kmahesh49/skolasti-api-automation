@@ -1,0 +1,13 @@
+🔒 UNAUTHORIZED (401)
+      
+Possible Causes:
+• Missing Authorization header
+• Invalid or expired JWT token
+• Token signature verification failed
+• Incorrect token format
+
+Action Items:
+✓ Check if token is included in headers
+✓ Verify token hasn't expired (check 'exp' claim)
+✓ Ensure token format is "Bearer {token}"
+✓ Generate new token if current one is expired

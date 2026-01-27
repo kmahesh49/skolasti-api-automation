@@ -1,0 +1,8 @@
+❌ FAIL: POST /FeatureFlag/invalidatecache should return status 200 or 204, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [200, 204]
+   Endpoint: /FeatureFlag/invalidatecache
+   Expected Status: 200,204
+   Actual Status: 401

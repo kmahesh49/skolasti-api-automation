@@ -1,0 +1,5 @@
+
+========== ❌ TEST: MISSING REQUIRED FIELDS ==========
+
+🧪 Testing: Missing ContentTypeId
+📊 Response Status: 401

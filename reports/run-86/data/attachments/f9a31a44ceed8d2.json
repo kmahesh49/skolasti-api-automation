@@ -1,0 +1,10 @@
+{
+  "Id": 1,
+  "TenantId": 1,
+  "PaymentGatewayType": "Stripe",
+  "GatewayAccountId": "acct_updated123",
+  "GatewayProductId": "prod_updated456",
+  "IsConfigured": true,
+  "ConfiguredStatus": "Active",
+  "ConfiguredDate": "2026-01-24T10:00:00Z"
+}

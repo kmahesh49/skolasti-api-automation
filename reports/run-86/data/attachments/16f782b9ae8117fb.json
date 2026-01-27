@@ -1,0 +1,10 @@
+{
+  "method": "PUT",
+  "endpoint": "https://adminapi.skolasti.com/api/VisibilityTenantSettings/paymentgatewayconfig",
+  "expectedStatus": [
+    200,
+    404
+  ],
+  "actualStatus": 401,
+  "timestamp": "2026-01-27T13:15:24.887Z"
+}

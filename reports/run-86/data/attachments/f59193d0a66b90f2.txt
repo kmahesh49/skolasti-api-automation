@@ -1,0 +1,5 @@
+
+========== ❌ TEST: INVALID CATEGORY ID ==========
+
+🧪 Testing: notificationCategoryId - Non-existent ID
+📊 Response Status: 401

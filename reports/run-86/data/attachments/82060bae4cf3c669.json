@@ -1,0 +1,9 @@
+{
+  "method": "POST",
+  "endpoint": "https://adminapi.skolasti.com/api/UserManagement/getfusionauthuserroles",
+  "expectedStatus": [
+    200
+  ],
+  "actualStatus": 401,
+  "timestamp": "2026-01-27T13:15:16.111Z"
+}

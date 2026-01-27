@@ -1,0 +1,3 @@
+Getting resource from: /CourseData/getcontentreviews?contentId=-1&contentTypeId=1&PageNumber=1&PageSize=10
+Attempt 1: Status: 401
+Attempt 1: Raw response: 

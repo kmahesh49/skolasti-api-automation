@@ -1,0 +1,5 @@
+
+========== ❌ TEST: INVALID CERTIFICATE SHARING ==========
+
+🧪 Testing: Invalid Email Format
+📊 Response Status: 401

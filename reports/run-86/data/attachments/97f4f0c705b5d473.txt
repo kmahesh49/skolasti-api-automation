@@ -1,0 +1,34 @@
+
+✨ Creating resource at: /Video/create
+📦 Payload: {
+  "Videos": [
+    {
+      "FileName": "beneath_beneath",
+      "state": "Uploading",
+      "FileId": "Nmbi4AqNlilLtgRxkGNPJ9GyFDjDA7xJ",
+      "IsSharingAllowed": true,
+      "IsPublic": true,
+      "VideoType": 2,
+      "CdnUrl": "",
+      "credentials": {
+        "policy": "mdw8OYWKRQZzrAGgztUd7gA1ebw3s21CVICiACbSgU3xtLDnUjNHCX5M2YUhYUkapVMJaslRr1P8g8SGZ9EwyyQwlVl0BjIRW4me8XaSb4PLe3Rq5mz0EfCgxnm8BfxNSNXZaD6UNnIBhmssNKSRmnVrAORKyndf6QMZqF2Px5ClblDDChsZuDDstTLH8Irafn8VpDZg",
+        "key": "orig/WDAj7BzIMho0f",
+        "x-amz-signature": "ueTFXJ6b0CNlfHXD4ICIgRT029d80DvwmOr6c4qa2MGEGiBiEGqrninlc8YUy5fx",
+        "x-amz-algorithm": "AWS4-HMAC-SHA256",
+        "x-amz-date": "20260127T000000Z",
+        "x-amz-credential": "AKIAJ2S2LBWKGN3W33GQ/20260127/ap-southeast-1/s3/aws4_request",
+        "uploadLink": "https://vdo-ap-southeast.s3-accelerate.amazonaws.com"
+      }
+    }
+  ]
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:16:27.231Z
+📍 POST (CREATE) https://courseapi.skolasti.com/api/Video/create
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: Missing Authorization token
+Status code: 401
+📥 Create Response: null

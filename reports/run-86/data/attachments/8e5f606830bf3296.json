@@ -1,0 +1,13 @@
+{
+  "Title": "Test Notification",
+  "RecipitentGroupIds": [
+    1,
+    2
+  ],
+  "RecipitentUserIds": [
+    "3f537698-4e5e-4101-9115-626385911940"
+  ],
+  "CategoryId": 1,
+  "TemplateId": 1,
+  "TypeID": 1
+}

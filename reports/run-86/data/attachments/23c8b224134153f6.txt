@@ -1,0 +1,5 @@
+
+========== ðŸ“‹ GET ALL SUBSCRIPTION PLANS ==========
+Getting resource from: /Subscription/getallplans
+Attempt 1: Status: 401
+Attempt 1: Raw response: Missing Authorization token

@@ -1,0 +1,21 @@
+
+========== 📚 GET ALL USER COURSES ==========
+
+📤 POST request to: /Course/getallusercourses?viewAllCourseType=1
+📦 Payload: {
+  "PageNumber": 1,
+  "PageSize": 10,
+  "IncludeAllPage": false,
+  "SortField": "CreatedDate",
+  "SortType": "DESC"
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:16:04.118Z
+📍 POST https://clientapi.skolasti.com/api/Course/getallusercourses?viewAllCourseType=1
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: Missing Authorization token
+Status code: 401
+📥 POST Response: null

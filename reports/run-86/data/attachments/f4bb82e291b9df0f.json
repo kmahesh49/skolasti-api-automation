@@ -1,0 +1,9 @@
+{
+  "method": "POST",
+  "endpoint": "https://clientapi.skolasti.com/api/Subscription/createsubscriptionplan",
+  "expectedStatus": [
+    200
+  ],
+  "actualStatus": 401,
+  "timestamp": "2026-01-27T13:15:41.986Z"
+}

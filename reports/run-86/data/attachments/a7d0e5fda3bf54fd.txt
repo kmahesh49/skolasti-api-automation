@@ -1,0 +1,5 @@
+
+========== ❌ TEST: MISSING REQUIRED PARAMETERS ==========
+
+🧪 Testing: Missing userId
+📊 Response Status: 401

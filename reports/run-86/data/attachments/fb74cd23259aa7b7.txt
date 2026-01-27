@@ -1,0 +1,16 @@
+
+📤 POST request to: /PageSectionDynamicContent/pagesectiondynamiccontent
+📦 Payload: {
+  "Heading": "Test Dynamic Content",
+  "Description": "Missing section ID"
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:17:11.619Z
+📍 POST https://marketingapi.skolasti.com/api/PageSectionDynamicContent/pagesectiondynamiccontent
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null

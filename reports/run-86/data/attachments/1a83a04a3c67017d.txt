@@ -1,0 +1,5 @@
+
+========== ðŸ“‹ GET DEPENDENCIES ==========
+Getting resource from: /Subscription/validitytypes
+Attempt 1: Status: 401
+Attempt 1: Raw response: Missing Authorization token

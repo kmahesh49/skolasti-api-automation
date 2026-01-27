@@ -1,0 +1,21 @@
+
+🔄 PUT request to: /PageSection/pagesection
+📦 Payload: {
+  "Id": 99999,
+  "Pageid": 1,
+  "Sectionname": "Non-existent Section",
+  "Sectiontitle": "Test",
+  "Ordersequence": 1,
+  "Issectionvisible": true,
+  "IsPublished": true
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:17:34.300Z
+📍 PUT https://marketingapi.skolasti.com/api/PageSection/pagesection
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 PUT Response: null

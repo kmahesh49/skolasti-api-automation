@@ -1,0 +1,12 @@
+{
+  "Integrationtype": "Google Calendar",
+  "Description": "Google Calendar integration for tenant",
+  "VisibilityConfigurationId": 1,
+  "TenantId": 1,
+  "Providermailid": "admin@test.com",
+  "Accesstoken": "test-access-token-123456",
+  "Refreshtoken": "test-refresh-token-789012",
+  "CalendarId": "test-calendar-id",
+  "ExpiredAt": "2026-12-31T23:59:59Z",
+  "Scope": "https://www.googleapis.com/auth/calendar"
+}

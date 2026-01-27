@@ -1,0 +1,8 @@
+
+========== ❌ TEST: INVALID CATEGORY CREATION ==========
+
+🧪 Testing: Missing CategoryName
+📦 Payload: [
+  {}
+]
+📊 Response Status: 401

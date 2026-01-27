@@ -1,0 +1,10 @@
+{
+  "SectionProductContentid": 1,
+  "Contenttitle": "Test Product",
+  "Contenttypename": "Course",
+  "ContentCategory": "Technology",
+  "Price": -10,
+  "Curencycode": "USD",
+  "Rating": 4.8,
+  "IsPublished": true
+}

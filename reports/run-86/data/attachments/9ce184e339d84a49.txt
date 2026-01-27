@@ -1,0 +1,22 @@
+
+📤 POST request to: /SectionProductDetails/sectionproductdetails
+📦 Payload: {
+  "SectionProductContentid": 1,
+  "Contenttitle": "Test Product",
+  "Contenttypename": "Course",
+  "ContentCategory": "Technology",
+  "Price": -10,
+  "Curencycode": "USD",
+  "Rating": 4.8,
+  "IsPublished": true
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:17:25.471Z
+📍 POST https://marketingapi.skolasti.com/api/SectionProductDetails/sectionproductdetails
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null

@@ -1,0 +1,5 @@
+
+========== ❌ TEST: INVALID WEBINAR DOCUMENT ==========
+
+🧪 Testing: Missing SessionId
+📊 Response Status: 401

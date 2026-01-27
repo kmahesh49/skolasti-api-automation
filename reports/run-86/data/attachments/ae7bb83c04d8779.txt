@@ -1,0 +1,5 @@
+
+========== ❌ TEST: DELETE NON-EXISTENT SESSION ==========
+
+🧪 Testing: Delete session ID 999999999
+📊 Response Status: 401

@@ -1,0 +1,9 @@
+❌ FAIL: DELETE /UserManagement/deleteprofilepicture?userId=3f537698-4e5e-4101-9115-626385911940 should be successful (2xx status)
+   Error: expect(received).toBeTruthy()
+
+Received: false
+❌ FAIL: DELETE /UserManagement/deleteprofilepicture?userId=3f537698-4e5e-4101-9115-626385911940 should return status 204, got 401
+   Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 204
+Received: 401

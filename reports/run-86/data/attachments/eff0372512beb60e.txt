@@ -1,0 +1,5 @@
+
+========== ❌ TEST: INVALID SESSION START ==========
+
+🧪 Testing: Missing UserId
+📊 Response Status: 401

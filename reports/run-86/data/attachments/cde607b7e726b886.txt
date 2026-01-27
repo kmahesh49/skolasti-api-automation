@@ -1,0 +1,5 @@
+
+========== ❌ TEST: INVALID USER ID ==========
+
+🧪 Testing: Empty User ID
+📊 Response Status: 401

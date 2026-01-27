@@ -1,0 +1,21 @@
+
+📤 POST request to: /PageSectionStaticContent/pagesectionstaticcontent
+📦 Payload: {
+  "Pagesectionid": 1,
+  "Heading": "Update Static Test 1769519830277",
+  "Description": "Test description for static content",
+  "Buttontext": "Learn More",
+  "Buttonurl": "https://example.com",
+  "Isvisible": true,
+  "IsPublished": true
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:17:10.628Z
+📍 POST https://marketingapi.skolasti.com/api/PageSectionStaticContent/pagesectionstaticcontent
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null

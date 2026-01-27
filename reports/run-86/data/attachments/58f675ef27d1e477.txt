@@ -1,0 +1,76 @@
+❌ FAIL: POST /PageSection/pagesection should return status 201, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [201]
+   Endpoint: /PageSection/pagesection
+   Expected Status: 201
+   Actual Status: 401
+❌ FAIL: POST /PageSection/pagesection should return status 409 or 201, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [409, 201]
+   Endpoint: /PageSection/pagesection
+   Expected Status: 409,201
+   Actual Status: 401
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                    TEST EXECUTION FAILURE SUMMARY                          ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+❌ Total Failures: 2
+📊 Status Code Failures: 2
+✓ Validation Failures: 0
+
+
+════════════════════════════════════════════════════════════════════════════════
+📊 STATUS CODE FAILURES:
+════════════════════════════════════════════════════════════════════════════════
+
+1. POST /PageSection/pagesection should return status 201, got 401
+   Endpoint: /PageSection/pagesection
+   Expected: 201
+   Actual: 401
+   Category: CLIENT ERROR (4xx)
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [201]
+   Time: 2026-01-27T13:17:37.972Z
+   
+   🔒 UNAUTHORIZED (401)
+         
+   Possible Causes:
+   • Missing Authorization header
+   • Invalid or expired JWT token
+
+2. POST /PageSection/pagesection should return status 409 or 201, got 401
+   Endpoint: /PageSection/pagesection
+   Expected: 409,201
+   Actual: 401
+   Category: CLIENT ERROR (4xx)
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [409, 201]
+   Time: 2026-01-27T13:17:38.258Z
+   
+   🔒 UNAUTHORIZED (401)
+         
+   Possible Causes:
+   • Missing Authorization header
+   • Invalid or expired JWT token
+
+════════════════════════════════════════════════════════════════════════════════
+📋 REQUEST HISTORY (Last 5):
+════════════════════════════════════════════════════════════════════════════════
+
+1. POST /PageSection/pagesection
+   Status: 401
+   Time: 2026-01-27T13:17:37.960Z
+
+2. POST /PageSection/pagesection
+   Status: 401
+   Time: 2026-01-27T13:17:38.248Z
+

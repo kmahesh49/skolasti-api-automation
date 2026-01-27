@@ -1,0 +1,6 @@
+Deleting resource at: /PageSection/pagesection/invalid
+Payload: [
+  400,
+  404
+]
+Delete Status: 401

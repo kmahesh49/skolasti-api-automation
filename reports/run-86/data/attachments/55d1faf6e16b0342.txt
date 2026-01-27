@@ -1,0 +1,13 @@
+
+📤 POST request to: /Marketingpages/marketingpages
+📦 Payload: {}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:17:04.550Z
+📍 POST https://marketingapi.skolasti.com/api/Marketingpages/marketingpages
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null

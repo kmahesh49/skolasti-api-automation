@@ -1,0 +1,7 @@
+{
+  "method": "POST (CREATE)",
+  "endpoint": "https://clientapi.skolasti.com/api/UserQuizAndAssesment/createquiz",
+  "expectedStatus": 200,
+  "actualStatus": 401,
+  "timestamp": "2026-01-27T13:15:38.569Z"
+}

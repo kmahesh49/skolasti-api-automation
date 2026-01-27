@@ -1,0 +1,5 @@
+
+========== ❌ TEST: INVALID Q&A PAYLOAD ==========
+
+🧪 Testing: Missing QuestionText
+📊 Response Status: 401

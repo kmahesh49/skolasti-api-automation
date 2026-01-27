@@ -1,0 +1,47 @@
+
+========== STEP 1: CREATE SUBSCRIPTION PLAN ==========
+Create Subscription Plan Payload: {
+  "PlanName": "Automation Test Plan 1769519739513",
+  "Description": "Automated test subscription plan",
+  "Price": 199,
+  "Validity": 365,
+  "ValidityTypeId": 2,
+  "CurrencyCodeId": 0,
+  "RazorPayPlanId": "plan_test_1769519739513",
+  "PaymentLink": "Payment Link will be available later",
+  "subscriptionDataVM": [
+    {
+      "ContentId": 1137,
+      "ContentTypeId": 0
+    }
+  ]
+}
+
+📤 POST request to: /Subscription/createsubscriptionplan
+📦 Payload: {
+  "PlanName": "Automation Test Plan 1769519739513",
+  "Description": "Automated test subscription plan",
+  "Price": 199,
+  "Validity": 365,
+  "ValidityTypeId": 2,
+  "CurrencyCodeId": 0,
+  "RazorPayPlanId": "plan_test_1769519739513",
+  "PaymentLink": "Payment Link will be available later",
+  "subscriptionDataVM": [
+    {
+      "ContentId": 1137,
+      "ContentTypeId": 0
+    }
+  ]
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:15:39.936Z
+📍 POST https://clientapi.skolasti.com/api/Subscription/createsubscriptionplan
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: Missing Authorization token
+Status code: 401
+📥 POST Response: null
+Create Subscription Plan Response: null

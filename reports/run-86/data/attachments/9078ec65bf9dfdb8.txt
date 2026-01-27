@@ -1,0 +1,19 @@
+
+📤 POST request to: /CourseData/inviteuser
+📦 Payload: {
+  "EmailId": "testuser@example.com",
+  "ClientId": "test-client-id",
+  "TenantId": "test-tenant-id",
+  "Domian": "skillrok.com",
+  "RoleId": 1
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:16:53.659Z
+📍 POST https://marketingapi.skolasti.com/api/CourseData/inviteuser
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null

@@ -1,0 +1,7 @@
+{
+  "EmailId": "testuser@example.com",
+  "ClientId": "test-client-id",
+  "TenantId": "test-tenant-id",
+  "Domian": "skillrok.com",
+  "RoleId": 1
+}

@@ -1,0 +1,40 @@
+
+📤 POST request to: /PageSection/pagesection
+📦 Payload: {
+  "Pageid": 1,
+  "Sectionname": "Duplicate Section 1769519857596",
+  "Sectiontitle": "Test Section Title",
+  "Ordersequence": 1,
+  "Issectionvisible": true,
+  "IsPublished": true
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:17:37.960Z
+📍 POST https://marketingapi.skolasti.com/api/PageSection/pagesection
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null
+
+📤 POST request to: /PageSection/pagesection
+📦 Payload: {
+  "Pageid": 1,
+  "Sectionname": "Duplicate Section 1769519857596",
+  "Sectiontitle": "Test Section Title",
+  "Ordersequence": 1,
+  "Issectionvisible": true,
+  "IsPublished": true
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:17:38.248Z
+📍 POST https://marketingapi.skolasti.com/api/PageSection/pagesection
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null

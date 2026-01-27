@@ -1,0 +1,36 @@
+
+========== ✨ CREATE DOCUMENT ==========
+
+✨ Creating resource at: /ContentDocument/createcontentdocument
+📦 Payload: [
+  {
+    "Id": 0,
+    "Title": "torqueo.pdf",
+    "Url": "",
+    "CdnUrl": "",
+    "ContentRefId": 4223,
+    "ContentRefTypeId": 1,
+    "FileName": "torqueo.pdf",
+    "FileId": "",
+    "documentType": 1,
+    "Extension": "pdf",
+    "CreatedDate": "2026-01-27T13:16:25.040+00:00",
+    "UpdatedDate": "2026-01-27T13:16:25.059+00:00",
+    "DocumentSize": 158201,
+    "IsActive": true,
+    "IsDeleted": false,
+    "IsPublished": false,
+    "BlobPath": "cdn/documents/torqueo.pdf",
+    "ContainerName": "0SgHq1mm"
+  }
+]
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:16:26.222Z
+📍 POST (CREATE) https://courseapi.skolasti.com/api/ContentDocument/createcontentdocument
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: Missing Authorization token
+Status code: 401
+📥 Create Response: null

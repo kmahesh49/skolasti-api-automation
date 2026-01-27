@@ -1,0 +1,24 @@
+
+========== âŒ TEST: UNAUTHORIZED ACCESS ==========
+
+ðŸ”’ Testing: No Authorization Header
+ðŸ“Š Response Status: 401
+âœ… Correctly rejected with status 401
+ðŸ“¥ Response: Missing Authorization token and clientid header.
+
+ðŸ”’ Testing: Invalid Bearer Token
+ðŸ“Š Response Status: 401
+âœ… Correctly rejected with status 401
+ðŸ“¥ Response: Missing Authorization token
+
+ðŸ”’ Testing: Expired Token
+ðŸ“Š Response Status: 401
+âœ… Correctly rejected with status 401
+ðŸ“¥ Response: Missing Authorization token
+
+ðŸ”’ Testing: Malformed Authorization Header
+ðŸ“Š Response Status: 401
+âœ… Correctly rejected with status 401
+ðŸ“¥ Response: Missing Authorization token
+
+âœ… ALL UNAUTHORIZED ACCESS TESTS PASSED

@@ -1,0 +1,9 @@
+❌ FAIL: GET /UserQuizAndAssesment/getquizlevels should return status 200, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [200]
+❌ FAIL: GET /UserQuizAndAssesment/getquizlevels should be successful (2xx status)
+   Error: expect(received).toBeTruthy()
+
+Received: false

@@ -1,0 +1,7 @@
+Deleting resource at: /UserManagement/deleteprofilepicture?userId=3f537698-4e5e-4101-9115-626385911940
+Payload: [
+  200,
+  204,
+  404
+]
+Delete Status: 401

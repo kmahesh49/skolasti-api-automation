@@ -1,0 +1,5 @@
+
+========== ❌ TEST: DELETE NON-EXISTENT BADGE ==========
+
+🧪 Testing: Delete badge ID 999999999
+📊 Response Status: 401

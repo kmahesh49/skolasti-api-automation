@@ -1,0 +1,16 @@
+{
+  "PlanName": "Weekly Test Plan 1769519740816",
+  "Description": "Test Weekly subscription plan",
+  "Price": 100,
+  "Validity": 7,
+  "ValidityTypeId": 2,
+  "CurrencyCodeId": 0,
+  "RazorPayPlanId": "plan_test_1769519740816",
+  "PaymentLink": "Payment Link will be available later",
+  "subscriptionDataVM": [
+    {
+      "ContentId": 1137,
+      "ContentTypeId": 0
+    }
+  ]
+}

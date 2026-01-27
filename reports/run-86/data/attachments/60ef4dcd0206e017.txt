@@ -1,0 +1,3 @@
+Getting resource from: /CourseData/validateemail?domain=skillrok.com
+Attempt 1: Status: 401
+Attempt 1: Raw response: 

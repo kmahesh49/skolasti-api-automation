@@ -1,0 +1,76 @@
+❌ FAIL: POST /Marketingpages/marketingpages should return status 201, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [201]
+   Endpoint: /Marketingpages/marketingpages
+   Expected Status: 201
+   Actual Status: 401
+❌ FAIL: POST /Marketingpages/marketingpages should return status 409, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [409]
+   Endpoint: /Marketingpages/marketingpages
+   Expected Status: 409
+   Actual Status: 401
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                    TEST EXECUTION FAILURE SUMMARY                          ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+❌ Total Failures: 2
+📊 Status Code Failures: 2
+✓ Validation Failures: 0
+
+
+════════════════════════════════════════════════════════════════════════════════
+📊 STATUS CODE FAILURES:
+════════════════════════════════════════════════════════════════════════════════
+
+1. POST /Marketingpages/marketingpages should return status 201, got 401
+   Endpoint: /Marketingpages/marketingpages
+   Expected: 201
+   Actual: 401
+   Category: CLIENT ERROR (4xx)
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [201]
+   Time: 2026-01-27T13:17:03.077Z
+   
+   🔒 UNAUTHORIZED (401)
+         
+   Possible Causes:
+   • Missing Authorization header
+   • Invalid or expired JWT token
+
+2. POST /Marketingpages/marketingpages should return status 409, got 401
+   Endpoint: /Marketingpages/marketingpages
+   Expected: 409
+   Actual: 401
+   Category: CLIENT ERROR (4xx)
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [409]
+   Time: 2026-01-27T13:17:03.364Z
+   
+   🔒 UNAUTHORIZED (401)
+         
+   Possible Causes:
+   • Missing Authorization header
+   • Invalid or expired JWT token
+
+════════════════════════════════════════════════════════════════════════════════
+📋 REQUEST HISTORY (Last 5):
+════════════════════════════════════════════════════════════════════════════════
+
+1. POST /Marketingpages/marketingpages
+   Status: 401
+   Time: 2026-01-27T13:17:03.060Z
+
+2. POST /Marketingpages/marketingpages
+   Status: 401
+   Time: 2026-01-27T13:17:03.357Z
+

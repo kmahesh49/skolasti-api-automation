@@ -1,0 +1,33 @@
+
+========== ✨ CREATE AUDIO ==========
+
+✨ Creating resource at: /Audio/createaudio
+📦 Payload: [
+  {
+    "Id": 0,
+    "Title": "Kiss You All Over.mp3",
+    "Description": "",
+    "Transcript": "",
+    "audioType": 1,
+    "AudioUrl": "",
+    "AudioLength": 0,
+    "FileName": "Money For Nothing.mp3",
+    "Extension": "mp3",
+    "CreatedDate": "2026-01-27T13:16:10.013+00:00",
+    "UpdatedDate": "2026-01-27T13:16:10.026+00:00",
+    "AudioSize": 1791377,
+    "IsActive": true,
+    "IsDeleted": false,
+    "IsPublished": false
+  }
+]
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:16:11.289Z
+📍 POST (CREATE) https://courseapi.skolasti.com/api/Audio/createaudio
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: Missing Authorization token
+Status code: 401
+📥 Create Response: null

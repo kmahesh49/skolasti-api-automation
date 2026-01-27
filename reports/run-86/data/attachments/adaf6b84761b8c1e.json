@@ -1,0 +1,28 @@
+{
+  "Title": "Negative Test Quiz 1769519732347",
+  "NumberOfRetake": 3,
+  "PassScoreInPertcentage": "70",
+  "TotalQuestions": 6,
+  "TotalScore": 110,
+  "IsOptional": true,
+  "QuizLevels": [
+    {
+      "LevelId": 0,
+      "NumberOfQuestions": 1,
+      "PassScoreInPertcentage": 70,
+      "PointsPerQuestion": 10
+    },
+    {
+      "LevelId": 1,
+      "NumberOfQuestions": 2,
+      "PassScoreInPertcentage": 70,
+      "PointsPerQuestion": 20
+    },
+    {
+      "LevelId": 2,
+      "NumberOfQuestions": 3,
+      "PassScoreInPertcentage": 70,
+      "PointsPerQuestion": 20
+    }
+  ]
+}

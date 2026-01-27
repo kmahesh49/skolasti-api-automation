@@ -1,0 +1,16 @@
+
+📤 POST request to: /VisibilityTenantSettings/createtenantsettings
+📦 Payload: {
+  "TenantConfigurationId": 2,
+  "IsEnabled": false
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:15:23.974Z
+📍 POST https://adminapi.skolasti.com/api/VisibilityTenantSettings/createtenantsettings
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null

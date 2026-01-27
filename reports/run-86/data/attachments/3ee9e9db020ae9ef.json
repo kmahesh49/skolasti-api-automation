@@ -1,0 +1,9 @@
+{
+  "Id": 0,
+  "PaymentGatewayType": "Stripe",
+  "GatewayAccountId": "acct_test123456",
+  "GatewayProductId": "prod_test789012",
+  "IsConfigured": true,
+  "ConfiguredStatus": "Active",
+  "ConfiguredDate": "2026-01-24T00:00:00Z"
+}

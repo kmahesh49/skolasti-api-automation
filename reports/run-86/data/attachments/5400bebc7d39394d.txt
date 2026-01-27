@@ -1,0 +1,20 @@
+
+📤 POST request to: /Notification/createnotificationtemplates
+📦 Payload: [
+  {
+    "Content": "Invalid content",
+    "Placeholder": "{{test}}",
+    "Subject": "Invalid",
+    "CategoryName": "Invalid"
+  }
+]
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:15:14.037Z
+📍 POST https://adminapi.skolasti.com/api/Notification/createnotificationtemplates
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null

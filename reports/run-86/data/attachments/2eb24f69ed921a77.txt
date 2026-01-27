@@ -1,0 +1,13 @@
+
+📤 POST request to: /PageSectionDynamicContent/invalidatecache
+📦 Payload: {}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:17:25.472Z
+📍 POST https://marketingapi.skolasti.com/api/PageSectionDynamicContent/invalidatecache
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null

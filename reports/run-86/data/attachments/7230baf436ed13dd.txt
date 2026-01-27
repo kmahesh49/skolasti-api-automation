@@ -1,0 +1,15 @@
+
+========== ✨ CREATE NOTIFICATION PREFERENCES ==========
+
+📤 POST request to: /UserNotification/createnotificationpreferences?userId=3f537698-4e5e-4101-9115-626385911940&notificationCategoryId=1
+📦 Payload: {}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:16:06.781Z
+📍 POST https://clientapi.skolasti.com/api/UserNotification/createnotificationpreferences?userId=3f537698-4e5e-4101-9115-626385911940&notificationCategoryId=1
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: Missing Authorization token
+Status code: 401
+📥 POST Response: null

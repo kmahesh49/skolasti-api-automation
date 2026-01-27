@@ -1,0 +1,16 @@
+
+🔄 PUT request to: /UserManagement/updatedpreferredlanguage
+📦 Payload: {
+  "UserId": "3f537698-4e5e-4101-9115-626385911940",
+  "LanguageId": 1
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:15:19.613Z
+📍 PUT https://adminapi.skolasti.com/api/UserManagement/updatedpreferredlanguage
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 PUT Response: null

@@ -1,0 +1,3 @@
+Getting resource from: /CourseData/details/invalid
+Attempt 1: Status: 401
+Attempt 1: Raw response: 

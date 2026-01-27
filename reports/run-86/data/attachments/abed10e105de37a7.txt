@@ -1,0 +1,5 @@
+
+========== ❌ TEST: BOUNDARY VALUES ==========
+
+🧪 Testing: Exactly 2 characters (minimum boundary)
+📊 Response Status: 401

@@ -1,0 +1,40 @@
+❌ FAIL: DELETE /PageSection/pagesection/1 should be successful (2xx status)
+   Error: expect(received).toBeTruthy()
+
+Received: false
+❌ FAIL: DELETE /PageSection/pagesection/1 should return status 204, got 401
+   Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 204
+Received: 401
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                    TEST EXECUTION FAILURE SUMMARY                          ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+❌ Total Failures: 2
+📊 Status Code Failures: 0
+✓ Validation Failures: 2
+
+
+════════════════════════════════════════════════════════════════════════════════
+✓ VALIDATION FAILURES:
+════════════════════════════════════════════════════════════════════════════════
+
+1. DELETE /PageSection/pagesection/1 should be successful (2xx status)
+   Error: expect(received).toBeTruthy()
+
+Received: false
+   Time: 2026-01-27T13:17:40.495Z
+
+2. DELETE /PageSection/pagesection/1 should return status 204, got 401
+   Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 204
+Received: 401
+   Time: 2026-01-27T13:17:40.497Z
+
+════════════════════════════════════════════════════════════════════════════════
+📋 REQUEST HISTORY (Last 5):
+════════════════════════════════════════════════════════════════════════════════
+

@@ -1,0 +1,29 @@
+
+📤 POST request to: /Notification/createnotificationtemplates
+📦 Payload: [
+  {
+    "Title": "Welcome Email Template",
+    "Content": "Welcome to our platform! {{username}}",
+    "Placeholder": "{{username}}, {{email}}",
+    "Subject": "Welcome to Skolasti",
+    "CategoryName": "Welcome",
+    "Description": "Template for welcoming new users"
+  },
+  {
+    "Title": "Password Reset Template",
+    "Content": "Click here to reset: {{resetLink}}",
+    "Placeholder": "{{resetLink}}, {{email}}",
+    "Subject": "Password Reset Request",
+    "CategoryName": "Security"
+  }
+]
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:15:13.808Z
+📍 POST https://adminapi.skolasti.com/api/Notification/createnotificationtemplates
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null

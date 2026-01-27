@@ -1,0 +1,5 @@
+
+========== ❌ TEST: INVALID SESSION ID FOR Q&A ==========
+
+🧪 Testing: Q&A for session 999999999
+📊 Response Status: 401

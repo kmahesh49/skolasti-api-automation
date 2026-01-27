@@ -1,0 +1,20 @@
+
+========== 👤 CHECK USER UNDER COURSE ==========
+
+📤 POST request to: /ChatSession/userundercourseorvideo
+📦 Payload: {
+  "CourseId": 1,
+  "VideoId": null,
+  "PageNumber": 1,
+  "PageSize": 10
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:15:52.393Z
+📍 POST https://clientapi.skolasti.com/api/ChatSession/userundercourseorvideo
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: Missing Authorization token
+Status code: 401
+📥 POST Response: null

@@ -1,0 +1,128 @@
+Failed to parse JSON: SyntaxError: Unexpected token M in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at ApiHelper.parseResponse (/home/runner/work/skolasti-api-automation/skolasti-api-automation/utils/ApiHelper.js:349:29)
+    at ApiHelper.post (/home/runner/work/skolasti-api-automation/skolasti-api-automation/utils/ApiHelper.js:398:26)
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/tests/Client-API/Subscription.spec.js:201:7
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:310:9
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/testInfo.js:305:11
+    at TimeoutManager.withRunnable (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/timeoutManager.js:67:14)
+    at TestInfoImpl._runWithTimeout (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/testInfo.js:303:7)
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:308:7
+    at WorkerMain._runTest (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:283:5)
+    at WorkerMain.runTestGroup (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:198:11)
+    at process.<anonymous> (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/common/process.js:65:22)
+❌ FAIL: POST /Subscription/togglewishlist?contentId=1&contentTypeId=1&userId=3f537698-4e5e-4101-9115-626385911940 should return status 200, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [200]
+   Endpoint: /Subscription/togglewishlist?contentId=1&contentTypeId=1&userId=3f537698-4e5e-4101-9115-626385911940
+   Expected Status: 200
+   Actual Status: 401
+❌ FAIL: GET /Subscription/getwishlist?userId=3f537698-4e5e-4101-9115-626385911940&PageNumber=1&PageSize=10 should return status 200 or 204, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [200, 204]
+❌ FAIL: GET /Subscription/getwishlist?userId=3f537698-4e5e-4101-9115-626385911940&PageNumber=1&PageSize=10 should be successful (2xx status)
+   Error: expect(received).toBeTruthy()
+
+Received: false
+Failed to parse JSON: SyntaxError: Unexpected token M in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at ApiHelper.parseResponse (/home/runner/work/skolasti-api-automation/skolasti-api-automation/utils/ApiHelper.js:349:29)
+    at ApiHelper.post (/home/runner/work/skolasti-api-automation/skolasti-api-automation/utils/ApiHelper.js:398:26)
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/tests/Client-API/Subscription.spec.js:222:7
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:310:9
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/testInfo.js:305:11
+    at TimeoutManager.withRunnable (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/timeoutManager.js:67:14)
+    at TestInfoImpl._runWithTimeout (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/testInfo.js:303:7)
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:308:7
+    at WorkerMain._runTest (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:283:5)
+    at WorkerMain.runTestGroup (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:198:11)
+    at process.<anonymous> (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/common/process.js:65:22)
+❌ FAIL: POST /Subscription/togglewishlist?contentId=1&contentTypeId=1&userId=3f537698-4e5e-4101-9115-626385911940 should return status 200, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [200]
+   Endpoint: /Subscription/togglewishlist?contentId=1&contentTypeId=1&userId=3f537698-4e5e-4101-9115-626385911940
+   Expected Status: 200
+   Actual Status: 401
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                    TEST EXECUTION FAILURE SUMMARY                          ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+❌ Total Failures: 4
+📊 Status Code Failures: 2
+✓ Validation Failures: 2
+
+
+════════════════════════════════════════════════════════════════════════════════
+📊 STATUS CODE FAILURES:
+════════════════════════════════════════════════════════════════════════════════
+
+1. POST /Subscription/togglewishlist?contentId=1&contentTypeId=1&userId=3f537698-4e5e-4101-9115-626385911940 should return status 200, got 401
+   Endpoint: /Subscription/togglewishlist?contentId=1&contentTypeId=1&userId=3f537698-4e5e-4101-9115-626385911940
+   Expected: 200
+   Actual: 401
+   Category: CLIENT ERROR (4xx)
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [200]
+   Time: 2026-01-27T13:16:00.246Z
+   
+   🔒 UNAUTHORIZED (401)
+         
+   Possible Causes:
+   • Missing Authorization header
+   • Invalid or expired JWT token
+
+2. POST /Subscription/togglewishlist?contentId=1&contentTypeId=1&userId=3f537698-4e5e-4101-9115-626385911940 should return status 200, got 401
+   Endpoint: /Subscription/togglewishlist?contentId=1&contentTypeId=1&userId=3f537698-4e5e-4101-9115-626385911940
+   Expected: 200
+   Actual: 401
+   Category: CLIENT ERROR (4xx)
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [200]
+   Time: 2026-01-27T13:16:00.901Z
+   
+   🔒 UNAUTHORIZED (401)
+         
+   Possible Causes:
+   • Missing Authorization header
+   • Invalid or expired JWT token
+
+════════════════════════════════════════════════════════════════════════════════
+✓ VALIDATION FAILURES:
+════════════════════════════════════════════════════════════════════════════════
+
+1. GET /Subscription/getwishlist?userId=3f537698-4e5e-4101-9115-626385911940&PageNumber=1&PageSize=10 should return status 200 or 204, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [200, 204]
+   Time: 2026-01-27T13:16:00.563Z
+
+2. GET /Subscription/getwishlist?userId=3f537698-4e5e-4101-9115-626385911940&PageNumber=1&PageSize=10 should be successful (2xx status)
+   Error: expect(received).toBeTruthy()
+
+Received: false
+   Time: 2026-01-27T13:16:00.565Z
+
+════════════════════════════════════════════════════════════════════════════════
+📋 REQUEST HISTORY (Last 5):
+════════════════════════════════════════════════════════════════════════════════
+
+1. POST /Subscription/togglewishlist?contentId=1&contentTypeId=1&userId=3f537698-4e5e-4101-9115-626385911940
+   Status: 401
+   Time: 2026-01-27T13:16:00.234Z
+
+2. POST /Subscription/togglewishlist?contentId=1&contentTypeId=1&userId=3f537698-4e5e-4101-9115-626385911940
+   Status: 401
+   Time: 2026-01-27T13:16:00.894Z
+

@@ -1,0 +1,34 @@
+
+📤 POST request to: /Marketingpages/marketingpages
+📦 Payload: {
+  "PageName": "Duplicate Test 1769519822699",
+  "IsPageVisible": true,
+  "IsPublished": true
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:17:03.060Z
+📍 POST https://marketingapi.skolasti.com/api/Marketingpages/marketingpages
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null
+
+📤 POST request to: /Marketingpages/marketingpages
+📦 Payload: {
+  "PageName": "Duplicate Test 1769519822699",
+  "IsPageVisible": true,
+  "IsPublished": true
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:17:03.357Z
+📍 POST https://marketingapi.skolasti.com/api/Marketingpages/marketingpages
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null

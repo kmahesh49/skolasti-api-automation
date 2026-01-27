@@ -1,0 +1,16 @@
+
+🔄 PUT request to: /VisibilityTenantSettings/updatetenantsettings
+📦 Payload: {
+  "TenantSettingsId": 0,
+  "IsEnabled": true
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:15:24.316Z
+📍 PUT https://adminapi.skolasti.com/api/VisibilityTenantSettings/updatetenantsettings
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 PUT Response: null

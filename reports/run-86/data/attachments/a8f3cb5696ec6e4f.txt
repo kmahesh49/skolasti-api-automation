@@ -1,0 +1,8 @@
+❌ FAIL: PUT /UserManagement/updateuserroleinusers should return status 200 or 404, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [200, 404]
+   Endpoint: /UserManagement/updateuserroleinusers
+   Expected Status: 200,404
+   Actual Status: 401

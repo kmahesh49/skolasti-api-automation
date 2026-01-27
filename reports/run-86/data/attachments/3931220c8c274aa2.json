@@ -1,0 +1,9 @@
+[
+  {
+    "Title": "Test Template",
+    "Content": "Test content {{placeholder}}",
+    "Placeholder": "{{placeholder}}",
+    "Subject": "Test Subject",
+    "CategoryName": "Test"
+  }
+]

@@ -1,0 +1,19 @@
+
+========== 🚀 START CHAT SESSION ==========
+
+📤 POST request to: /ChatSession/startchatsession
+📦 Payload: {
+  "UserId": "3f537698-4e5e-4101-9115-626385911940",
+  "CourseId": 1,
+  "VideoId": null
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:15:49.879Z
+📍 POST https://clientapi.skolasti.com/api/ChatSession/startchatsession
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: Missing Authorization token
+Status code: 401
+📥 POST Response: null

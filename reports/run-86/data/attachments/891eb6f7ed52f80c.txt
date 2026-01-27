@@ -1,0 +1,7 @@
+Deleting resource at: /VisibilityTenantSettings/paymentgatewayconfig?tenantId=1
+Payload: [
+  200,
+  204,
+  404
+]
+Delete Status: 401

@@ -1,0 +1,40 @@
+❌ FAIL: DELETE /Marketingpages/marketingpages/99999 should be successful (2xx status)
+   Error: expect(received).toBeTruthy()
+
+Received: false
+❌ FAIL: DELETE /Marketingpages/marketingpages/99999 should return status 204, got 401
+   Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 204
+Received: 401
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                    TEST EXECUTION FAILURE SUMMARY                          ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+❌ Total Failures: 2
+📊 Status Code Failures: 0
+✓ Validation Failures: 2
+
+
+════════════════════════════════════════════════════════════════════════════════
+✓ VALIDATION FAILURES:
+════════════════════════════════════════════════════════════════════════════════
+
+1. DELETE /Marketingpages/marketingpages/99999 should be successful (2xx status)
+   Error: expect(received).toBeTruthy()
+
+Received: false
+   Time: 2026-01-27T13:17:05.501Z
+
+2. DELETE /Marketingpages/marketingpages/99999 should return status 204, got 401
+   Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 204
+Received: 401
+   Time: 2026-01-27T13:17:05.504Z
+
+════════════════════════════════════════════════════════════════════════════════
+📋 REQUEST HISTORY (Last 5):
+════════════════════════════════════════════════════════════════════════════════
+

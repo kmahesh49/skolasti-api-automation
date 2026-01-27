@@ -1,0 +1,21 @@
+
+🔄 PUT request to: /PageSection/pagesection
+📦 Payload: {
+  "Id": 1,
+  "Pageid": 1,
+  "Sectionname": "",
+  "Sectiontitle": "Updated Section Title",
+  "Ordersequence": 2,
+  "Issectionvisible": true,
+  "IsPublished": true
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:17:36.800Z
+📍 PUT https://marketingapi.skolasti.com/api/PageSection/pagesection
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 PUT Response: null

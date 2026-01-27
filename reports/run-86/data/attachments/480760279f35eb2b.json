@@ -1,0 +1,10 @@
+{
+  "method": "POST (CREATE)",
+  "endpoint": "https://courseapi.skolasti.com/api/Course/createcourse",
+  "expectedStatus": [
+    200,
+    201
+  ],
+  "actualStatus": 401,
+  "timestamp": "2026-01-27T13:16:23.901Z"
+}

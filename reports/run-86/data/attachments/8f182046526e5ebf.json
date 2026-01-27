@@ -1,0 +1,7 @@
+{
+  "EmailId": "invalid-email",
+  "ClientId": "test-client-id",
+  "TenantId": "test-tenant-id",
+  "Domian": "skillrok.com",
+  "RoleId": 1
+}

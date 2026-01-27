@@ -1,0 +1,47 @@
+❌ FAIL: POST /CourseData/inviteuser should return status 400, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [400]
+   Endpoint: /CourseData/inviteuser
+   Expected Status: 400
+   Actual Status: 401
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                    TEST EXECUTION FAILURE SUMMARY                          ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+❌ Total Failures: 1
+📊 Status Code Failures: 1
+✓ Validation Failures: 0
+
+
+════════════════════════════════════════════════════════════════════════════════
+📊 STATUS CODE FAILURES:
+════════════════════════════════════════════════════════════════════════════════
+
+1. POST /CourseData/inviteuser should return status 400, got 401
+   Endpoint: /CourseData/inviteuser
+   Expected: 400
+   Actual: 401
+   Category: CLIENT ERROR (4xx)
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [400]
+   Time: 2026-01-27T13:16:54.892Z
+   
+   🔒 UNAUTHORIZED (401)
+         
+   Possible Causes:
+   • Missing Authorization header
+   • Invalid or expired JWT token
+
+════════════════════════════════════════════════════════════════════════════════
+📋 REQUEST HISTORY (Last 5):
+════════════════════════════════════════════════════════════════════════════════
+
+1. POST /CourseData/inviteuser
+   Status: 401
+   Time: 2026-01-27T13:16:54.877Z
+

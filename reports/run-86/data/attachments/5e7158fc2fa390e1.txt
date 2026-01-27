@@ -1,0 +1,22 @@
+
+📤 POST request to: /VisibilityTenantSettings/createconfiguration
+📦 Payload: {
+  "Integrationtype": "Outlook Calendar",
+  "VisibilityConfigurationId": 2,
+  "TenantId": 1,
+  "Providermailid": "admin@test.com",
+  "Accesstoken": "minimal-access-token",
+  "Refreshtoken": "minimal-refresh-token",
+  "CalendarId": "minimal-calendar-id",
+  "ExpiredAt": "2026-12-31T23:59:59Z"
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:15:23.128Z
+📍 POST https://adminapi.skolasti.com/api/VisibilityTenantSettings/createconfiguration
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null

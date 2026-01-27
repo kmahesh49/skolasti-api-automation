@@ -1,0 +1,25 @@
+
+📤 POST request to: /CourseData/getallcourses
+📦 Payload: {
+  "PageNumber": 1,
+  "PageSize": 10,
+  "FilterField": "Title",
+  "FilterText": "Test",
+  "CategoryIds": [
+    1,
+    2
+  ],
+  "CourseTypes": [
+    1
+  ]
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:16:45.635Z
+📍 POST https://marketingapi.skolasti.com/api/CourseData/getallcourses
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null

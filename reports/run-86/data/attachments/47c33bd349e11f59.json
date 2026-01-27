@@ -1,0 +1,13 @@
+{
+  "PageNumber": 1,
+  "PageSize": 10,
+  "FilterField": "Title",
+  "FilterText": "Test",
+  "CategoryIds": [
+    1,
+    2
+  ],
+  "CourseTypes": [
+    1
+  ]
+}

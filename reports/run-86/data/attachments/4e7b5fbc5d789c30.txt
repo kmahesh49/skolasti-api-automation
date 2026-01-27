@@ -1,0 +1,5 @@
+
+========== ❌ TEST: DELETE NON-EXISTENT PREFERENCE ==========
+
+🧪 Testing: Delete preference ID 999999999
+📊 Response Status: 401

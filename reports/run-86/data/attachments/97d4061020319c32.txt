@@ -1,0 +1,30 @@
+
+========== SETUP: Create Quiz with Questions for Execution Flow ==========
+
+✨ Creating resource at: /UserQuizAndAssesment/createquiz
+📦 Payload: {
+  "Title": "Execution Flow Quiz 1769519738151",
+  "NumberOfRetake": 3,
+  "PassScoreInPertcentage": "70",
+  "TotalQuestions": 3,
+  "TotalScore": 110,
+  "IsOptional": true,
+  "QuizLevels": [
+    {
+      "LevelId": 0,
+      "NumberOfQuestions": 3,
+      "PassScoreInPertcentage": 60,
+      "PointsPerQuestion": 10
+    }
+  ]
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:15:38.565Z
+📍 POST (CREATE) https://clientapi.skolasti.com/api/UserQuizAndAssesment/createquiz
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: Missing Authorization token
+Status code: 401
+📥 Create Response: null

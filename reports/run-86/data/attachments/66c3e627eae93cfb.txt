@@ -1,0 +1,17 @@
+
+📤 POST request to: /VisibilityTenantSettings/createconfiguration
+📦 Payload: {
+  "VisibilityConfigurationId": 1,
+  "TenantId": 1,
+  "Providermailid": "admin@test.com"
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:15:22.515Z
+📍 POST https://adminapi.skolasti.com/api/VisibilityTenantSettings/createconfiguration
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null

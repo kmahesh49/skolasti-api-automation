@@ -1,0 +1,8 @@
+❌ FAIL: POST /VisibilityTenantSettings/createtenantsettings should return status 400, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [400]
+   Endpoint: /VisibilityTenantSettings/createtenantsettings
+   Expected Status: 400
+   Actual Status: 401

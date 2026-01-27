@@ -1,0 +1,8 @@
+
+========== NEGATIVE TEST: GET NON-EXISTENT PLAN BY ID ==========
+Requesting non-existent Plan ID: 999999
+Response Status: 401
+Response Body: Missing Authorization token
+✓ API returns 401 for non-existent plan
+
+========== COMPLETE: NEGATIVE TEST COMPLETED ==========

@@ -1,0 +1,5 @@
+
+========== ❌ TEST: INVALID COURSE ID ==========
+
+🧪 Testing: courseId - Non-existent ID
+📊 Response Status: 401

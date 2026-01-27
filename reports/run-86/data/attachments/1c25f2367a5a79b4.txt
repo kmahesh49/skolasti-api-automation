@@ -1,0 +1,40 @@
+❌ FAIL: GET /CourseData/subscriptionplans should return status 200 or 204, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [200, 204]
+❌ FAIL: GET /CourseData/subscriptionplans should be successful (2xx status)
+   Error: expect(received).toBeTruthy()
+
+Received: false
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                    TEST EXECUTION FAILURE SUMMARY                          ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+❌ Total Failures: 2
+📊 Status Code Failures: 0
+✓ Validation Failures: 2
+
+
+════════════════════════════════════════════════════════════════════════════════
+✓ VALIDATION FAILURES:
+════════════════════════════════════════════════════════════════════════════════
+
+1. GET /CourseData/subscriptionplans should return status 200 or 204, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [200, 204]
+   Time: 2026-01-27T13:16:37.010Z
+
+2. GET /CourseData/subscriptionplans should be successful (2xx status)
+   Error: expect(received).toBeTruthy()
+
+Received: false
+   Time: 2026-01-27T13:16:37.011Z
+
+════════════════════════════════════════════════════════════════════════════════
+📋 REQUEST HISTORY (Last 5):
+════════════════════════════════════════════════════════════════════════════════
+

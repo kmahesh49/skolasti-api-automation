@@ -1,0 +1,27 @@
+
+========== 📜 GET ALL USER CERTIFICATES ==========
+
+📤 POST request to: /Certificates/getallusercertificates
+📦 Payload: {
+  "PageNumber": 1,
+  "PageSize": 10,
+  "IncludeAllPage": false,
+  "SortField": "CreatedDate",
+  "SortType": "DESC"
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:15:48.875Z
+📍 POST https://clientapi.skolasti.com/api/Certificates/getallusercertificates
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: Missing Authorization token
+Status code: 401
+📥 POST Response: null
+✅ No user certificates found
+
+========== 📋 GET CERTIFICATE TEMPLATES ==========
+Getting resource from: /Certificates/getcertificatetemplates
+Attempt 1: Status: 401
+Attempt 1: Raw response: Missing Authorization token

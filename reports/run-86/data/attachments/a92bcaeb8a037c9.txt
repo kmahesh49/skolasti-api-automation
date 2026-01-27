@@ -1,0 +1,7 @@
+Deleting resource at: /UserManagement/deleteuserprofile/00000000-0000-0000-0000-000000000000
+Payload: [
+  404,
+  200,
+  204
+]
+Delete Status: 401

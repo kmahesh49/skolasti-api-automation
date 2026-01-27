@@ -1,0 +1,10 @@
+{
+  "method": "POST",
+  "endpoint": "https://marketingapi.skolasti.com/api/CourseData/inviteuser",
+  "expectedStatus": [
+    200,
+    201
+  ],
+  "actualStatus": 401,
+  "timestamp": "2026-01-27T13:16:53.662Z"
+}

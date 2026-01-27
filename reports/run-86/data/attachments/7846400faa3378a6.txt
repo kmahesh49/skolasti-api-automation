@@ -1,0 +1,40 @@
+❌ FAIL: GET /CourseData/details/99999 should return status 404, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [404]
+❌ FAIL: GET /CourseData/details/99999 should be successful (2xx status)
+   Error: expect(received).toBeTruthy()
+
+Received: false
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                    TEST EXECUTION FAILURE SUMMARY                          ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+❌ Total Failures: 2
+📊 Status Code Failures: 0
+✓ Validation Failures: 2
+
+
+════════════════════════════════════════════════════════════════════════════════
+✓ VALIDATION FAILURES:
+════════════════════════════════════════════════════════════════════════════════
+
+1. GET /CourseData/details/99999 should return status 404, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [404]
+   Time: 2026-01-27T13:16:51.243Z
+
+2. GET /CourseData/details/99999 should be successful (2xx status)
+   Error: expect(received).toBeTruthy()
+
+Received: false
+   Time: 2026-01-27T13:16:51.244Z
+
+════════════════════════════════════════════════════════════════════════════════
+📋 REQUEST HISTORY (Last 5):
+════════════════════════════════════════════════════════════════════════════════
+

@@ -1,0 +1,6 @@
+Deleting resource at: /Notification/deletenotificationtemplate?notificationtemplateid=999999
+Payload: [
+  404,
+  204
+]
+Delete Status: 401

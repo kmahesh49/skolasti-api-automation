@@ -1,0 +1,22 @@
+
+📤 POST request to: /VisibilityTenantSettings/paymentgatewayconfig
+📦 Payload: {
+  "Id": 0,
+  "TenantId": 1,
+  "PaymentGatewayType": "Stripe",
+  "GatewayAccountId": "acct_test123456",
+  "GatewayProductId": "prod_test789012",
+  "IsConfigured": true,
+  "ConfiguredStatus": "Active",
+  "ConfiguredDate": "2026-01-24T00:00:00Z"
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:15:24.660Z
+📍 POST https://adminapi.skolasti.com/api/VisibilityTenantSettings/paymentgatewayconfig
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null

@@ -1,0 +1,10 @@
+{
+  "method": "POST",
+  "endpoint": "https://marketingapi.skolasti.com/api/PageSection/pagesection",
+  "expectedStatus": [
+    409,
+    201
+  ],
+  "actualStatus": 401,
+  "timestamp": "2026-01-27T13:17:38.249Z"
+}

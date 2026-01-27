@@ -1,0 +1,3 @@
+Getting resource from: /Notification/notification?notificationId=999999
+Attempt 1: Status: 401
+Attempt 1: Raw response: 

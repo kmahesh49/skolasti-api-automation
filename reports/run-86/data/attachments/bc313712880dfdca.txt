@@ -1,0 +1,47 @@
+❌ FAIL: POST /PageSection/pagesection should return status 201, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [201]
+   Endpoint: /PageSection/pagesection
+   Expected Status: 201
+   Actual Status: 401
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                    TEST EXECUTION FAILURE SUMMARY                          ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+❌ Total Failures: 1
+📊 Status Code Failures: 1
+✓ Validation Failures: 0
+
+
+════════════════════════════════════════════════════════════════════════════════
+📊 STATUS CODE FAILURES:
+════════════════════════════════════════════════════════════════════════════════
+
+1. POST /PageSection/pagesection should return status 201, got 401
+   Endpoint: /PageSection/pagesection
+   Expected: 201
+   Actual: 401
+   Category: CLIENT ERROR (4xx)
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [201]
+   Time: 2026-01-27T13:17:34.241Z
+   
+   🔒 UNAUTHORIZED (401)
+         
+   Possible Causes:
+   • Missing Authorization header
+   • Invalid or expired JWT token
+
+════════════════════════════════════════════════════════════════════════════════
+📋 REQUEST HISTORY (Last 5):
+════════════════════════════════════════════════════════════════════════════════
+
+1. POST /PageSection/pagesection
+   Status: 401
+   Time: 2026-01-27T13:17:34.229Z
+

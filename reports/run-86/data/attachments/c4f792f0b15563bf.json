@@ -1,0 +1,16 @@
+{
+  "Title": "Execution Flow Quiz 1769519738151",
+  "NumberOfRetake": 3,
+  "PassScoreInPertcentage": "70",
+  "TotalQuestions": 3,
+  "TotalScore": 110,
+  "IsOptional": true,
+  "QuizLevels": [
+    {
+      "LevelId": 0,
+      "NumberOfQuestions": 3,
+      "PassScoreInPertcentage": 60,
+      "PointsPerQuestion": 10
+    }
+  ]
+}

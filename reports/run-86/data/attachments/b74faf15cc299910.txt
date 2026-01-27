@@ -1,0 +1,5 @@
+
+========== ❌ TEST: INVALID SESSION ID ==========
+
+🧪 Testing: sessionId - Non-existent ID
+📊 Response Status: 401

@@ -1,0 +1,18 @@
+
+📤 POST request to: /SectionProductContent/sectionproductcontent
+📦 Payload: {
+  "Pagesectionid": 1,
+  "Contentid": 99999,
+  "Contenttypeid": 1,
+  "IsPublished": true
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:17:17.274Z
+📍 POST https://marketingapi.skolasti.com/api/SectionProductContent/sectionproductcontent
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null

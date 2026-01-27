@@ -1,0 +1,17 @@
+
+📤 POST request to: /CourseData/getallcourses
+📦 Payload: {
+  "PageNumber": 1,
+  "PageSize": 10,
+  "IncludeAllPage": true
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:16:45.722Z
+📍 POST https://marketingapi.skolasti.com/api/CourseData/getallcourses
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null

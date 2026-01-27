@@ -1,0 +1,20 @@
+
+📤 POST request to: /PageSection/pagesection
+📦 Payload: {
+  "Pageid": 1,
+  "Sectionname": "Hidden Section 1769519862491",
+  "Sectiontitle": "Test Section Title",
+  "Ordersequence": 1,
+  "Issectionvisible": false,
+  "IsPublished": false
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:17:42.840Z
+📍 POST https://marketingapi.skolasti.com/api/PageSection/pagesection
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null

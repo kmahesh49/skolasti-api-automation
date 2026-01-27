@@ -1,0 +1,30 @@
+
+========== CREATE: WEEKLY SUBSCRIPTION PLAN ==========
+
+📤 POST request to: /Subscription/createsubscriptionplan
+📦 Payload: {
+  "PlanName": "Weekly Test Plan 1769519740816",
+  "Description": "Test Weekly subscription plan",
+  "Price": 100,
+  "Validity": 7,
+  "ValidityTypeId": 2,
+  "CurrencyCodeId": 0,
+  "RazorPayPlanId": "plan_test_1769519740816",
+  "PaymentLink": "Payment Link will be available later",
+  "subscriptionDataVM": [
+    {
+      "ContentId": 1137,
+      "ContentTypeId": 0
+    }
+  ]
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:15:41.981Z
+📍 POST https://clientapi.skolasti.com/api/Subscription/createsubscriptionplan
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: Missing Authorization token
+Status code: 401
+📥 POST Response: null

@@ -1,0 +1,21 @@
+Failed to parse JSON: SyntaxError: Unexpected token M in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at ApiHelper.parseResponse (/home/runner/work/skolasti-api-automation/skolasti-api-automation/utils/ApiHelper.js:349:29)
+    at ApiHelper.post (/home/runner/work/skolasti-api-automation/skolasti-api-automation/utils/ApiHelper.js:398:26)
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/tests/Client-API/UserNotification.spec.js:111:35
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:310:9
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/testInfo.js:305:11
+    at TimeoutManager.withRunnable (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/timeoutManager.js:67:14)
+    at TestInfoImpl._runWithTimeout (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/testInfo.js:303:7)
+    at /home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:308:7
+    at WorkerMain._runTest (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:283:5)
+    at WorkerMain.runTestGroup (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/worker/workerMain.js:198:11)
+    at process.<anonymous> (/home/runner/work/skolasti-api-automation/skolasti-api-automation/node_modules/playwright/lib/common/process.js:65:22)
+❌ FAIL: POST /UserNotification/createnotificationpreferences?userId=3f537698-4e5e-4101-9115-626385911940&notificationCategoryId=1 should return status 200 or 201, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [200, 201]
+   Endpoint: /UserNotification/createnotificationpreferences?userId=3f537698-4e5e-4101-9115-626385911940&notificationCategoryId=1
+   Expected Status: 200,201
+   Actual Status: 401

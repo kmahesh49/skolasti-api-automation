@@ -1,0 +1,22 @@
+
+========== POST: INVALIDATE CATEGORY CACHES ==========
+
+📤 POST request to: /Category/invalidatecategorycaches
+📦 Payload: {}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:15:29.946Z
+📍 POST https://clientapi.skolasti.com/api/Category/invalidatecategorycaches
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: Missing Authorization token
+Status code: 401
+📥 POST Response: null
+Invalidate Cache Response: null
+✓ Cache invalidation completed (empty response)
+
+========== VERIFY: CATEGORIES ACCESSIBLE AFTER CACHE INVALIDATION ==========
+Getting resource from: /Category/getallcategories
+Attempt 1: Status: 401
+Attempt 1: Raw response: Missing Authorization token

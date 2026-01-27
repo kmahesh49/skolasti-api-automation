@@ -1,0 +1,10 @@
+{
+  "method": "POST",
+  "endpoint": "https://adminapi.skolasti.com/api/UserManagement/bulkinviteuser",
+  "expectedStatus": [
+    200,
+    201
+  ],
+  "actualStatus": 401,
+  "timestamp": "2026-01-27T13:15:17.816Z"
+}

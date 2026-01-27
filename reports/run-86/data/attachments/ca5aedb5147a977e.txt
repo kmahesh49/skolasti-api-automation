@@ -1,0 +1,40 @@
+❌ FAIL: GET /CourseData/validateemail?email=invalid-email&domain=skillrok.com should return status 400, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [400]
+❌ FAIL: GET /CourseData/validateemail?email=invalid-email&domain=skillrok.com should be successful (2xx status)
+   Error: expect(received).toBeTruthy()
+
+Received: false
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                    TEST EXECUTION FAILURE SUMMARY                          ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+❌ Total Failures: 2
+📊 Status Code Failures: 0
+✓ Validation Failures: 2
+
+
+════════════════════════════════════════════════════════════════════════════════
+✓ VALIDATION FAILURES:
+════════════════════════════════════════════════════════════════════════════════
+
+1. GET /CourseData/validateemail?email=invalid-email&domain=skillrok.com should return status 400, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [400]
+   Time: 2026-01-27T13:16:52.480Z
+
+2. GET /CourseData/validateemail?email=invalid-email&domain=skillrok.com should be successful (2xx status)
+   Error: expect(received).toBeTruthy()
+
+Received: false
+   Time: 2026-01-27T13:16:52.482Z
+
+════════════════════════════════════════════════════════════════════════════════
+📋 REQUEST HISTORY (Last 5):
+════════════════════════════════════════════════════════════════════════════════
+

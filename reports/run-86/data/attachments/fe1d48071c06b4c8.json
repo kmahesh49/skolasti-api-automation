@@ -1,0 +1,92 @@
+{
+  "aiText": "Solvo denuncio nulla.",
+  "title": "audacia dapifer vergo",
+  "titlePlaceholder": "viridis pariatur teneo brevis triduana",
+  "courseType": "online",
+  "courseTypeLabel": "Course Type",
+  "courseCategoryLabel": "Category",
+  "courseCategory": "0",
+  "courseLevelLabel": "Course Level",
+  "courseLevel": "intermediate",
+  "courseLevelId": 3,
+  "description": "Carpo succedo perspiciatis. Cognatus vito bos decretum spargo civitas utilis. Adsidue terreo victoria censura.",
+  "descriptionPlaceholder": "Course Description Goes here",
+  "skillsSectionLabel": "What skills students will gain from this course?",
+  "skills": [
+    "",
+    "",
+    "",
+    ""
+  ],
+  "skillsPlaceholders": [
+    "e.g., JavaScript fundamentals, DOM manipulation",
+    "e.g., ES6+ features, async programming",
+    "e.g., React.js basics, component lifecycle",
+    "e.g., State management, hooks usage"
+  ],
+  "courseTypeId": 1,
+  "categories": [
+    {
+      "Id": 0,
+      "PlaylistCategoryName": "Leadership",
+      "PlaylistCategoryDescription": "Entertainment",
+      "CreatedDate": "2025-02-14T05:41:21.1666667",
+      "UpdatedDate": "2025-02-14T05:41:21.17",
+      "Playlists": []
+    },
+    {
+      "Id": 1,
+      "PlaylistCategoryName": "Technology",
+      "PlaylistCategoryDescription": "Technology",
+      "CreatedDate": "2025-02-18T14:03:19.4966667",
+      "UpdatedDate": "2025-02-18T14:03:19.4966667",
+      "Playlists": []
+    },
+    {
+      "Id": 2,
+      "PlaylistCategoryName": "Soft Skills",
+      "PlaylistCategoryDescription": "Soft Skills",
+      "CreatedDate": "2025-02-18T14:03:19.5066667",
+      "UpdatedDate": "2025-02-18T14:03:19.5066667",
+      "Playlists": []
+    },
+    {
+      "Id": 3,
+      "PlaylistCategoryName": "Production",
+      "PlaylistCategoryDescription": "Production",
+      "CreatedDate": "2025-02-18T14:03:19.51",
+      "UpdatedDate": "2025-02-18T14:03:19.51",
+      "Playlists": []
+    },
+    {
+      "Id": 4,
+      "PlaylistCategoryName": "Learning",
+      "PlaylistCategoryDescription": "Learning",
+      "CreatedDate": "2025-02-18T14:03:19.5166667",
+      "UpdatedDate": "2025-02-18T14:03:19.5166667",
+      "Playlists": []
+    },
+    {
+      "Id": 5,
+      "PlaylistCategoryName": "Life style",
+      "PlaylistCategoryDescription": "Life style",
+      "CreatedDate": "2025-02-25T13:40:00.28",
+      "UpdatedDate": "2025-02-25T13:40:00.28",
+      "Playlists": []
+    },
+    {
+      "Id": 6,
+      "PlaylistCategoryName": "LIfestyle",
+      "PlaylistCategoryDescription": "LIfestyle",
+      "CreatedDate": "2025-03-28T13:15:35.69",
+      "UpdatedDate": "2025-03-28T13:15:35.69",
+      "Playlists": []
+    }
+  ],
+  "CategoryId": 0,
+  "existingSkills": [],
+  "Createddate": "2026-01-27T13:16:14.672+00:00",
+  "UpdatedDate": "2026-01-27T13:16:14.686+00:00",
+  "state": "saved",
+  "IsActive": true
+}

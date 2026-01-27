@@ -1,0 +1,18 @@
+
+========== 📅 GET UPCOMING SESSIONS ==========
+
+📤 POST request to: /Sessions/getupcomingsessions
+📦 Payload: {
+  "StartDate": "2026-01-27T13:15:54.792Z",
+  "EndDate": "2026-02-26T13:15:54.792Z"
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:15:55.136Z
+📍 POST https://clientapi.skolasti.com/api/Sessions/getupcomingsessions
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: Missing Authorization token
+Status code: 401
+📥 POST Response: null

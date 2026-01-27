@@ -1,0 +1,22 @@
+
+📤 POST request to: /PageSectionDynamicContent/pagesectiondynamiccontent
+📦 Payload: {
+  "Pagesectionid": 1,
+  "Heading": "Test Dynamic Content",
+  "Description": "Test description for dynamic content",
+  "Subheading": "Test Subheading",
+  "Subdescription": "Test subdescription",
+  "Rating": 10,
+  "Isvisible": true,
+  "IsPublished": true
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:17:12.869Z
+📍 POST https://marketingapi.skolasti.com/api/PageSectionDynamicContent/pagesectiondynamiccontent
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null

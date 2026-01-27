@@ -1,0 +1,9 @@
+❌ FAIL: GET /VisibilityTenantSettings/getconfigurationbyid should return status 400, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [400]
+❌ FAIL: GET /VisibilityTenantSettings/getconfigurationbyid should be successful (2xx status)
+   Error: expect(received).toBeTruthy()
+
+Received: false

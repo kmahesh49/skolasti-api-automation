@@ -1,0 +1,9 @@
+❌ FAIL: GET /UserManagement/details?userId=invalid-uuid should return status 400 or 404, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [400, 404]
+❌ FAIL: GET /UserManagement/details?userId=invalid-uuid should be successful (2xx status)
+   Error: expect(received).toBeTruthy()
+
+Received: false

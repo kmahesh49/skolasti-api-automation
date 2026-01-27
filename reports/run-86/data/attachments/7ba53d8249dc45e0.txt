@@ -1,0 +1,9 @@
+❌ FAIL: GET /UserManagement/details?userId=00000000-0000-0000-0000-000000000000 should return status 404, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [404]
+❌ FAIL: GET /UserManagement/details?userId=00000000-0000-0000-0000-000000000000 should be successful (2xx status)
+   Error: expect(received).toBeTruthy()
+
+Received: false

@@ -1,0 +1,10 @@
+{
+  "method": "POST",
+  "endpoint": "https://marketingapi.skolasti.com/api/CourseData/getallcourses",
+  "expectedStatus": [
+    200,
+    204
+  ],
+  "actualStatus": 401,
+  "timestamp": "2026-01-27T13:16:44.548Z"
+}

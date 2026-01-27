@@ -1,0 +1,47 @@
+❌ FAIL: POST /CourseData/getallcourses?viewAllCourseType=1 should return status 200 or 204, got 401
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [200, 204]
+   Endpoint: /CourseData/getallcourses?viewAllCourseType=1
+   Expected Status: 200,204
+   Actual Status: 401
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                    TEST EXECUTION FAILURE SUMMARY                          ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+❌ Total Failures: 1
+📊 Status Code Failures: 1
+✓ Validation Failures: 0
+
+
+════════════════════════════════════════════════════════════════════════════════
+📊 STATUS CODE FAILURES:
+════════════════════════════════════════════════════════════════════════════════
+
+1. POST /CourseData/getallcourses?viewAllCourseType=1 should return status 200 or 204, got 401
+   Endpoint: /CourseData/getallcourses?viewAllCourseType=1
+   Expected: 200,204
+   Actual: 401
+   Category: CLIENT ERROR (4xx)
+   Error: expect(received).toContain(expected) // indexOf
+
+Expected value: 401
+Received array: [200, 204]
+   Time: 2026-01-27T13:16:46.891Z
+   
+   🔒 UNAUTHORIZED (401)
+         
+   Possible Causes:
+   • Missing Authorization header
+   • Invalid or expired JWT token
+
+════════════════════════════════════════════════════════════════════════════════
+📋 REQUEST HISTORY (Last 5):
+════════════════════════════════════════════════════════════════════════════════
+
+1. POST /CourseData/getallcourses?viewAllCourseType=1
+   Status: 401
+   Time: 2026-01-27T13:16:46.879Z
+

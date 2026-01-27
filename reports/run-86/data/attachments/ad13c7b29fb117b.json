@@ -1,0 +1,10 @@
+{
+  "method": "POST",
+  "endpoint": "https://clientapi.skolasti.com/api/ChatSession/startchatsession",
+  "expectedStatus": [
+    200,
+    201
+  ],
+  "actualStatus": 401,
+  "timestamp": "2026-01-27T13:15:49.886Z"
+}

@@ -1,0 +1,20 @@
+
+========== ❌ TEST: UNAUTHORIZED ACCESS ==========
+
+🔒 Testing: No Authorization Header
+📊 Response Status: 401
+✅ Correctly rejected with status 401
+
+🔒 Testing: Invalid Bearer Token
+📊 Response Status: 401
+✅ Correctly rejected with status 401
+
+🔒 Testing: Expired Token
+📊 Response Status: 401
+✅ Correctly rejected with status 401
+
+🔒 Testing: Malformed Authorization Header
+📊 Response Status: 401
+✅ Correctly rejected with status 401
+
+✅ ALL UNAUTHORIZED ACCESS TESTS PASSED

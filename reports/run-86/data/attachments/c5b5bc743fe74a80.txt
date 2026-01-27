@@ -1,0 +1,5 @@
+
+========== ❌ TEST: INVALID FILTER PARAMETERS ==========
+
+🧪 Testing: Invalid Category IDs (String)
+📊 Response Status: 401

@@ -1,0 +1,3 @@
+Getting resource from: /UserManagement/details?userId=3f537698-4e5e-4101-9115-626385911940
+Attempt 1: Status: 401
+Attempt 1: Raw response: 

@@ -1,0 +1,10 @@
+{
+  "method": "POST",
+  "endpoint": "https://clientapi.skolasti.com/api/ChatSession/userundercourseorvideo",
+  "expectedStatus": [
+    200,
+    204
+  ],
+  "actualStatus": 401,
+  "timestamp": "2026-01-27T13:15:52.398Z"
+}

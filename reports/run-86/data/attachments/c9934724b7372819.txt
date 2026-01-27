@@ -1,0 +1,18 @@
+
+📤 POST request to: /UserManagement/bulkinviteuser
+📦 Payload: [
+  {
+    "RegistrationUrl": "https://test.skillrok.com/register",
+    "UserEmailId": "invalid-email"
+  }
+]
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:15:17.877Z
+📍 POST https://adminapi.skolasti.com/api/UserManagement/bulkinviteuser
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null

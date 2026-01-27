@@ -1,0 +1,17 @@
+
+📤 POST request to: /Marketingpages/marketingpages
+📦 Payload: {
+  "PageName": "Test Page 1769519819173",
+  "IsPageVisible": true,
+  "IsPublished": true
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:17:00.507Z
+📍 POST https://marketingapi.skolasti.com/api/Marketingpages/marketingpages
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: 
+Status code: 401
+📥 POST Response: null

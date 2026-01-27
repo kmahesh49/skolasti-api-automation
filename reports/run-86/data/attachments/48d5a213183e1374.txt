@@ -1,0 +1,40 @@
+
+✨ Creating resource at: /UserQuizAndAssesment/createquiz
+📦 Payload: {
+  "Title": "Multi-Level Quiz 1769519735645",
+  "NumberOfRetake": 3,
+  "PassScoreInPertcentage": "70",
+  "TotalQuestions": 6,
+  "TotalScore": 110,
+  "IsOptional": true,
+  "QuizLevels": [
+    {
+      "LevelId": 0,
+      "NumberOfQuestions": 2,
+      "PassScoreInPertcentage": 60,
+      "PointsPerQuestion": 10
+    },
+    {
+      "LevelId": 1,
+      "NumberOfQuestions": 3,
+      "PassScoreInPertcentage": 70,
+      "PointsPerQuestion": 15
+    },
+    {
+      "LevelId": 2,
+      "NumberOfQuestions": 5,
+      "PassScoreInPertcentage": 80,
+      "PointsPerQuestion": 20
+    }
+  ]
+}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:15:36.059Z
+📍 POST (CREATE) https://clientapi.skolasti.com/api/UserQuizAndAssesment/createquiz
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: Missing Authorization token
+Status code: 401
+📥 Create Response: null

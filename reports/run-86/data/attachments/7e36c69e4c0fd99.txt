@@ -1,0 +1,3 @@
+Getting resource from: /VisibilityTenantSettings/paymentgatewayconfig?tenantId=999999
+Attempt 1: Status: 401
+Attempt 1: Raw response: 

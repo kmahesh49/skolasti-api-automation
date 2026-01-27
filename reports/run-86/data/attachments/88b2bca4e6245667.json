@@ -1,0 +1,16 @@
+{
+  "PlanName": "Automation Test Plan 1769519739513",
+  "Description": "Automated test subscription plan",
+  "Price": 199,
+  "Validity": 365,
+  "ValidityTypeId": 2,
+  "CurrencyCodeId": 0,
+  "RazorPayPlanId": "plan_test_1769519739513",
+  "PaymentLink": "Payment Link will be available later",
+  "subscriptionDataVM": [
+    {
+      "ContentId": 1137,
+      "ContentTypeId": 0
+    }
+  ]
+}

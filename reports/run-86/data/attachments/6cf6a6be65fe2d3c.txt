@@ -1,0 +1,3 @@
+Getting resource from: /VisibilityTenantSettings/getconfigurationbyid?configurationId=999999
+Attempt 1: Status: 401
+Attempt 1: Raw response: 

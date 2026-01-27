@@ -1,0 +1,5 @@
+
+========== 🏅 GET ALL BADGES ==========
+Getting resource from: /Badges/getallBadges
+Attempt 1: Status: 401
+Attempt 1: Raw response: Missing Authorization token

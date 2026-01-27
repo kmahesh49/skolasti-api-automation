@@ -1,0 +1,33 @@
+
+========== â¤ï¸ WISHLIST OPERATIONS ==========
+
+📤 POST request to: /Subscription/togglewishlist?contentId=1&contentTypeId=1&userId=3f537698-4e5e-4101-9115-626385911940
+📦 Payload: {}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:16:00.234Z
+📍 POST https://clientapi.skolasti.com/api/Subscription/togglewishlist?contentId=1&contentTypeId=1&userId=3f537698-4e5e-4101-9115-626385911940
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: Missing Authorization token
+Status code: 401
+📥 POST Response: null
+âœ… Content added to wishlist
+Getting resource from: /Subscription/getwishlist?userId=3f537698-4e5e-4101-9115-626385911940&PageNumber=1&PageSize=10
+Attempt 1: Status: 401
+Attempt 1: Raw response: Missing Authorization token
+
+📤 POST request to: /Subscription/togglewishlist?contentId=1&contentTypeId=1&userId=3f537698-4e5e-4101-9115-626385911940
+📦 Payload: {}
+
+════════════════════════════════════════════════════════════════════════════════
+🕐 2026-01-27T13:16:00.894Z
+📍 POST https://clientapi.skolasti.com/api/Subscription/togglewishlist?contentId=1&contentTypeId=1&userId=3f537698-4e5e-4101-9115-626385911940
+📊 Status: 401 Unauthorized
+════════════════════════════════════════════════════════════════════════════════
+
+Raw response: Missing Authorization token
+Status code: 401
+📥 POST Response: null
+âœ… Content removed from wishlist

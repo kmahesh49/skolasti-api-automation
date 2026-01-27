@@ -1,0 +1,14 @@
+
+========== âŒ TEST: INVALID NUMERIC VALUES ==========
+
+ðŸ§ª Testing: Negative Price
+ðŸ“¦ Payload: {
+  "PlanName": "Test Plan",
+  "Description": "Test",
+  "Price": -99.99,
+  "Validity": 30,
+  "ValidityTypeId": 1,
+  "CurrencyCodeId": 1,
+  "RazorPayPlanId": "plan_neg"
+}
+ðŸ“Š Response Status: 401
