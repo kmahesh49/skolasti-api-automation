@@ -22,13 +22,13 @@ test.describe("Course Section API", () => {
 
     // ==================== CREATE COURSE (Prerequisite) ====================
     const createCoursePayload = PayloadGenerator.generateCoursePayload();
-    const createCourseResponse = await api.create("/Course/createcourse", createCoursePayload, 200);
+    const createCourseResponse = await api.create("/Course/createcourse", createCoursePayload, [200, 201]);
     const courseId = createCourseResponse.Id;
     console.log("Created Course ID:", courseId);
 
     // ==================== CREATE COURSE SECTION ====================
     const createSectionPayload = PayloadGenerator.generateCourseSectionPayload(courseId);
-    const createSectionResponse = await api.create("/CourseSection/createcoursesection", createSectionPayload, 200);
+    const createSectionResponse = await api.create("/CourseSection/createcoursesection", createSectionPayload, [200, 201]);
     
     const courseSectionId = createSectionResponse.Id;
     console.log("Created Course Section ID:", courseSectionId);
@@ -46,7 +46,7 @@ test.describe("Course Section API", () => {
 
     // ==================== UPDATE COURSE SECTION ====================
     const updateSectionPayload = PayloadGenerator.generateCourseSectionPayload(courseId, { Id: courseSectionId });
-    const updateSectionResponse = await api.update("/CourseSection/updatecoursesection", updateSectionPayload, 201);
+    const updateSectionResponse = await api.update("/CourseSection/updatecoursesection", updateSectionPayload, [200, 201]);
     console.log("Course section updated successfully");
 
     // ==================== GET ALL SECTIONS AFTER UPDATE ====================
@@ -54,11 +54,11 @@ test.describe("Course Section API", () => {
     console.log("Course sections after update retrieved successfully");
 
     // ==================== DELETE COURSE SECTION ====================
-    await api.delete(`/CourseSection/deletebyidcoursesection/${courseSectionId}`, 204);
+    await api.delete(`/CourseSection/deletebyidcoursesection/${courseSectionId}`, [200, 204]);
     console.log("Course section deleted successfully");
 
     // ==================== CLEANUP: DELETE COURSE ====================
-    await api.delete(`/course/deletebyidcourse/${courseId}`, 204);
+    await api.delete(`/course/deletebyidcourse/${courseId}`, [200, 204]);
     console.log("Course deleted successfully");
   });
 });

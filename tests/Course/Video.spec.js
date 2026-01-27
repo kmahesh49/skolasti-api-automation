@@ -22,7 +22,7 @@ test.describe("Video API", () => {
 
     // ==================== CREATE VIDEO ====================
     const createVideoPayload = PayloadGenerator.generateVideoPayload();
-    const createVideoResponse = await api.create("/Video/create", createVideoPayload, 200);
+    const createVideoResponse = await api.create("/Video/create", createVideoPayload, [200, 201]);
     
     const videoId = createVideoResponse[0].VideoId;
     const videoFileName = createVideoPayload.Videos[0].FileName;

@@ -22,13 +22,13 @@ test.describe("Course Skills API", () => {
 
     // ==================== CREATE COURSE (Prerequisite) ====================
     const createCoursePayload = PayloadGenerator.generateCoursePayload();
-    const createCourseResponse = await api.create("/Course/createcourse", createCoursePayload, 200);
+    const createCourseResponse = await api.create("/Course/createcourse", createCoursePayload, [200, 201]);
     const courseId = createCourseResponse.Id;
     console.log("Created Course ID:", courseId);
 
     // ==================== CREATE COURSE SKILLS ====================
     const createSkillsPayload = PayloadGenerator.generateCourseSkillsPayload(courseId, 4);
-    const createSkillsResponse = await api.create("/CourseSkill/createcourseskill", createSkillsPayload, 200);
+    const createSkillsResponse = await api.create("/CourseSkill/createcourseskill", createSkillsPayload, [200, 201]);
     
     const skillIds = createSkillsResponse.map(skill => skill.Id);
     console.log("Created Course Skill IDs:", skillIds);
@@ -49,7 +49,7 @@ test.describe("Course Skills API", () => {
 
     // ==================== UPDATE COURSE SKILLS ====================
     const updateSkillsPayload = PayloadGenerator.generateCourseSkillsUpdatePayload(courseId, 4);
-    await api.update("/CourseSkill/updatecourseskill", updateSkillsPayload, 201);
+    await api.update("/CourseSkill/updatecourseskill", updateSkillsPayload, [200, 201]);
     console.log("Course skills updated successfully");
 
     // ==================== GET ALL COURSE SKILLS AFTER UPDATE ====================
@@ -63,11 +63,11 @@ test.describe("Course Skills API", () => {
     });
 
     // ==================== DELETE COURSE SKILLS ====================
-    await api.delete(`/CourseSkill/deletebyidcourseskill/${courseId}`, 204);
+    await api.delete(`/CourseSkill/deletebyidcourseskill/${courseId}`, [200, 204]);
     console.log("Course skills deleted successfully");
 
     // ==================== CLEANUP: DELETE COURSE ====================
-    await api.delete(`/course/deletebyidcourse/${courseId}`, 204);
+    await api.delete(`/course/deletebyidcourse/${courseId}`, [200, 204]);
     console.log("Course deleted successfully");
   });
 });

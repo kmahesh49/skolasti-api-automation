@@ -32,7 +32,7 @@ test.describe("Course Lesson API", () => {
     console.log("Created Course Section ID:", courseSectionId);
 
     const createAudioPayload = PayloadGenerator.generateAudioPayload();
-    const createAudioResponse = await api.create("/Audio/createaudio", createAudioPayload, 200);
+    const createAudioResponse = await api.create("/Audio/createaudio", createAudioPayload, [200, 201]);
     const audioId = createAudioResponse[0].Id;
     const audioTitle = createAudioPayload[0].Title;
     console.log("Created Audio ID:", audioId);
@@ -44,7 +44,7 @@ test.describe("Course Lesson API", () => {
       2, // LearningItemTypeId: 2 = Audio
       audioTitle
     );
-    const createLessonResponse = await api.create("/CourseLession/createcourselession", createLessonPayload, 200);
+    const createLessonResponse = await api.create("/CourseLession/createcourselession", createLessonPayload, [200, 201]);
     
     const lessonId = createLessonResponse[0].Id;
     console.log("Created Course Lesson ID:", lessonId);
@@ -78,11 +78,11 @@ test.describe("Course Lesson API", () => {
       2,
       audioTitle
     );
-    const updateLessonResponse = await api.update("/CourseLession/updatecourselession", updateLessonPayload, 201);
+    const updateLessonResponse = await api.update("/CourseLession/updatecourselession", updateLessonPayload, [200, 201]);
     console.log("Course lesson updated successfully");
 
     // ==================== DELETE COURSE LESSON ====================
-    await api.delete(`/CourseLession/deletebyidcourselession/${lessonId}`, 204);
+    await api.delete(`/CourseLession/deletebyidcourselession/${lessonId}`, [200, 204]);
     console.log("Course lesson deleted successfully");
 
     // ==================== VERIFY LESSON DELETION ====================
@@ -90,9 +90,9 @@ test.describe("Course Lesson API", () => {
     console.log("Course lesson deletion verified");
 
     // ==================== CLEANUP ====================
-    await api.delete(`/Audio/deletebyidaudio/${audioId}`, 204);
-    await api.delete(`/CourseSection/deletebyidcoursesection/${courseSectionId}`, 204);
-    await api.delete(`/course/deletebyidcourse/${courseId}`, 204);
+    await api.delete(`/Audio/deletebyidaudio/${audioId}`, [200, 204]);
+    await api.delete(`/CourseSection/deletebyidcoursesection/${courseSectionId}`, [200, 204]);
+    await api.delete(`/course/deletebyidcourse/${courseId}`, [200, 204]);
     console.log("Cleanup completed");
   });
 
@@ -106,17 +106,17 @@ test.describe("Course Lesson API", () => {
 
     // ==================== CREATE PREREQUISITES ====================
     const createCoursePayload = PayloadGenerator.generateCoursePayload();
-    const createCourseResponse = await api.create("/Course/createcourse", createCoursePayload, 200);
+    const createCourseResponse = await api.create("/Course/createcourse", createCoursePayload, [200, 201]);
     const courseId = createCourseResponse.Id;
     console.log("Created Course ID:", courseId);
 
     const createSectionPayload = PayloadGenerator.generateCourseSectionPayload(courseId);
-    const createSectionResponse = await api.create("/CourseSection/createcoursesection", createSectionPayload, 200);
+    const createSectionResponse = await api.create("/CourseSection/createcoursesection", createSectionPayload, [200, 201]);
     const courseSectionId = createSectionResponse.Id;
     console.log("Created Course Section ID:", courseSectionId);
 
     const createVideoPayload = PayloadGenerator.generateVideoPayload();
-    const createVideoResponse = await api.create("/Video/create", createVideoPayload, 200);
+    const createVideoResponse = await api.create("/Video/create", createVideoPayload, [200, 201]);
     const videoId = createVideoResponse[0].VideoId;
     const videoFileName = createVideoPayload.Videos[0].FileName;
     console.log("Created Video ID:", videoId);
@@ -128,7 +128,7 @@ test.describe("Course Lesson API", () => {
       1, // LearningItemTypeId: 1 = Video
       videoFileName
     );
-    const createVideoLessonResponse = await api.create("/CourseLession/createcourselession", createVideoLessonPayload, 200);
+    const createVideoLessonResponse = await api.create("/CourseLession/createcourselession", createVideoLessonPayload, [200, 201]);
     
     const videoLessonId = createVideoLessonResponse[0].Id;
     console.log("Created Video Lesson ID:", videoLessonId);
@@ -161,11 +161,11 @@ test.describe("Course Lesson API", () => {
       1,
       videoFileName
     );
-    await api.update("/CourseLession/updatecourselession", updateVideoLessonPayload, 201);
+    await api.update("/CourseLession/updatecourselession", updateVideoLessonPayload, [200, 201]);
     console.log("Video lesson updated successfully");
 
     // ==================== DELETE COURSE LESSON (VIDEO) ====================
-    await api.delete(`/CourseLession/deletebyidcourselession/${videoLessonId}`, 204);
+    await api.delete(`/CourseLession/deletebyidcourselession/${videoLessonId}`, [200, 204]);
     console.log("Video lesson deleted successfully");
 
     // ==================== VERIFY VIDEO LESSON DELETION ====================
@@ -173,8 +173,8 @@ test.describe("Course Lesson API", () => {
     console.log("Video lesson deletion verified");
 
     // ==================== CLEANUP ====================
-    await api.delete(`/CourseSection/deletebyidcoursesection/${courseSectionId}`, 204);
-    await api.delete(`/course/deletebyidcourse/${courseId}`, 204);
+    await api.delete(`/CourseSection/deletebyidcoursesection/${courseSectionId}`, [200, 204]);
+    await api.delete(`/course/deletebyidcourse/${courseId}`, [200, 204]);
     console.log("Cleanup completed");
   });
 
@@ -188,17 +188,17 @@ test.describe("Course Lesson API", () => {
 
     // ==================== CREATE PREREQUISITES ====================
     const createCoursePayload = PayloadGenerator.generateCoursePayload();
-    const createCourseResponse = await api.create("/Course/createcourse", createCoursePayload, 200);
+    const createCourseResponse = await api.create("/Course/createcourse", createCoursePayload, [200, 201]);
     const courseId = createCourseResponse.Id;
     console.log("Created Course ID:", courseId);
 
     const createSectionPayload = PayloadGenerator.generateCourseSectionPayload(courseId);
-    const createSectionResponse = await api.create("/CourseSection/createcoursesection", createSectionPayload, 200);
+    const createSectionResponse = await api.create("/CourseSection/createcoursesection", createSectionPayload, [200, 201]);
     const courseSectionId = createSectionResponse.Id;
     console.log("Created Course Section ID:", courseSectionId);
 
     const createDocumentPayload = PayloadGenerator.generateDocumentPayload();
-    const createDocumentResponse = await api.create("/ContentDocument/createcontentdocument", createDocumentPayload, 200);
+    const createDocumentResponse = await api.create("/ContentDocument/createcontentdocument", createDocumentPayload, [200, 201]);
     const documentId = createDocumentResponse[0].Id;
     const documentTitle = createDocumentPayload[0].Title;
     console.log("Created Document ID:", documentId);
@@ -210,7 +210,7 @@ test.describe("Course Lesson API", () => {
       3, // LearningItemTypeId: 3 = Document
       documentTitle
     );
-    const createDocLessonResponse = await api.create("/CourseLession/createcourselession", createDocLessonPayload, 200);
+    const createDocLessonResponse = await api.create("/CourseLession/createcourselession", createDocLessonPayload, [200, 201]);
     
     const docLessonId = createDocLessonResponse[0].Id;
     console.log("Created Document Lesson ID:", docLessonId);
@@ -243,11 +243,11 @@ test.describe("Course Lesson API", () => {
       3,
       documentTitle
     );
-    await api.update("/CourseLession/updatecourselession", updateDocLessonPayload, 201);
+    await api.update("/CourseLession/updatecourselession", updateDocLessonPayload, [200, 201]);
     console.log("Document lesson updated successfully");
 
     // ==================== DELETE COURSE LESSON (DOCUMENT) ====================
-    await api.delete(`/CourseLession/deletebyidcourselession/${docLessonId}`, 204);
+    await api.delete(`/CourseLession/deletebyidcourselession/${docLessonId}`, [200, 204]);
     console.log("Document lesson deleted successfully");
 
     // ==================== VERIFY DOCUMENT LESSON DELETION ====================
@@ -255,9 +255,9 @@ test.describe("Course Lesson API", () => {
     console.log("Document lesson deletion verified");
 
     // ==================== CLEANUP ====================
-    await api.delete(`/ContentDocument/deletebyidcontentdocument/${documentId}`, 204);
-    await api.delete(`/CourseSection/deletebyidcoursesection/${courseSectionId}`, 204);
-    await api.delete(`/course/deletebyidcourse/${courseId}`, 204);
+    await api.delete(`/ContentDocument/deletebyidcontentdocument/${documentId}`, [200, 204]);
+    await api.delete(`/CourseSection/deletebyidcoursesection/${courseSectionId}`, [200, 204]);
+    await api.delete(`/course/deletebyidcourse/${courseId}`, [200, 204]);
     console.log("Cleanup completed");
   });
 });

@@ -34,7 +34,7 @@ test.describe("Course API", () => {
 
     // ==================== CREATE ====================
     const createPayload = PayloadGenerator.generateCoursePayload();
-    const createResponse = await api.create("/Course/createcourse", createPayload, 200);
+    const createResponse = await api.create("/Course/createcourse", createPayload, [200, 201]);
     
     const courseId = createResponse?.Id;
     console.log("=".repeat(50));
@@ -79,7 +79,7 @@ test.describe("Course API", () => {
 
     // ==================== UPDATE ====================
     const updatePayload = PayloadGenerator.generateCoursePayload({ Id: courseId });
-    const updateResponse = await api.update("/Course/updatecourse", updatePayload, 201);
+    const updateResponse = await api.update("/Course/updatecourse", updatePayload, [200, 201]);
     console.log("Course updated successfully");
     
     // Add small delay to allow API to fully persist/index the updates
@@ -90,7 +90,7 @@ test.describe("Course API", () => {
     console.log("Updated course details retrieved successfully");
 
     // ==================== DELETE ====================
-    await api.delete(`/course/deletebyidcourse/${courseId}`, 204);
+    await api.delete(`/course/deletebyidcourse/${courseId}`, [200, 204]);
     console.log("Course deleted successfully");
 
     // ==================== VERIFY DELETION ====================

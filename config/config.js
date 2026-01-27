@@ -30,9 +30,9 @@ const getEnvConfig = (env) => environments[env] || environments.dev;
 const envConfig = getEnvConfig(currentEnv);
 
 // =============================================================================
-// AUTHORIZATION TOKEN
+// AUTHORIZATION TOKEN (without "Bearer" prefix - added automatically in headers)
 // =============================================================================
-const defaultToken = "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFlOUduTnJHYXVMX1ZFUnpJNUZFWlZfYktmOCJ9.eyJhdWQiOiJiYmY1Yjg5OS00YTM0LTQ0NzQtYTBhYi01YjY5ZDljNTFmOTIiLCJleHAiOjE3Njg5NzkxMjIsImlhdCI6MTc2ODk3NTUyMiwiaXNzIjoiaHR0cHM6Ly9hdXRoLnNrb2xhc3RpLmFwcC8iLCJzdWIiOiIzZjUzNzY5OC00ZTVlLTQxMDEtOTExNS02MjYzODU5MTE5NDAiLCJqdGkiOiJmMTk3N2E3My1hOGQ2LTQyMzQtYjQ2Zi1kMDY0NjRmYmQwZDAiLCJhdXRoZW50aWNhdGlvblR5cGUiOiJQQVNTV09SRCIsImVtYWlsIjoiZ29waWtyaXNobmEyMjIxQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJnb3Bpa3Jpc2huYTIyMjFAZ21haWwuY29tIiwiYXBwbGljYXRpb25JZCI6ImJiZjViODk5LTRhMzQtNDQ3NC1hMGFiLTViNjlkOWM1MWY5MiIsInJvbGVzIjpbInVzZXIiXSwic2lkIjoiOTExYTFhN2EtOGZmZC00MTk2LWEwYzctNzVjZGMzOTg0NjFjIiwiYXV0aF90aW1lIjoxNzY4OTc1NTIyLCJ0aWQiOiI2Y2ZmZGQ2Mi04NjQ5LTRkOWQtODZmZS0zMDY2ZWU0NDcwODIifQ.CpE6ksn5xFmM5kseEqgdVEr3EChppRja6vT1g8o8LAAnIB80M8olMGiNVid8pmEoLMk-ND4v-dpVZqz3r6-LHJsNqjXu6f-G4RN_uE606QsHIErxHM4tXsWqx8mqIwyLigrYDAHgZQlUBRfjn-BGczJjIx_xQwpf3NLLU7_SGQsDuyZ5n2Hu92MEIw_EgOa5ueF_FZzdecAfCEOOYnpTJvuMsWjVZTYbgGqUItrQ1Oe08subPP2YkLzVKsh5tZi2y7aIPSB4-hF09HXfwNLVc3FwWfaEqYJh9yYhMtPrTC_9rkXnVipDRm0aTrOB7cKDyerDDiEQAam1KkMKARiSCw";
+const defaultToken = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InhQcmIxTUxiVXhqdTZxdXRFek9hTUlMYXppbyJ9.eyJhdWQiOiIwMmFhZGMwZC03M2JlLTRhNWMtYTg2MC0xNzExMDJiZDEwZWMiLCJleHAiOjE3Njk1MTI3MTcsImlhdCI6MTc2OTUwOTExNywiaXNzIjoiaHR0cHM6Ly9hdXRoLnNrb2xhc3RpLmFwcC8iLCJzdWIiOiJkNTk3NzMyNS1jYmQ4LTRiMDUtOTE0ZC1iNDI5ZGM1MTU0NGIiLCJqdGkiOiJlOTJkNDM4Zi03Y2JmLTQ4ZmYtOTA3MC0zYTA3MmE1Yjc0YjYiLCJhdXRoZW50aWNhdGlvblR5cGUiOiJQQVNTV09SRCIsImVtYWlsIjoiZ29waWtyaXNobmEyMjIxQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJnb3Bpa3Jpc2huYTIyMjFAZ21haWwuY29tIiwiYXBwbGljYXRpb25JZCI6IjAyYWFkYzBkLTczYmUtNGE1Yy1hODYwLTE3MTEwMmJkMTBlYyIsInJvbGVzIjpbInVzZXIiXSwic2lkIjoiMGZhYmUyMzQtNjM1OS00OWFlLTlkNGItMTg2ZmE2MGRmYTY0IiwiYXV0aF90aW1lIjoxNzY5NTA5MTE3LCJ0aWQiOiI2YmViZjlhNS04MjY0LTRlMmQtYjk4Yy1jMzU1MDk2ODIyMjkifQ.QHEUqTPn0uy_Dnl4A5oFDCrHTk626R2A_cBmpKEfKI65_PgM1G4pFU4bRg99ZqhtG1CCgG7enYF47H_j88JXqHsV_dbwt1LejxDFgWP7FN99AVde4WojydtAgnGXt8B72cku6IDFbA-cvrcF8ljmdI7xIrd8SCm3vaTajSehi8Rz_C21EP2WGg3iqMralqSeGBNf348zKTbvHk_OjyCsQZhqpEvs2l1GN3-FxWzvf26HuulkbB9KYe8zGt_Rz8HshXa1ZyWcmkc_GBoVCKMBXwdTzed2S5Je8i2-WdXN_tJ6MWMmLVIus3s6VyEao_K1gUmhPX_RLCBs9OwEq1DpoQ";
 
 // =============================================================================
 // EXPORTED CONFIGURATION
@@ -55,9 +55,40 @@ module.exports = {
   // All environment configurations
   environments,
   
-  // Headers
+  // Headers for Client API (requires Authorization + clientid)
   headers: {
     "Authorization": process.env.API_TOKEN ? `Bearer ${process.env.API_TOKEN}` : `Bearer ${defaultToken}`,
-    "Content-Type": "application/json"
+    "Content-Type": "application/json",
+    "clientid": "6cffdd62-8649-4d9d-86fe-3066ee447082"
+  },
+  
+  // Headers for Marketing API (requires ONLY clientId, no Bearer token)
+  // Note: Uses different clientId value (tenant/application ID)
+  // NOTE: PageContent endpoints (Dynamic/Static) require multipart/form-data but current framework uses JSON
+  // TODO: These endpoints may require file upload implementation or backend API changes
+  marketingHeaders: {
+    "Content-Type": "application/json",
+    "clientId": "bbf5b899-4a34-4474-a0ab-5b69d9c51f92"
+  },
+  
+  // Headers for Admin API (requires Bearer token + clientid, same as Client API)
+  adminHeaders: {
+    "Authorization": process.env.API_TOKEN ? `Bearer ${process.env.API_TOKEN}` : `Bearer ${defaultToken}`,
+    "Content-Type": "application/json",
+    "clientid": "6cffdd62-8649-4d9d-86fe-3066ee447082"
+  },
+  
+  // Headers for Tenant API (requires X-Api-Key, NO Bearer token)
+  // Note: Different authentication pattern - uses API Key in custom header
+  tenantHeaders: {
+    "Content-Type": "application/json",
+    "X-Api-Key": "7VtvvnImeGev1FZQXYYbHthXumoWaVwj_L3wHqSl0Q9waC4Ye2Wenh8Z"
+  },
+  
+  // Headers for Course API (requires Bearer token + clientid, same as Client/Admin API)
+  courseHeaders: {
+    "Authorization": process.env.API_TOKEN ? `Bearer ${process.env.API_TOKEN}` : `Bearer ${defaultToken}`,
+    "Content-Type": "application/json",
+    "clientid": "6cffdd62-8649-4d9d-86fe-3066ee447082"
   }
 };
